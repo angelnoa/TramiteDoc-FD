@@ -1,0 +1,206 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang3082{\fonttbl{\f0\fnil Courier New;}{\f1\fnil\fcharset0 Courier New;}{\f2\fswiss\fprq2\fcharset0 Arial;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\cf1\b\f0\fs20 ResultSet \tab lrs\par
+date \tab\tab\tab ld_desde, ld_hasta\par
+String \tab\tab ls_filtro, ls_descripcion_tipdoc\par
+DataStore \tab ds_datos\par
+n_error \tab\tab ln_error\par
+integer \tab\tab li_cont\par
+//\par
+iel_log.log(" dentro de : " + "of_lista_mesa_partes()")\par
+// iel_log.log(" as_oficina: " + as_oficina)\par
+// Validamos las fechas .....\par
+if as_fecha_ini ="*" or isnull(as_fecha_ini) or as_fecha_fin = "*" or isnull(as_fecha_fin) or len(trim((as_fecha_ini))) = 0 then\par
+\tab iel_log.log(" entro por que es nuelo ..... : " )\par
+\tab ld_hasta = today()\par
+\tab ld_desde = RelativeDate(ld_hasta,  - 10)\par
+else\par
+\tab ld_desde = date(as_fecha_ini)\par
+   ld_hasta = date(as_fecha_fin)\par
+end if\par
+iel_log.log(" as_fecha_ini: " + string(ld_hasta))\par
+iel_log.log(" as_fecha_fin: " + string(ld_desde))\par
+if not isvalid(ds_datos) then\par
+\tab ds_datos = create DataStore\par
+end if\par
+//\par
+ls_filtro = ""\par
+if as_naturaleza = "E" or as_naturaleza = "I" or  as_naturaleza = "S"  then\par
+\tab ls_filtro = "naturaleza_documento='" + as_naturaleza + "'"\par
+end if\par
+//\par
+if as_estado >= "1" and as_estado <= "7" then\par
+\tab if len(trim(ls_filtro)) > 0 then\par
+\tab\tab ls_filtro = ls_filtro + " and " + "estado_movimiento='" + as_estado + "'"\par
+\tab else\par
+\tab\tab ls_filtro = "estado_movimiento='" + as_estado + "'"\par
+\tab end if\par
+end if\par
+// as_tipodoc\par
+if as_tipodoc >= "01" and as_tipodoc <= "99" then\par
+\tab ls_descripcion_tipdoc = of_codigo_tipdoc(as_tipodoc)\par
+\tab if len(trim(ls_filtro)) > 0 then\par
+\tab\tab ls_filtro = ls_filtro + " and " + "descripcion_tipo='" + ls_descripcion_tipdoc + "'"\par
+\tab else\par
+\tab\tab ls_filtro = "descripcion_tipo='" + ls_descripcion_tipdoc + "'"\par
+\tab end if\par
+end if\par
+//\par
+if as_filtro = "C" and len(trim(as_valor)) > 0 then\par
+\tab if len(trim(ls_filtro)) > 0 then\par
+\tab\tab as_valor = "%"+as_valor\par
+\tab\tab ls_filtro = ls_filtro + " and " + "codigo_documento like '" + as_valor + "'"\par
+\tab else\par
+\tab\tab as_valor = "%"+as_valor\par
+\tab\tab ls_filtro = "codigo_documento like '" + as_valor + "'"\par
+\tab end if\par
+end if\par
+if as_filtro = "N" and len(trim(as_valor)) > 0 then\par
+\tab if len(trim(ls_filtro)) > 0 then\par
+\tab\tab as_valor = "%"+trim(as_valor)\par
+\tab\tab ls_filtro = ls_filtro + " and " + "numero_documento like '" + as_valor + "'"\par
+\tab else\par
+\tab\tab as_valor = "%"+as_valor\par
+\tab\tab ls_filtro = "numero_documento like '" + as_valor + "'"\par
+\tab end if\par
+end if\par
+//\par
+ds_datos.dataobject = "d_mesa_partes_normal"\par
+ds_datos.settransobject(itr_trans)\par
+// iel_log.log(" sqlca : " + itr_trans.sqlerrtext)\par
+// iel_log.log(" ls_filtro: " + ls_filtro)\par
+// ld_desde = date(as_fecha_ini)\par
+// ld_hasta = date(as_fecha_fin)\par
+//\par
+if ds_datos.retrieve(as_oficina, "01", ld_desde, ld_hasta)  < 0 then\par
+\tab iel_log.log(" error en el metodo : " + itr_trans.sqlerrtext)\par
+\tab ln_error = create n_error\par
+\tab ln_error.setmessage( "No se logro obtener los datos Requeridos")\par
+\tab throw ln_error\par
+end if\par
+// vemos si hay que Filtrar el datastore ....\par
+if len(trim(ls_filtro)) > 0 then\par
+\tab ds_datos.SetFilter(ls_filtro)\par
+\tab ds_datos.Filter()\par
+end if\par
+//\par
+if ds_datos.generateresultset(lrs) = -1 then\par
+\tab iel_log.log(" error al convertir el resultset ...!!!" )\par
+\tab ln_error = create n_error\par
+\tab ln_error.setmessage( "No se logro obtener los datos de mesa de Partes ")\par
+\tab throw ln_error\par
+end if\par
+//\par
+return lrs\par
+\par
+\par
+\par
+\lang10250\f1 /***************************Procedimiento \lang3082\f0 d_mesa_partes_normal\lang10250\f1 *****************************/\par
+\par
+create procedure dba.sp_mesa_partes(in @as_oficina char(4),in @as_fondo char(2),in @ad_fecha_ini date,in @ad_fecha_fin date)\par
+result(codigo_documento char(10),descripcion_oficina varchar(100),descripcion_tipo\par
+varchar(80),numero_documento char(6),naturaleza_documento char(1),fecha_documento\par
+date,codigo_oficina char(4),codigo_institucion char(6),descripcion_institucion\par
+varchar(80),siglas_institucion varchar(25),siglas_oficina varchar(20),fecha_movimiento\par
+date,hora_movimiento time,estado_movimiento char(1),descripcion_motivo\par
+varchar(80),asunto_documento long varchar,folios_documento char(4),observa_documento\par
+long varchar,descripcion_serie varchar(80),descripcion_expediente varchar(80),fecha_registro\par
+date,hora_registro time,ultima_modificacion timestamp,codigo_inicia char(10),secuencia_movimiento\par
+char(2),ultimo_usuario char(8),nombre_personal varchar(80),nombre_contacto\par
+varchar(80),es_multiple char(1),doc_deriva char(10),observa_movimiento\par
+long varchar,codigo_motivo char(2),"'N'" char(1),destino_documento char(4),abogadesignado\par
+char(8),flag_atenabogado char(1)) begin select movimientos_doc.codigo_documento,oficinas_a.descripcion_oficina,oficinas_b.descripcion_oficina,tipo_documento.descripcion_tipo,documento.numero_documento,documento.naturaleza_documento,documento.fecha_documento,doc_salida_origen.codigo_oficina,doc_salida_destino.codigo_institucion,institucion_a.descripcion_institucion,oficinas_c.descripcion_oficina,institucion_b.descripcion_institucion,oficinas_d.descripcion_oficina,institucion_b.siglas_institucion,oficinas_c.siglas_oficina,oficinas_b.siglas_oficina,movimientos_doc.fecha_movimiento,movimientos_doc.hora_movimiento,movimientos_doc.estado_movimiento,motivo.descripcion_motivo,documento.asunto_documento,documento.folios_documento,documento.observa_documento,serie_documental.descripcion_serie,expediente.descripcion_expediente,documento.fecha_registro,documento.hora_registro,documento.ultima_modificacion,movimientos_doc.codigo_inicia,movimientos_doc.secuencia_movimiento,doc_interno_origen.codigo_oficina,movimientos_doc.ultimo_usuario,personal_a.nombre_personal,personal_b.nombre_personal,personal_c.nombre_personal,personal_d.nombre_personal,contactos_a.nombre_contacto,contactos_b.nombre_contacto,tipo_documento.es_multiple,movimientos_doc.doc_deriva,movimientos_doc.observa_movimiento,movimientos_doc.codigo_motivo,'N',doc_interno_destino.codigo_oficina,doc_entrada.destino_documento,movimientos_doc.abogadesignado,movimientos_doc.flag_atenabogado\par
+from doc_salida_destino left outer join institucion as institucion_a\par
+on doc_salida_destino.codigo_institucion = institucion_a.codigo_institucion,documento\par
+left outer join doc_interno_destino on documento.codigo_documento = doc_interno_destino.codigo_documento,documento\par
+left outer join doc_interno_origen on documento.codigo_documento = doc_interno_origen.codigo_documento,doc_interno_destino\par
+left outer join oficinas as oficinas_a on doc_interno_destino.codigo_oficina\par
+= oficinas_a.codigo_oficina and doc_interno_destino.codigo_fondo = oficinas_a.codigo_fondo,doc_interno_origen\par
+left outer join oficinas as oficinas_b on doc_interno_origen.codigo_fondo\par
+= oficinas_b.codigo_fondo and doc_interno_origen.codigo_oficina = oficinas_b.codigo_oficina,doc_entrada\par
+left outer join institucion as institucion_b on doc_entrada.origen_documento\par
+= institucion_b.codigo_institucion,doc_entrada left outer join oficinas\par
+as oficinas_d on doc_entrada.destino_documento = oficinas_d.codigo_oficina\par
+and doc_entrada.fondo_destino = oficinas_d.codigo_fondo,doc_interno_origen\par
+left outer join personal as personal_a on doc_interno_origen.codigo_personal\par
+= personal_a.codigo_personal,doc_interno_destino left outer join personal\par
+as personal_b on doc_interno_destino.codigo_personal = personal_b.codigo_personal,doc_salida_origen\par
+left outer join personal as personal_c on doc_salida_origen.codigo_personal\par
+= personal_c.codigo_personal,doc_salida_destino left outer join contactos\par
+as contactos_a on doc_salida_destino.codigo_contacto = contactos_a.codigo_contacto,doc_entrada\par
+left outer join contactos as contactos_b on doc_entrada.remitente = contactos_b.codigo_contacto,doc_entrada\par
+left outer join personal as personal_d on doc_entrada.destinatario =\par
+personal_d.codigo_personal,doc_salida_origen left outer join oficinas\par
+as oficinas_c on doc_salida_origen.codigo_oficina = oficinas_c.codigo_oficina\par
+and doc_salida_origen.codigo_fondo = oficinas_c.codigo_fondo,documento\par
+left outer join doc_salida_origen on documento.codigo_documento = doc_salida_origen.codigo_documento,documento\par
+left outer join doc_salida_destino on documento.codigo_documento = doc_salida_destino.codigo_documento,documento\par
+left outer join doc_entrada on documento.codigo_documento = doc_entrada.codigo_documento,movimientos_doc\par
+left outer join motivo on movimientos_doc.codigo_motivo = motivo.codigo_motivo,movimientos_doc\par
+left outer join expediente on movimientos_doc.codigo_expediente = expediente.codigo_expediente\par
+and movimientos_doc.codigo_fondo = expediente.codigo_fondo and movimientos_doc.codigo_oficina\par
+= expediente.codigo_oficina and movimientos_doc.codigo_serie = expediente.codigo_serie,movimientos_doc\par
+left outer join serie_documental on movimientos_doc.codigo_fondo = serie_documental.codigo_fondo\par
+and movimientos_doc.codigo_oficina = serie_documental.codigo_oficina\par
+and movimientos_doc.codigo_serie = serie_documental.codigo_serie,tipo_documento\par
+where(documento.codigo_documento = movimientos_doc.codigo_documento)\par
+and(tipo_documento.codigo_tipo = documento.codigo_tipo) and((movimientos_doc.codigo_oficina\par
+like @as_oficina) and(movimientos_doc.codigo_fondo like @as_fondo)) and(movimientos_doc.fecha_movimiento\par
+>= @ad_fecha_ini) and(movimientos_doc.fecha_movimiento <= @ad_fecha_fin)\par
+order by movimientos_doc.fecha_movimiento desc,movimientos_doc.hora_movimiento\par
+desc,movimientos_doc.codigo_documento desc,movimientos_doc.secuencia_movimiento\par
+desc end\par
+\par
+\pard\nowidctlpar\cf0\lang3082\b0\f2\par
+\par
+/***********************************procedimiento modificado**********************************/\par
+select movimientos_doc.codigo_documento,oficinas_a.descripcion_oficina,oficinas_b.descripcion_oficina,tipo_documento.descripcion_tipo\par
+,documento.numero_documento,documento.naturaleza_documento,documento.fecha_documento,doc_salida_origen.codigo_oficina,\par
+doc_salida_destino.codigo_institucion,institucion_a.descripcion_institucion,oficinas_c.descripcion_oficina,\par
+institucion_b.descripcion_institucion,oficinas_d.descripcion_oficina,institucion_b.siglas_institucion,oficinas_c.siglas_oficina,\par
+oficinas_b.siglas_oficina,movimientos_doc.fecha_movimiento,movimientos_doc.hora_movimiento,movimientos_doc.estado_movimiento,\par
+motivo.descripcion_motivo,documento.asunto_documento,documento.folios_documento,documento.observa_documento,\par
+serie_documental.descripcion_serie,expediente.descripcion_expediente,documento.fecha_registro,documento.hora_registro,\par
+documento.ultima_modificacion,movimientos_doc.codigo_inicia,movimientos_doc.secuencia_movimiento,doc_interno_origen.codigo_oficina,\par
+movimientos_doc.ultimo_usuario,personal_a.nombre_personal,personal_b.nombre_personal,personal_c.nombre_personal,\par
+personal_d.nombre_personal,contactos_a.nombre_contacto,contactos_b.nombre_contacto,tipo_documento.es_multiple,\par
+movimientos_doc.doc_deriva,movimientos_doc.observa_movimiento,movimientos_doc.codigo_motivo,'N',doc_interno_destino.codigo_oficina,\par
+doc_entrada.destino_documento,movimientos_doc.abogadesignado,movimientos_doc.flag_atenabogado\par
+from tramite.doc_salida_destino doc_salida_destino left outer join tramite.institucion institucion_a\par
+on doc_salida_destino.codigo_institucion = institucion_a.codigo_institucion,\par
+tramite.documento documento left outer join tramite.doc_interno_destino doc_interno_destino on documento.codigo_documento = doc_interno_destino.codigo_documento,\par
+tramite.documento documento_a left outer join tramite.doc_interno_origen doc_interno_origen on documento_a.codigo_documento = doc_interno_origen.codigo_documento,\par
+tramite.doc_interno_destino doc_interno_destino_a left outer join tramite.oficinas oficinas_a on doc_interno_destino_a.codigo_oficina= oficinas_a.codigo_oficina and doc_interno_destino_a.codigo_fondo = oficinas_a.codigo_fondo,\par
+tramite.doc_interno_origen doc_interno_origen_a left outer join tramite.oficinas oficinas_b on doc_interno_origen_a.codigo_fondo= oficinas_b.codigo_fondo and \par
+doc_interno_origen_a.codigo_oficina = oficinas_b.codigo_oficina,\par
+tramite.doc_entrada doc_entrada left outer join tramite.institucion institucion_b on doc_entrada.origen_documento= institucion_b.codigo_institucion,tramite.doc_entrada doc_entrada_a left outer join tramite.oficinas\par
+oficinas_d on doc_entrada_a.destino_documento = oficinas_d.codigo_oficina\par
+and doc_entrada_a.fondo_destino = oficinas_d.codigo_fondo,\par
+tramite.doc_interno_origen doc_interno_origen_b left outer join tramite.personal personal_a on doc_interno_origen_b.codigo_personal= personal_a.codigo_personal,\par
+tramite.doc_interno_destino doc_interno_destino_b left outer join tramite.personal  personal_b on doc_interno_destino_b.codigo_personal = personal_b.codigo_personal,\par
+tramite.doc_salida_origen doc_salida_origen left outer join tramite.personal personal_c on doc_salida_origen.codigo_personal= personal_c.codigo_personal,\par
+tramite.doc_salida_destino doc_salida_destino_a left outer join tramite.contactos contactos_a on doc_salida_destino_a.codigo_contacto = contactos_a.codigo_contacto,tramite.doc_entrada doc_entrada_b\par
+left outer join tramite.contactos contactos_b on doc_entrada_b.remitente = contactos_b.codigo_contacto,tramite.doc_entrada doc_entrada_c\par
+left outer join tramite.personal personal_d on doc_entrada_c.destinatario =personal_d.codigo_personal,\par
+tramite.doc_salida_origen doc_salida_origen_a left outer join tramite.oficinas oficinas_c on doc_salida_origen_a.codigo_oficina = oficinas_c.codigo_oficina\par
+and doc_salida_origen_a.codigo_fondo = oficinas_c.codigo_fondo,tramite.documento documento_b\par
+left outer join tramite.doc_salida_origen doc_salida_origen_b on documento_b.codigo_documento = doc_salida_origen_b.codigo_documento,tramite.documento documento_c\par
+left outer join tramite.doc_salida_destino doc_salida_destino_b on documento_c.codigo_documento = doc_salida_destino_b.codigo_documento,tramite.documento documento_d \par
+left outer join tramite.doc_entrada doc_entrada_d on documento_d.codigo_documento = doc_entrada_d.codigo_documento,tramite.movimientos_doc movimientos_doc\par
+left outer join tramite.motivo motivo on movimientos_doc.codigo_motivo = motivo.codigo_motivo,tramite.movimientos_doc movimientos_doc_a\par
+left outer join tramite.expediente expediente on movimientos_doc_a.codigo_expediente = expediente.codigo_expediente\par
+and movimientos_doc_a.codigo_fondo = expediente.codigo_fondo and movimientos_doc_a.codigo_oficina\par
+= expediente.codigo_oficina and movimientos_doc_a.codigo_serie = expediente.codigo_serie,tramite.movimientos_doc movimientos_doc_b\par
+left outer join tramite.serie_documental serie_documental on movimientos_doc_b.codigo_fondo = serie_documental.codigo_fondo\par
+and movimientos_doc_b.codigo_oficina = serie_documental.codigo_oficina\par
+and movimientos_doc_b.codigo_serie = serie_documental.codigo_serie,tramite.tipo_documento tipo_documento\par
+where(documento.codigo_documento = movimientos_doc.codigo_documento)\par
+and(tipo_documento.codigo_tipo = documento.codigo_tipo) and((movimientos_doc.codigo_oficina\par
+like '0001') and(movimientos_doc.codigo_fondo like '01')) and(movimientos_doc.fecha_movimiento\par
+>= 05/07/2008) and(movimientos_doc.fecha_movimiento <= 06/08/2008)\par
+order by movimientos_doc.fecha_movimiento desc,movimientos_doc.hora_movimiento\par
+desc,movimientos_doc.codigo_documento desc,movimientos_doc.secuencia_movimiento\par
+desc\par
+\pard\cf1\b\f0\par
+}
+ 

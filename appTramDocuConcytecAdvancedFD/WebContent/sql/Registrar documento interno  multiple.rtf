@@ -1,0 +1,229 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang3082{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\f0\fs20 /* \par
+   Nombre : of_registrar_doc_interno()\par
+   Metodo para Registrar un Documento Interno .....\par
+\tab by Joseph Estrada\par
+*/ \par
+string   ls_asunto, ls_folios, ls_observa, l_serie, l_expe, ls_null,destino\par
+string   cod_base, ls_cod_base , new_ano, new_cod, new_ofi, new_sig, ls_solo_ano, no_es\par
+datetime lafecha\par
+date     ls_fecha_documento, lt_null_date\par
+time     lt_null_time\par
+long     reg, rtn, li_ok = 1, secue, li_solo_codigo, docs, li_rowant,indice1\par
+string   g_fondo_actual, s_remite, g_codigo_documento, g_numero_documento, g_oficina_actual, &\par
+\tab\tab    g_tipo_documento, s_ins_destino, s_naturaleza_documento, g_usuario_actual, &\par
+\tab\tab    s_destina, s_ofi_origen, g_codigo_inicia, s_modalidad, s_motivo\par
+integer  li_retorno\tab\tab  \par
+string \tab ls_copia_ofic\par
+int \tab\tab li_longitud, li_pos\par
+iel_log.log(" dentro de : " + "of_registrar_doc_interno()")\par
+\par
+g_fondo_actual = "01"\par
+s_remite="Int"\par
+\par
+SELECT now(*) INTO :lafecha FROM SYS.DUMMY  using itr_trans;\par
+\tab\par
+\tab\tab SELECT max(codigo_documento)\par
+\tab\tab INTO :cod_base\par
+\tab\tab FROM documento\par
+\tab\tab WHERE substr(codigo_documento,4,1) ='O' using itr_trans;\par
+\tab\tab if isnull(cod_base) then\par
+\tab\tab\tab new_ano=string(year(date(lafecha)))\par
+\tab\tab\tab new_ano=left(new_ano,1)+right(new_ano,2)+"O"\tab\tab\par
+\tab\tab\tab new_cod='000001'\par
+\tab\tab else\par
+\tab\tab\tab new_sig='2000'\par
+\tab\tab\tab new_ano=mid(cod_base,2,2)\par
+\tab\tab\tab new_ano=string(long(new_sig) + long(new_ano))\par
+\tab\tab\tab new_ofi=mid(cod_base,4,1)\par
+\tab\tab\tab if long(new_ano) < long(year(date(lafecha))) then\par
+\tab\tab\tab\tab new_ano=string(year(date(lafecha)))\par
+\tab\tab\tab\tab new_ano=left(new_ano,1)+right(new_ano,2)+"O"\par
+\tab\tab\tab\tab new_cod='000001'\par
+\tab\tab\tab else\par
+\tab\tab\tab\tab new_cod=right(cod_base,6)\par
+\tab\tab\tab\tab new_cod=right("000000"+string(long(new_cod) + 1),6)\tab\par
+\tab\tab\tab\tab new_ano=left(new_ano,1)+right(new_ano,2)+"O"\par
+\tab\tab\tab end if\tab\par
+\tab\tab end if\par
+\tab\tab g_codigo_documento=new_ano+new_cod\par
+      iel_log.log(" g_codigo_documento: " + g_codigo_documento)\par
+//----------------------Generando el n\'famero de documento----------------------//\par
+\tab // puede ser de salida .....\par
+\tab g_oficina_actual = as_origen\par
+\tab g_tipo_documento = as_tipo_doc\par
+\tab //\par
+//\tab SELECT ultimo\par
+//\tab INTO :g_numero_documento\par
+//\tab FROM CORRELATIVOS\par
+//\tab WHERE codigo_oficina=:g_oficina_actual and \par
+//\tab       codigo_fondo=:g_fondo_actual     and codigo_tipo=:g_tipo_documento  \par
+//\tab\tab\tab      using itr_trans;\par
+//\par
+//\tab if isnull(g_numero_documento) then\par
+//\tab\tab g_numero_documento='000001'\par
+//\tab else\par
+//\tab\tab g_numero_documento=right("000000"+string(long(g_numero_documento) + 1),6)\par
+//\tab end if\par
+\tab\par
+\tab // em_1.text = g_numero_documento\par
+\tab\tab\par
+ls_fecha_documento = date(as_fecha_doc)\par
+ls_asunto          = as_asunto\par
+ls_observa         = as_observacion\par
+ls_folios          = as_folios\par
+// s_ins_destino      = as_institucion\par
+g_tipo_documento   = as_tipo_doc\par
+g_numero_documento = as_numero_doc\par
+s_naturaleza_documento \tab = "I"\par
+g_usuario_actual   \tab\tab = as_usuario_actual\par
+// s_destina\tab\tab\tab\tab\tab = as_contacto\par
+s_ofi_origen\tab\tab\tab\tab = as_destino\par
+s_remite\tab\tab\tab\tab\tab\tab = as_destinatario\par
+l_serie\tab\tab\tab\tab\tab\tab = as_serie\par
+l_expe\tab\tab\tab\tab\tab\tab = as_expediente\par
+s_motivo \tab\tab\tab\tab\tab = as_asunto\par
+// s_modalidad             = as_modalidad\par
+//iel_log.log("ls_fecha_documento  : " + string(ls_fecha_documento))\par
+//iel_log.log("g_usuario_actual  : " + g_usuario_actual )\par
+//iel_log.log("as_copia  : " + as_copia )\par
+//iel_log.log("s_ofi_origen  : " + s_ofi_origen)\par
+//iel_log.log("ls_asunto  : " + ls_asunto)\par
+//iel_log.log("ls_observa : " + ls_observa)\par
+//iel_log.log("ls_folios  : " + ls_folios)\par
+//iel_log.log("s_ins_destino  : " + s_ins_destino)\par
+//iel_log.log("s_destina  : " + s_destina)\par
+//iel_log.log("g_tipo_documento  : " + g_tipo_documento)\par
+//iel_log.log("g_numero_documento  : " + g_numero_documento)\par
+//iel_log.log("s_modalidad  : " + s_modalidad)\par
+//------------------------Registramos el Documento-------------------------//\par
+\tab\tab // es a\'f1adir ....\par
+\tab\tab Declare sp_inserta procedure for sp_inserta_documento(1,:g_codigo_documento,:g_tipo_documento,\par
+\tab\tab\tab left(:s_naturaleza_documento,1), :g_numero_documento, :ls_fecha_documento, :ls_asunto, :ls_folios,\par
+\tab\tab\tab :ls_observa, now(), now(), now(), :g_usuario_actual,'1')  using itr_trans;\par
+\tab\tab execute sp_inserta;\par
+\tab\tab\par
+\tab\tab if itr_trans.sqlcode < 0 then\par
+\tab        iel_log.log(" mensaje de Base de Datos" + itr_trans.sqlerrtext)\par
+\tab\tab\tab  iel_log.log(" mensaje de Base de Datos" + string(itr_trans.sqlcode))\par
+\tab\tab\tab  its_jag.setabort()\par
+\tab\tab\tab  return -1\par
+\tab\tab end if\par
+//------------------------Registramos la Oficina de Origen y Destino-------------------------//\par
+\tab\tab\tab INSERT INTO "doc_interno_origen"\par
+\tab\tab\tab\tab\tab ( "codigo_documento",   \par
+\tab\tab\tab\tab\tab   "codigo_fondo",   \par
+\tab\tab\tab\tab\tab   "codigo_oficina",\par
+\tab\tab\tab\tab\tab   "codigo_personal")\par
+\tab\tab\tab VALUES ( :g_codigo_documento,   \par
+\tab\tab\tab\tab\tab   '01',   \par
+\tab\tab\tab\tab\tab   :as_origen,\par
+\tab\tab\tab\tab\tab   :as_remitente) using itr_trans;\par
+\par
+\tab\tab\tab if itr_trans.sqlcode < 0 then\par
+\tab\tab\tab\tab  iel_log.log(" mensaje de Base de Datos" + itr_trans.sqlerrtext)\par
+\tab\tab\tab\tab  iel_log.log(" mensaje de Base de Datos" + string(itr_trans.sqlcode))\par
+\tab\tab\tab\tab  its_jag.setabort()\par
+\tab\tab\tab\tab  return -1\par
+\tab\tab\tab end if\par
+         // iel_log.log(" as_destino : " + as_destino)\par
+\tab\tab\tab // iel_log.log(" as_destinatario : " + as_destinatario)\par
+\par
+\tab\tab\tab INSERT INTO "doc_interno_destino"  \par
+\tab\tab\tab\tab\tab ( "codigo_documento",   \par
+\tab\tab\tab\tab\tab   "secuencia_documento",   \par
+\tab\tab\tab\tab\tab   "codigo_personal",\par
+\tab\tab\tab\tab\tab   "codigo_fondo",\par
+\tab\tab\tab\tab\tab   "codigo_oficina")  \par
+\tab\tab\tab VALUES ( :g_codigo_documento,   \par
+\tab\tab\tab\tab\tab   '01',\par
+\tab\tab\tab\tab\tab   :as_destinatario,\par
+\tab\tab\tab\tab\tab   '01',\par
+\tab\tab\tab\tab\tab   :as_destino) using itr_trans;\par
+\tab\tab\tab\tab\par
+\tab\tab\tab if itr_trans.sqlcode < 0 then\par
+\tab\tab\tab\tab  iel_log.log(" mensaje de Base de Datos" + itr_trans.sqlerrtext)\par
+\tab\tab\tab\tab  iel_log.log(" mensaje de Base de Datos" + string(itr_trans.sqlcode))\par
+\tab\tab\tab\tab  its_jag.setabort()\par
+\tab\tab\tab\tab  return -1\par
+\tab\tab\tab end if\par
+\tab\tab\tab\par
+\tab\tab\tab // if g_opcion='A' then\par
+\tab\tab\tab\tab g_codigo_inicia = g_codigo_documento\par
+//\tab\tab\tab end if\par
+\tab\tab\tab\par
+\tab\tab\tab setnull(ls_null)\par
+\tab\tab\tab\tab\par
+\tab\tab\tab SELECT count(codigo_documento)\par
+\tab\tab\tab INTO :secue\par
+\tab\tab\tab FROM movimientos_doc\par
+\tab\tab\tab WHERE codigo_documento = :g_codigo_documento  using itr_trans;\par
+\par
+\tab\tab\tab if itr_trans.sqlcode=0 then\par
+\tab\tab\tab\tab secue = secue + 1\par
+\tab\tab\tab else\par
+\tab\tab\tab\tab secue = 1\par
+\tab\tab\tab end if\par
+\par
+\tab\tab\tab // if s_modalidad = "D" then\par
+\tab\tab\tab    // Salida Directa  ......\par
+\tab\tab\tab\tab lt_null_date=today()\par
+\tab\tab\tab\tab lt_null_time=now()\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab of_registra_movimientos(as_origen, g_codigo_documento,  ls_null,secue, '1',  ls_null,s_motivo,l_serie,l_expe,lt_null_date,lt_null_time, as_usuario_actual, as_codigo_padre)\par
+\tab\tab\tab\tab\par
+\tab\tab\tab\tab of_registra_movimientos(as_destino,g_codigo_documento, ls_null,secue+1,'2',  ls_null,s_motivo,ls_null,ls_null,lt_null_date,lt_null_time, as_usuario_actual, as_codigo_padre)\par
+\tab\tab\tab\tab // of_registra_movimientos(ls_null,g_codigo_documento, s_ins_destino, secue + 1,'2',ls_null,s_motivo,ls_null,ls_null,lt_null_date,lt_null_time, as_usuario_actual)\par
+\tab\tab\tab\tab /*<----------*/\tab\tab\tab\tab\tab   \par
+\tab\tab\tab // else\par
+\tab\tab\tab\tab // Salida por Intermediaci\'f3n del OAD ....ls_null\par
+//\tab\tab\tab\tab lt_null_date=today()\par
+//\tab\tab\tab\tab lt_null_time=now()\tab\tab\tab\tab\par
+//            of_registra_movimientos(s_ofi_origen,g_codigo_documento, ls_null,secue,'1',ls_null,s_motivo,l_serie,l_expe,lt_null_date,lt_null_time, as_usuario_actual)\par
+//\tab\tab\tab\tab of_registra_movimientos('0001',g_codigo_documento, ls_null,secue + 1,'2',ls_null,s_motivo,ls_null,ls_null,lt_null_date,lt_null_time, as_usuario_actual)\par
+//\tab\tab\tab\tab of_registra_movimientos(ls_null,g_codigo_documento,s_ins_destino, secue + 2,'2',ls_null,s_motivo,ls_null,ls_null,lt_null_date,lt_null_time, as_usuario_actual)\par
+//\tab\tab\tab end if\par
+\tab\tab\tab if as_copia = "S" then\par
+\tab\tab\tab\tab iel_log.log("entro ....a copiarr  : " )\par
+\tab\tab\tab\tab // iel_log.log("valor actual secue : "  + string(secue))\par
+\tab\tab\tab\tab // Documento tiene copia ...\par
+\tab\tab\tab\tab lt_null_date=today()\par
+\tab\tab\tab\tab lt_null_time=now()\par
+\tab\tab\tab\tab s_motivo='01'\par
+            if pos(as_otras_oficinas, "|", 1) = 0 then\par
+\tab\tab\tab\tab\tab // no hay barra ....\par
+\tab\tab\tab\tab\tab as_otras_oficinas =  trim(as_otras_oficinas) + "|"\par
+\tab\tab\tab\tab end if\par
+\tab\tab\tab\tab li_longitud = pos(as_otras_oficinas, "|", 1)  - 1\par
+\tab\tab\tab\tab li_pos = 1\par
+\tab\tab\tab\tab //Grabaci\'f3n de Copias a Otras Oficinas \par
+\tab\tab\tab\tab do while( li_pos < len(as_otras_oficinas))\par
+\tab\tab\tab\tab\tab iel_log.log("Iteraci\'f3n secue ... : "  + string(secue))\par
+\tab\tab\tab\tab\tab ls_copia_ofic = mid(as_otras_oficinas, li_pos, li_longitud)\par
+\tab\tab\tab\tab\tab li_pos = li_pos + li_longitud + 1\par
+\tab\tab\tab\tab\tab secue=secue +1\par
+\tab\tab\tab\tab\tab of_registra_movimientos(ls_copia_ofic,g_codigo_documento, ls_null,secue+1,'2',  ls_null,s_motivo,ls_null,ls_null,lt_null_date,lt_null_time, as_usuario_actual, as_codigo_padre)\par
+\tab\tab\tab\tab loop\tab\tab\par
+\tab\tab\tab end if\par
+\par
+//--------------------------aqui se actualiza el correlativo-----------------------//\par
+\par
+//\tab UPDATE CORRELATIVOS\par
+//\tab SET ultimo=:g_numero_documento\par
+//\tab WHERE codigo_oficina=:g_oficina_actual and codigo_fondo=:g_fondo_actual and codigo_tipo=:g_tipo_documento \par
+//\tab  using itr_trans;\par
+//\par
+IF itr_trans.sqlcode >= 0 THEN\par
+   iel_log.log("its_jag.setcomplete()")\par
+\tab its_jag.setcomplete()\par
+\tab li_retorno = 0\par
+ELSE\par
+\tab its_jag.setabort()\par
+\tab iel_log.log("its_jag.setabort()")\par
+\tab iel_log.log(" Error Base de Datos" + itr_trans.sqlerrtext)\par
+\tab iel_log.log(" Error Base de Datos" + string(itr_trans.sqlcode))\par
+\tab li_retorno = -1\par
+END IF\tab\par
+return li_retorno \par
+}
+ 

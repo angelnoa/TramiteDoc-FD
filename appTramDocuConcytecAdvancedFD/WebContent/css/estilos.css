@@ -1,0 +1,372 @@
+.recibirpass {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.recibirpass:hover {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.topmenu {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.topmenu:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+
+.topmenu1 {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.topmenu1:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+
+.menu_desplegable {
+	BACKGROUND-COLOR: #5b5b5b;
+	height: 15px;
+}
+.menuPrincipal {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.menuPrincipal:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.Arial11pxFFFFFFLogo {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12pxFFFFFF {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.diseño {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.diseño_pagina {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #4cae00
+}
+.diseño_pagina_gr {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #777777
+}
+.diseño_pagina_az {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #216ee2
+}
+.diseño_pagina2 {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ff0000
+}
+.web {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #eeeeee; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.web_diseño {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.registro_dominio {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px005DE6LinkAzulMail {
+	FONT-SIZE: 12px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px005DE6LinkAzulMail:hover {
+	FONT-SIZE: 12px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.CajaPunteadaFondoGris {
+	BORDER-RIGHT: #999999 1px dotted; BORDER-TOP: #999999 1px dotted; BORDER-LEFT: #999999 1px dotted; BORDER-BOTTOM: #999999 1px dotted; BACKGROUND-COLOR: #f5f5f5; TEXT-DECORATION: none
+}
+.alojamiento {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.alojamientoLinkNormal {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.alojamientoLinkNormal:hover {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.alojamientoBold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.CajaPunteadaFondoBlanco {
+	BORDER-RIGHT: #999999 1px dotted; BORDER-TOP: #999999 1px dotted; BORDER-LEFT: #999999 1px dotted; BORDER-BOTTOM: #999999 1px dotted; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.Arial14px000000Bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial36px37AD07Precios {
+	FONT-WEIGHT: bold; FONT-SIZE: 36px; COLOR: #37ad07; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px37AD07Precios02 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #37ad07; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10pxLinkInfoContratar {
+	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Arial; BACKGROUND-COLOR: #666666; TEXT-DECORATION: none
+}
+.Arial10pxLinkInfoContratar:hover {
+	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Arial; BACKGROUND-COLOR: #37ad07; TEXT-DECORATION: none
+}
+.Arial12px338D0FLinkVerde {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #338d0f; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.Arial12px338D0FLinkVerde:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #338d0f; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px666666 {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10pxFFFFFF {
+	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.CajaBodePrincipal {
+	BORDER-RIGHT: #999999 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.CajaBodePrincipalconTop {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.Arial10px666666 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #666666; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10px333333 {
+	FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10px333333Bold {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10px338DOFLinkEmail {
+	FONT-SIZE: 10px; COLOR: #338d0f; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10px338DOFLinkEmail:hover {
+	FONT-SIZE: 10px; COLOR: #338d0f; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.Arial12px666666LinkPath {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px666666LinkPath:hover {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.CajaTablaProductos {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.Celda01 {
+	BORDER-RIGHT: #cccccc 1px; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #dddddd; TEXT-DECORATION: none
+}
+.Celda02 {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #f5f5f5; TEXT-DECORATION: none
+}
+.Celda032 {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.Celda03 {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.Celda00 {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Celda01A {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #dddddd; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.Celda02FondoBlanco {
+	BORDER-RIGHT: #cccccc 1px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.Celda0RFondoBlanco {
+	BORDER-RIGHT: #cccccc 1px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.CeldaVerde-IZQ-DER {
+	BORDER-RIGHT: #cccccc 1px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 11px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #74b40e; TEXT-DECORATION: none
+}
+.CeldaVerde-IZQ-BAJ-DER {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px; FONT-WEIGHT: bold; FONT-SIZE: 11px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #74b40e; TEXT-DECORATION: none
+}
+.CeldaVerde-IZQ-TOP {
+	BORDER-RIGHT: #cccccc 1px; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px; FONT-FAMILY: Arial; BACKGROUND-COLOR: #74b40e; TEXT-DECORATION: none
+}
+.CeldaVerde-TOP-DER {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px; FONT-FAMILY: Arial; BACKGROUND-COLOR: #74b40e; TEXT-DECORATION: none
+}
+.Celda00A {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.diseño_web {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px000000:hover {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.alojamientoLinkAzulGris {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.alojamientoLinkAzulGris:hover {
+	FONT-SIZE: 12px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.servidor_virtual {
+	FONT-SIZE: 12px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.MenuLocalActivo {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.alojamiento_web {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+Arial12px005DE6Bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 36px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px000000LinkMenuLocal {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px000000LinkMenuLocal:hover {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.diseñoMenuPrincipal {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 2px; WIDTH: 85px; COLOR: #ffffff; FONT-FAMILY: Arial; HEIGHT: 23px; TEXT-DECORATION: none
+}
+.diseñoMenuPrincipal:hover {
+	FONT-SIZE: 12px; WIDTH: 85px; COLOR: #ffffff; FONT-FAMILY: Arial; HEIGHT: 23px; BACKGROUND-COLOR: #0964eb; TEXT-DECORATION: none
+}
+.Arial12px338D0F {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #338d0f; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px338D0F:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #338d0f; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.Arial20px37AD07 {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #37ad07; LINE-HEIGHT: 22px; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.dominio {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.diseño_web:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.disco_virtual {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.disco_virtual:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.web:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.servidor_virtual:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.alta_buscador {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #005de6; FONT-FAMILY: Arial; LETTER-SPACING: -1px; TEXT-DECORATION: none
+}
+.servidor_dedicado {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial16px333333 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #333333; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial16px666666 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #666666; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial16px000000 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial16pxC86716Bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #c86716; FONT-FAMILY: Arial; LETTER-SPACING: -1px; TEXT-DECORATION: none
+}
+.CeldaTitularAzul {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px; COLOR: #005de6; PADDING-TOP: 8px; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.CeldaTitularAzul2 {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px; COLOR: #005de6; PADDING-TOP: 8px; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.CeldaTitularAzul3 {
+	PADDING-RIGHT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #005de6; PADDING-TOP: 8px; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial20px338D0F {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #338d0f; LINE-HEIGHT: 22px; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10px999999 {
+	FONT-SIZE: 10px; COLOR: #999999; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10pxcccccc {
+	FONT-SIZE: 10px; COLOR: #cccccc; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.minilinks {
+	FONT-SIZE: 9px; COLOR: #cccccc; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px666666Bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial30px338D0F {
+	FONT-WEIGHT: bold; FONT-SIZE: 30px; COLOR: #338d0f; LINE-HEIGHT: 32px; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px999999 {
+	FONT-SIZE: 12px; COLOR: #999999; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial12px999999Bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #999999; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.blanco {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ffffff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial18px338D0F {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #338d0f; LINE-HEIGHT: 18px; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10pxPlantillas {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10pxPlantillas:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #005de6; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+.CeldaTitularAzul-normal {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px; COLOR: #005de6; PADDING-TOP: 8px; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Celda00-sinmargen {
+	BORDER-RIGHT: #cccccc 1px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial10px000000 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial11px000000 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial11px666666 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Arial13px000000 {
+	FONT-WEIGHT: normal; FONT-SIZE: 13px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.Precio-destacado {
+	BORDER-RIGHT: #cccccc 1px; BORDER-TOP: #cccccc 1px; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.enlace-precio {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #4baf01; TEXT-DECORATION: none
+}
+.enlace-precio-mg {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #ff009a; TEXT-DECORATION: none
+}
+.enlace-precio-nj {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #ec6e00; TEXT-DECORATION: none
+}
+.enlace-precio-rj {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #ff0100; TEXT-DECORATION: none
+}
+.pequenio_vr {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #4baf01; BORDER-BOTTOM: #cccccc 1px solid; TEXT-DECORATION: none
+}
+.pequenio_az {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #216ee2; BORDER-BOTTOM: #cccccc 1px solid; TEXT-DECORATION: none
+}
+.pequenio-mg {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ff009a; BORDER-BOTTOM: #cccccc 1px solid; TEXT-DECORATION: none
+}
+.pequenio-nj {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ec6e00; BORDER-BOTTOM: #cccccc 1px solid; TEXT-DECORATION: none
+}
+.pequenio-rj {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ff0100; BORDER-BOTTOM: #cccccc 1px solid; TEXT-DECORATION: none
+}
+.pequenio-rj2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0100; TEXT-DECORATION: none
+}
+.enlace-precio:hover {
+	COLOR: #4baf01; TEXT-DECORATION: underline
+}
+.enlace-precio-oferta {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+.enlace-precio-oferta:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+H1.relevancia {
+	FONT-WEIGHT: bolder; FONT-SIZE: 17px; MARGIN: 0px; COLOR: #0067ff; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+H2.relevancia {
+	FONT-SIZE: 12px; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}

@@ -1,0 +1,323 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #e9e9e9;
+ SCROLLBAR-ARROW-COLOR: #e9e9e9;
+}
+H3 {
+	FONT-SIZE: 13pt;
+ TEXT-TRANSFORM: uppercase;
+ COLOR: #990000;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: center
+}
+H4 {
+	FONT-SIZE: 11pt;
+ COLOR: #006600;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: center
+}
+H5 {
+	FONT-SIZE: 10pt;
+ TEXT-TRANSFORM: uppercase;
+ COLOR: #990000;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: center
+}
+P {
+	FONT-SIZE: 9pt;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: justify
+}
+A:link {
+	COLOR: #0000ff;
+ TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #990000;
+ TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ffffff;
+ TEXT-DECORATION: none
+}
+.texto {
+	FONT-SIZE: 8pt;
+ FONT-FAMILY: Arial
+}
+.cabecera {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	
+	font-weight: bold;
+	
+	HEIGHT: 20px;
+	
+	BORDER-BOTTOM: #000000 1px solid ;
+  BACKGROUND: #BAD0EB;
+}
+.tab {
+	FONT-WEIGHT: bold;
+ FONT-SIZE: 8pt;
+ VERTICAL-ALIGN: middle;
+ TEXT-TRANSFORM: uppercase;
+ COLOR: #ffffff;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: center
+}
+.etiqueta {
+	FONT-WEIGHT: bold;
+ FONT-SIZE: 8pt;
+ VERTICAL-ALIGN: middle;
+ COLOR: #006600;
+ FONT-FAMILY: Arial;
+ BACKGROUND-COLOR: transparent
+}
+.etiquetaDer {
+	FONT-WEIGHT: bold;
+ FONT-SIZE: 8pt;
+ VERTICAL-ALIGN: middle;
+ COLOR: #006600;
+ FONT-FAMILY: Arial;
+ BACKGROUND-COLOR: #c1d3b9;
+ TEXT-ALIGN: right
+}
+.etiquetaIzq {
+	FONT-WEIGHT: bold;
+ FONT-SIZE: 8pt;
+ VERTICAL-ALIGN: middle;
+ COLOR: #006600;
+ FONT-FAMILY: Arial;
+ BACKGROUND-COLOR: #c1d3b9;
+ TEXT-ALIGN: left
+}
+.detalle {
+	FONT-SIZE: 7pt;
+ BACKGROUND: #e0edd3;
+ VERTICAL-ALIGN: middle;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: center
+}
+.menu {
+	FONT-SIZE: 7pt;
+ BACKGROUND: #e0edd3;
+ VERTICAL-ALIGN: middle;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: left
+}
+.detalleIzq {
+	FONT-SIZE: 8pt;
+ BACKGROUND: #e0edd3;
+ VERTICAL-ALIGN: middle;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: left
+}
+.detalle_Lin {
+	FONT-SIZE: 7pt;
+ BACKGROUND: #c1d3b9;
+ VERTICAL-ALIGN: middle;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: center
+}
+.detalleIzq_Lin {
+	FONT-SIZE: 8pt;
+ BACKGROUND: #c1d3b9;
+ VERTICAL-ALIGN: middle;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: left
+}
+.detalleMant {
+	FONT-SIZE: 8pt;
+ VERTICAL-ALIGN: middle;
+ FONT-FAMILY: Arial;
+ TEXT-ALIGN: left
+}
+.btn {
+	BACKGROUND: #c1d3b9;
+ FONT: 10pt Arial
+}
+.textarea {
+	BORDER-RIGHT: #006699 1px solid;
+ BORDER-TOP: #006699 1px solid;
+ FONT-SIZE: 10px;
+ BORDER-LEFT: #006699 1px solid;
+ COLOR: #006699;
+ BORDER-BOTTOM: #006699 1px solid;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.txt {
+	BORDER-RIGHT: #000000 1px solid;
+ BORDER-TOP: #000000 1px solid;
+ FONT-SIZE: 10px;
+ BORDER-LEFT: #000000 1px solid;
+ BORDER-BOTTOM: #000000 1px solid;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.txtarea {
+	BORDER-RIGHT: #006600 1px solid;
+ BORDER-TOP: #006600 1px solid;
+ FONT: 9pt Arial;
+ BORDER-LEFT: #006600 1px solid;
+ BORDER-BOTTOM: #006600 1px solid
+}
+.cmb {
+	BORDER-RIGHT: #006600 1px solid;
+ BORDER-TOP: #006600 1px solid;
+ FONT-SIZE: 8pt;
+ BORDER-LEFT: #006600 1px solid;
+ BORDER-BOTTOM: #006600 1px solid;
+ FONT-FAMILY: Arial
+}
+.datadiv {
+	BORDER-RIGHT: #999999 1px solid;
+ PADDING-RIGHT: 0px;
+ BORDER-TOP: #999999 1px solid;
+ PADDING-LEFT: 0px;
+ FLOAT: left;
+ PADDING-BOTTOM: 0px;
+ MARGIN: 0px;
+ VERTICAL-ALIGN: top;
+ OVERFLOW: auto;
+ BORDER-LEFT: #999999 1px solid;
+ WIDTH: 100%;
+ PADDING-TOP: 0px;
+ BORDER-BOTTOM: #999999 1px solid;
+ HEIGHT: 100%;
+ BACKGROUND-COLOR: #f7f7f7;
+ TEXT-ALIGN: center
+}
+.paginado {
+	FONT-SIZE: 7pt;
+ COLOR: #006600;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.cabeceratable {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	
+	font-weight: bold;
+	BACKGROUND: #e9e9e9;
+	HEIGHT: 30px;
+	
+	BORDER-BOTTOM: #000000 1px solid ;
+}
+.cabeceratable2 {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	
+	font-weight: bold;
+	BACKGROUND: #e9e9e9;
+	HEIGHT: 20px;
+	BORDER-TOP: #000000 1px solid;
+	BORDER-BOTTOM: #000000 1px solid ;
+}
+.cabeceratable1 {
+	
+font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	
+	font-weight: bold;
+	
+	HEIGHT: 20px;
+	BORDER-TOP: #000000 1px solid;
+	BORDER-BOTTOM: #000000 1px solid ;
+}
+.formulario {
+	FONT-SIZE: 10px;
+ COLOR: #00496c;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ HEIGHT: 20px
+}
+.txtdeshabilitado {
+	BORDER-RIGHT: #006699 1px solid;
+ BORDER-TOP: #006699 1px solid;
+ FONT-SIZE: 10px;
+ BACKGROUND: #eeeeee;
+ BORDER-LEFT: #006699 1px solid;
+ COLOR: #006699;
+ BORDER-BOTTOM: #006699 1px solid;
+ FONT-FAMILY: verdana;
+ LETTER-SPACING: -1px
+}
+.boton {
+	BORDER-RIGHT: #005f01 1px solid;
+ BORDER-TOP: #005f01 1px solid;
+ FONT-WEIGHT: bold;
+ FONT-SIZE: 10px;
+ BORDER-LEFT: #005f01 1px solid;
+ COLOR: #ffffff;
+ BORDER-BOTTOM: #005f01 1px solid;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ BACKGROUND-COLOR: #007700
+}
+.codigolink {
+	FONT-WEIGHT: bold;
+ FONT-SIZE: 10px;
+ COLOR: #006600;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.combo {
+	BORDER-RIGHT: #006600 1px solid;
+ BORDER-TOP: #006600 1px solid;
+ FONT-SIZE: 10px;
+ BACKGROUND: #ffffff;
+ BORDER-LEFT: #006600 1px solid;
+ COLOR: #000000;
+ BORDER-BOTTOM: #006600 1px solid;
+ FONT-FAMILY: verdana
+}
+.fondotablepar {
+	BACKGROUND-COLOR: #00699b
+}
+.tablepar {
+	FONT-SIZE: 10px;
+ BACKGROUND: #FFFFF9;
+ VERTICAL-ALIGN: middle;
+ COLOR: #00496c;
+ FONT-FAMILY: Verdana,Arial,Helvetica, sans-serif;
+ TEXT-ALIGN: left
+}
+.tableimpar {
+	FONT-SIZE: 10px;
+ BACKGROUND: #e9e9e9;
+ VERTICAL-ALIGN: middle;
+ COLOR: #00496c;
+ FONT-FAMILY: Verdana,Arial, Helvetica, sans-serif;
+ TEXT-ALIGN: left
+}
+DIV.Lista {
+	BORDER-RIGHT: #999999 1px solid;
+ PADDING-RIGHT: 1px;
+ BORDER-TOP: #999999 1px solid;
+ PADDING-LEFT: 1px;
+ FONT-SIZE: 8pt;
+ VISIBILITY: visible;
+ PADDING-BOTTOM: 1px;
+ BORDER-LEFT: #999999 1px solid;
+ PADDING-TOP: 1px;
+ BORDER-BOTTOM: #999999 1px solid;
+ FONT-FAMILY: Arial;
+ HEIGHT: 195px
+}
+A.linkAdmin:link {
+	FONT-SIZE: 7pt;
+ COLOR: #006600;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ TEXT-DECORATION: none
+}
+A.linkAdmin:visited {
+	FONT-SIZE: 7pt;
+ COLOR: #006600;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ TEXT-DECORATION: none
+}
+A.linkAdmin:active {
+	FONT-SIZE: 7pt;
+ COLOR: #006600;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ TEXT-DECORATION: none
+}
+A.linkAdmin:hover {
+	FONT-SIZE: 7pt;
+ COLOR: #006600;
+ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+ TEXT-DECORATION: none
+}

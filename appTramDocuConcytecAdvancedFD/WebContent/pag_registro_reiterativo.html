@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" href="css/avatec.css" type="text/css" />
+		<link rel="stylesheet" href="css/table.css" type="text/css" />
+		 <LINK href="css/calendar-green.css" rel="stylesheet" type="text/css">
+        <script src="js/funciones.js" type="text/javascript"></script>
+		<script  src="js/prototype-1.4.0.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/scriptaculous.js"></script>
+       
+        <script type="text/javascript" src="js/ajaxtags.js"></script>
+		
+		<script language="JavaScript" src="js/avatec.js"></script>
+		<SCRIPT src="js/calendar.js"   type=text/javascript></SCRIPT>
+		<!-- librería para cargar el lenguaje deseado -->
+		<SCRIPT src="js/calendar-es.js" type=text/javascript></SCRIPT>
+		<!-- librería que declara la función Calendar.setup, que ayuda a generar un calendario en unas pocas líneas de código -->
+		<SCRIPT src="js/calendar-setup.js" type=text/javascript></SCRIPT>
+
+<title>Registro en reiterativo</title>
+</head>
+
+
+<body>
+<FORM action="pag_mantenimiento_reiterativo.jsp">
+<table align="center" cellspacing="0" cellpadding="2" width="100%" border="0">
+							<!--DWLayoutTable-->
+							<tr>
+								<td width="10" height="10" style="height: 10px;">								</td>
+								<td width="156" align="left">								</td>
+								<td width="71">								</td>
+								<td width="300">								</td>
+								<td width="18"></td>
+								<td width="103"></td>
+								<td width="10"></td>
+								<td width="500"></td>
+								<td width="10">								</td>
+							</tr>
+							
+							
+							<tr>
+								<td height="20" style="width: 10px;">&nbsp;								</td>
+								<td style="width: 90px;" class="label" align="left">
+									N&deg; Registro:								</td>
+								<td style="width: 10px;" align="center" class="labelsubtitle">&nbsp;								</td>
+							  <td align="left" valign="middle" style="width: 300px;">
+				                <input	name="codigo_documento"					 />
+				                <a  href="javascript:buscar_persona()"></a> </td>
+								<td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+								<td align="left" valign="middle" class="label"> N&deg; Expediente: </td>
+								<td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+								<td align="left" valign="middle"><input name="codigo_expediente"/></td>
+								<td style="width: 10px;">&nbsp;								</td>
+							</tr>
+							
+							<tr>
+								<td height="20" style="width: 10px;">&nbsp;								</td>
+								<td style="width: 90px;" class="label" align="left">
+									N&deg; Doc.:								</td>
+								<td style="width: 10px;" align="center" class="labelsubtitle">&nbsp;								</td>
+								<td align="left" valign="middle" style="width: 300px;"><html:text property="numero_documento" style="width: 260px;" styleClass="caja" />							  <input	name="numero_documento" /></td>
+								<td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+								<td align="left" valign="middle" class="label">Fecha Derivaci&oacute;n:</td>
+								<td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+								<td align="left" valign="middle">
+						          <input />							    &nbsp; <a href="" id="lanzador"><img  src="img/cal.gif" alt="Fecha (dd/mm/yyyy)" border="0"></a> &nbsp;dd/mm/yyyy </td>
+								<td style="width: 10px;">&nbsp;								</td>
+							</tr>
+							<tr>
+								<td height="20" style="width: 10px;">&nbsp;								</td>
+								<td style="width: 90px;" class="label" align="left">
+									Oficina:								</td>
+								<td style="width: 10px;" align="center" class="labelsubtitle">&nbsp;								</td>
+								<td align="left" valign="middle" style="width: 300px;">
+								  
+
+					              <select id="codigo_oficina" name="codigo_oficina" class="caja12" style="WIDTH: 300px; HEIGHT: 21px">
+						            <OPTION value="0" selected> -- Selecc Uno -- </OPTION>
+					                 </select>							      </td>
+								<td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+								<td align="left" valign="middle" class="label">Personal:</td>
+								<td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+								<td align="left" valign="middle"><select id="personas" name="personas" class="caja12" >
+											<option value="0">:: Personas ::</option>
+										  </select>
+								<td style="width: 10px;">&nbsp;								</td>
+							</tr>
+							<tr>
+							  <td style="width: 10px;">&nbsp;								</td>
+							  <td align="left" class="label" >Acci&oacute;n a realizar:</td>
+							  <td align="center" class="labelsubtitle" style="width: 10px;">&nbsp;								</td>
+							  <td align="left" valign="middle" style="width: 300px;"><select id="codigo_motivo" name="codigo_motivo" class="caja1" style="WIDTH: 250px; HEIGHT: 21px">
+                                    <OPTION value="0" selected> -- Selecc Uno -- </OPTION>
+                                    </select></td>
+							  <td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							  <td rowspan="5" align="left" valign="middle" class="label"><span class="label" style="width: 90px;">Con Copia:
+                                  <input language="JavaScript"  id="chk_copia"  checked="checked" class="caja" onClick="javascript:HabilitaCombo();" type="checkbox" name="chk_copia">
+                              </span></td>
+							  <td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							  <td rowspan="5" align="left" valign="middle"><div id="scroll">
+							    <table>
+  <c:forEach items='${rs_oficina}' var='pa'>
+    <tr>
+      <td><input  class="caja" type="checkbox" name="cbo_copia" value="<c:out value='${pa.codigo_oficina}'/>"></td>
+                      <td class="texto_small">	
+                          <c:out value='${pa.siglas_oficina}'/>
+                          - 
+                          <c:out value='${pa.descripcion_oficina}'/>                         </td>
+                    </tr></c:forEach>
+  </table>
+					          </div></td>
+							  <td style="width: 10px;">&nbsp;</td>
+					    </tr>
+							<tr>
+							  <td style="width: 10px;">&nbsp;</td>
+							  <td align="left" class="label" >Requiere Prioridad:</td>
+								<td align="center" class="labelsubtitle" style="width: 10px;">&nbsp;</td>
+								<td align="left" valign="middle" style="width: 300px;"><table width="100%" border="0">
+                                <tr>
+                                  <td width="6%"><input language="JavaScript" type="checkbox" class="caja" name="cbo_fecharpta" id="cbo_fecharpta" value="checkbox" onClick="javascript:HabilitaText();"></td>
+                                  <td width="24%" class="label">Fecha Requerida</td>
+                                  <td width="70%"><span class="label">
+						        
+                                       <INPUT language="JavaScript" class="caja1" onKeyPress="validarCaracterFecha(this);" id="fecha_rpta"  maxLength="10" size="11" name="fecha_rpta">
+                                   <a href="" id="lanzador1"  style="display:; width: 20;" ><img src="img/cal.gif" alt="Fecha de nacimiento (dd/mm/yyyy)" border="0"/></a> &nbsp;dd/mm/yyyy </td>
+                                </tr>
+                                                              </table></td>
+								<td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+								<td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							  <td style="width: 10px;">&nbsp;								</td>
+							</tr>
+							<tr>
+							  <td height="10" style="width: 10px;">&nbsp;</td>
+							  <td align="left" class="label" style="width: 90px;"><span class="label" style="width: 90px;"> Observaci&oacute;n: </span></td>
+							  <td>&nbsp;</td>
+							  <td align="left" valign="middle" style="width: 300px;">
+							  <textarea style="width: 300px;height: 70px;"  styleClass="caja"></textarea>			  </td>
+							  <td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							  <td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							  <td style="width: 10px;">&nbsp;</td>
+					    </tr>
+							<tr>
+							  <td height="10" style="width: 10px;">&nbsp;</td>
+							  <td align="left" valign="middle" class="label">Doc. de Rpta:</td>
+							  <td>&nbsp;</td>
+							  <td colspan="2" align="left" valign="middle" style="width: 300px;"><input  class="caja1"  id="doc_resp"  maxlength="60" size="40" name="doc_resp"> <input type="button"  id="btnUpload" name="btnUpload"  value="Agregar Archivos" onClick="AgregarArchivos()" alt="Agregar Archivos" style=" width: 120;" styleClass="boton" >
+&nbsp; <c:choose>
+				<c:when test='${operacion ==  "contadjunto" && codigocontador ==  "1"}'>
+			<img src="img/docadjuntos.gif" alt="Documentos Adjuntos">				</c:when>
+				</c:choose>	</td>
+							  <td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							  <td style="width: 10px;">&nbsp;</td>
+					    </tr>
+							<tr>
+							  <td height="20" style="width: 10px;">&nbsp;</td>
+							  <td align="left" valign="middle" class="label">Fecha Rpta.:</td>
+							  <td>&nbsp;</td>
+							  <td align="left" valign="middle" style="width: 300px;"><input language="JavaScript" class="caja1" onKeyPress="validarCaracterFecha(this);" id="fecha_rpta_rq"  maxlength="10" size="11" name="fecha_rpta_rq">
+&nbsp; <a href="" id="lanzador2"  ><img src="img/cal.gif" alt="Fecha de nacimiento (dd/mm/yyyy)" border="0"></a> &nbsp;dd/mm/yyyy</td>
+							  <td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							  <td align="left" valign="middle" class="label"><!--DWLayoutEmptyCell-->&nbsp;</td>
+							  <td style="width: 10px;">&nbsp;</td>
+					    </tr>
+                            
+                       
+							
+							<tr>
+							  <td height="2" colspan="9" align="center"><hr /></td>
+  </tr>
+							<tr>
+								<td height="31" colspan="9" align="center">
+									<table>
+										<tr>
+											<td><input name="btn" type="submit" value="Registrar"  />
+										    <input name="btn2" type="button" onclick="back();" value="Regresar" /></td>
+										</tr>
+									</table>								</td>
+							</tr>
+				    </table>
+					</FORM>
+</body>
+</html>

@@ -1,0 +1,811 @@
+@charset "utf-8";
+/* Estilo para Directorio Nacional
+Creado por: Alex Aragon Calixto
+email: aragonc@blenderperu.org
+*/
+
+/*@font-face{
+font-family:'Bebas Neue';
+src: url('../fonts/BebasNeue.otf')   format('opentype');
+}*/
+@font-face{
+font-family:'Oxygen';
+src: url('../fonts/Oxygen.otf')   format('opentype');
+}
+@font-face{
+font-family:'Oswald';
+src: url('../fonts/Oswald-Regular.otf')   format('opentype');
+}
+ 
+/*General*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;	
+	/*background-image: url(../images/bg_color.png);
+	background-repeat: repeat-x;*/
+	/*background-image: url(../images/back.png);*/
+
+	background-repeat: no-repeat;
+	background-position: center -15px;
+	behavior: url("csshover3.htc");
+}
+ul,h1, h2, h3, h4, h5 {
+	margin: 0px;
+	padding: 0px;
+}
+.clear {
+	clear: both;
+}
+#page{
+	display: block; /* Es necesario mostrarlo como un bloque */
+	position: relative; /* Esto es obligatorio solo cuando sea una división principal */
+	margin: auto;
+	left: 0px;
+	top: 0px;
+	bottom: 0px; /* Si definimos esta opción estará en el centro del navegador (centro de la pantalla) */
+	min-height: 64px; /* La altura es opcional */
+	width: 100%; /* Si esto no se define no se visualizará los resultados en el navegador (Internet Explorer) */
+	text-align: left; /* Estas propiedades, anteriormente definidos ayudarán a centrar el elemento en el navegador */
+	}
+#header{
+	clear:both;
+	display:table;
+	padding-top: 0px;
+	margin-bottom: 10px;
+	height: 85px;
+}
+
+/*Logotipos Header*/
+#logo-uno{
+float:left;
+width:900px;
+}
+#logo-dos{
+float:right;
+}
+.logo-a{
+	background:url(../images/logo_concytec.jpg) no-repeat;
+}
+.logo-a a{
+	display:block;
+	width:553px;
+	height:63px;
+}
+.logo-a a span{
+	display:none;
+}
+.logo-b{
+	background-image: url(../images/logo_concytec_ant.png);
+	background-repeat: no-repeat;
+}
+.logo-b a{
+	display:block;
+	width:79px;
+	height:70px;
+}
+.logo-b a span{
+	display:none;
+}
+/*Menu CSS Java Scripts*/
+
+#menu {
+	font-family:Arial, Helvetica, sans-serif;
+	height:auto;
+	width:1000px;
+	font-size:18px;
+	font-weight: normal;
+	margin: auto;
+}
+#nav {
+	list-style:none;
+	padding-left: 30px;
+}
+#nav li { 
+	float:left; 
+	/*background-image:url(nav_li_bg.png); 
+	background-repeat:no-repeat; 
+	background-position:right;*/
+}
+#nav li a {
+	display:block;
+	padding:7px 10px;
+	text-decoration:none;
+	color:#FFF;
+	font-weight:normal;
+}
+#nav li a:hover {
+	color:#FFFFFF;
+	background-color: #007297;
+}
+/* Submenu */
+#nav ul.submenu {
+	/*border:1px solid #000000;*/
+	/*padding:10px;*/
+	position:absolute;
+	list-style:none;
+	background-color:#0085B0;
+	font-size: 14px;
+}
+#nav ul.submenu li {
+	float:none;
+	background-image:none;
+	/*border-bottom:1px solid #fff;*/
+	width:180px;
+}
+#nav ul.submenu li a{
+	color: #FFF;
+}
+/* Subsubmenu */
+#nav ul.subsubmenu { 
+	border:1px solid #000000; 
+	padding:5px; position:absolute; 
+	list-style:none; 
+	background-color:#333333; 
+	margin-left:150px; 
+	margin-top:-30px;
+}
+#nav ul.subsubmenu li { 
+	float:none; 
+	background-image:none; 
+	border-bottom:1px solid #999999; 
+	min-width:200px;
+}
+/*COLUMNAS DEL CONTENIDO*/
+		
+/*#izq, #der {
+	margin: auto;
+	float: left;
+	width:48%;
+	padding:1%;
+}*/
+
+#der {
+	margin: auto;
+	float: left;
+	width:40%;
+	padding:1%;
+}
+#cent {
+	background-image:url(theme/images/logo-front-background.png) no-repeat;
+	/*background-color: red;*/
+	margin: auto;
+	float: center;
+	width:1000px;
+	
+	margin-top: 100px;
+	margin-bottom: 50px;
+	/*padding:1%;*/	
+}
+
+#izq {
+	margin: auto;
+	float: left;
+	width:55%;
+	padding:1%;
+}
+
+#izq_sec, #der_sec {
+	margin: auto;
+	float: left;
+	padding:1%;
+}
+#izq_sec{
+	width:60%
+	}
+#der_sec{
+	width:35%
+	}
+#contexto {
+  padding-left: 25px;
+}
+
+#contexto-form {
+	float:right;	
+    padding: 20px 20px 20px 20px; 
+}
+
+/*MENSAJE DE AVISO PARA NAVEGADORES*/
+#aviso {
+	font-size: 12px;
+	color: #333;
+	padding: 10px;
+	clear: both;
+	margin-top: 10px;
+	text-align: center;
+}
+#aviso a {
+	text-decoration: none;
+	color: #036;
+}
+#aviso a:hover {
+	text-decoration: underline;
+}
+/*BOTONES DE ATAJO*/
+#botones ul {
+	list-style-type: none;
+	text-align: center;
+	width: 410px;
+	display: block;
+}
+#botones ul li {
+	float: left;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: 50px;
+}
+
+#botones_sec ul {
+	list-style-type: none;
+	text-align: center;
+	display: block;
+}
+#botones_sec ul li {
+	float: left;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: 20px;
+}
+#botones_search {
+	margin: 0px;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 120px;
+}
+#botones_search ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#botones_search ul li {
+	margin-bottom: 10px;
+}
+
+/*Botones*/
+.buscar-btn{
+	background:url(../images/botonbuscar.png) no-repeat;
+}
+.buscar-btn a{
+	display:block;
+	width:135px;
+	height:135px;
+}
+.buscar-btn:hover{
+	background-position:0 -135px
+}
+.buscar-btn a span{
+	display:none;
+}
+.registrar-btn{
+	background:url(../images/botonregistrar.png) no-repeat;
+}
+.registrar-btn a{
+	display:block;
+	width:135px;
+	height:135px;
+}
+.registrar-btn:hover{
+	background-position:0 -135px
+}
+.registrar-btn a span{
+	display:none;
+
+}
+
+.ciencia-btn{
+	background-image: url(../images/botonproduccionciencia.png);
+	background-repeat: no-repeat;
+}
+.ciencia-btn a{
+	display:block;
+	width:135px;
+	height:135px;
+}
+.ciencia-btn:hover{
+	background-position:0 -135px
+}
+.ciencia-btn a span{
+	display:none;
+}
+
+.proyectos-btn{
+	background-image: url(../images/botonproyectos.png);
+	background-repeat: no-repeat;
+}
+.proyectos-btn a{
+	display:block;
+	width:135px;
+	height:135px;
+}
+.proyectos-btn:hover{
+	background-position:0 -135px
+}
+.proyectos-btn a span{
+	display:none;
+}
+
+.tipo_oxygen {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 20px;
+	font-size: 12px;
+	text-align: justify;
+	display: block;
+}
+.titulo-bienvenido {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #51A8B1;
+}
+.link_form {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+.link_form a {
+	color: #FFF;
+	text-decoration: none;
+}
+.link_form a:hover {
+	text-decoration: underline;
+}
+
+/*Botones para formulario login*/
+.boton_verde {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #ffffff;
+	padding: 10px 20px;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	border: none;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,1),
+		inset 0px 0px 2px rgba(255,255,255,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,1),
+		inset 0px 0px 2px rgba(255,255,255,0.7);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,1),
+		inset 0px 0px 2px rgba(255,255,255,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+	background: url(../images/bg_boton.jpg) repeat-x left top;
+	cursor:pointer;
+}
+.texto_ayuda {
+	font-size: 12px;
+	color: #FFF;
+}
+
+.input_zona {
+	width:80%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333;
+	padding: 5px;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	border: 1px solid #CCC;
+	behavior: url(theme/js/PIE.htc);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+	background: url(../images/bg_input.jpg) repeat-x left top;
+}
+#img-cont {
+	text-align: center;
+}
+/*ICONOS REDES SOCIALES*/
+#top-redes {
+	padding: 5px;
+	height: 35px;
+}
+.sociales {
+	list-style-type: none;
+}
+.sociales li {
+	float: left;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: 10px;
+}
+.sociales li a img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+/*PIE DE PAGINA*/
+#footer {
+	background-color: #FFFFFF;
+	/*background-image: url(../images/logo-cabecera-footer-2013.png);*/
+	padding: 10px;
+	text-align: center;
+	font-size: 12px;
+	
+	border-top: 1px solid #E4E5E6;
+	
+}
+#logos {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+#logos img {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#footer p {
+	color: black;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+.vinetas {
+	margin-left: 50px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height: 18px;
+	font-size: 12px;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+.vinetas li {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+.titulosecciones {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-left: 0px;
+	display: block;
+}
+.sandrialevel-uno {
+	padding-left: 20px;
+}
+.sandrialevel-dos {
+	padding-left: 40px;
+}
+.titulo-h2 {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	color: #333;
+	font-size: 22px;
+}
+.titulo-h3 {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	color: #333;
+	margin-top: 5px;
+	padding-top: 5px;
+	font-size: 20px;
+}
+
+/*CSS Fichas de Investigador */
+.titulo_fichas {
+	font-size: 16px;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	display: block;
+	padding: 5px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333;
+	text-transform: uppercase;
+}
+#resumen_inv, #datos_pers, #datos_acade, #idiomas,
+#proyectos_inves, #produccion_cien, #opciones, #avisos{
+	padding: 10px;
+	width:800px;
+	margin-left: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-right: auto;
+	1px solid #EBEBEB
+}
+.items {
+	background-color: #EFEFEF;
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+}
+#datitos tr td {
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCC;
+	border-left-color: #CCC;
+}
+#datitos  {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCC;
+}
+.registro {
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666;
+	padding: 8px;
+}
+.registro a {
+	text-decoration: none;
+	color: #069;
+}
+.registro a:hover {
+	text-decoration: underline;
+}
+.descripcion {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+.actualizacion {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #069;
+	display: block;
+	padding: 5px;
+	margin-top: 5px;
+	background-color: #FFC;
+}
+.titulo_form {
+	color: #FFF;
+}
+.foto {
+	border: 1px solid #E5E5E5;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	padding: 5px;
+}
+.relleno {
+	padding-right: 15px;
+	display: block;
+}
+.nota {
+	padding: 10px;
+	color: #666;
+	font-size: 13px;
+}
+.nota a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+}
+.nota a:hover {
+	text-decoration: underline;
+}
+#form_datos #reporte {
+	text-align: center;
+	padding: 10px;
+}
+.items_der {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: right;
+	color: #333333;
+	background-color: #EFEFEF;
+	padding-right: 10px;
+}
+#libros {
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #DDD;
+}
+#fichas-data {
+	margin: auto;
+	width: 1000px;
+}
+/*Lista de Formularios */
+#lista
+{
+	padding:0;
+	clear: both;
+}
+#lista li
+{
+	display:inline;
+}
+#lista li a
+{
+	font-family:Arial;
+	font-size:12px;
+	text-decoration: none;
+	float:left;
+	padding:8px;
+	color:#000;
+	border-bottom-color:#333;
+	border-bottom-style:solid;
+	font-weight: normal;
+	border-bottom-width: 2px;
+	display: block;
+}
+#lista li a:hover
+{
+	background-color:#333;
+	border-bottom-color:#333;
+	border-bottom-style:solid;
+	margin:auto;
+	color: #FFF;
+	border-bottom-width: 2px;
+}
+#lista li a.active {
+	background-color: #333;
+	color: #FFF;
+	border-bottom-color: #333;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+#opciones-header {
+	text-align: right;
+}
+#opciones-header ul  {
+	list-style-type: none;
+	margin: 0px;
+	display: block;
+	clear: both;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#opciones-header ul li {
+	float: right;
+	font-size: 12px;
+	display: block;
+	padding: 7px;
+}
+#opciones-header ul li a {
+	text-decoration: none;
+	color:#036;
+}
+#opciones-header ul li a:hover {
+	text-decoration: underline;
+}
+#opciones-header li img {
+	float: left;
+	padding-right: 5px;
+	height: 16px;
+	width: 16px;
+}
+/*Estilo de Menus Tabs Interior*/
+/*- Menu Tabs--------------------------- */
+
+
+    #tabs {
+	float:left;
+	width:1000px;
+	font-size:12px;
+	line-height:normal;
+	font-weight: bold;
+	font-family: Tahoma, Geneva, sans-serif;
+      }
+    #tabs ul {
+	margin:0;
+	list-style:none;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+      }
+    #tabs li {
+      display:inline;
+      margin:0;
+      padding:0;
+	  /*width:110px;*/
+      }
+    #tabs a {
+	float:left;
+	margin:0;
+	text-decoration:none;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 4px;
+	background-image: url(../images/tableft_3.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+      }
+    #tabs a span {
+	float:left;
+	display:block;
+	color:#003366;
+	/*height: 30px;*/
+	padding-top: 4px;
+	padding-right: 25px;
+	padding-bottom: 4px;
+	padding-left: 20px;
+	background-image: url(../images/tabright_3.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabs a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabs a:hover span {
+	color:#FFF;
+      }
+    #tabs a:hover {
+      background-position:0% -42px;
+      }
+    #tabs a:hover span {
+      background-position:100% -42px;
+      }
+
+        #tabs #current a {
+	background-position:0% -42px;
+        }
+        #tabs #current a span {
+	background-position:100% -42px;
+	color: #FFF;
+        }
+	.ui-datepicker, .ui-state-default, .ui-state-hover, .ui-state-active{    
+	font-size:11px;
+	}
+
+        
+.errorcito {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #F00;
+	font-weight: bold;
+}
+#botones_sec {
+  padding-top: 20px;
+}
+.ui-datepicker-trigger {
+  float: left;
+  padding-right: 5px;
+  cursor:pointer;
+}
+.item_buscar {
+	cursor: pointer;
+	padding-left: 3px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.justificar {
+	text-align: justify;
+}
+.titulo_fichas_dos {
+	font-size: 16px;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	display: block;
+	padding: 5px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+	text-transform: uppercase;
+	background-color: #DFDFDF;
+}

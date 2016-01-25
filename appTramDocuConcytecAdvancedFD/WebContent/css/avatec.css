@@ -1,0 +1,411 @@
+/* CSS Document */
+
+html,table,table tr,table tr td,font,b,strong,input {
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.labelheader {
+	color: #F4F1FF;
+	font-weight: bold;
+}
+
+.labelheader1 {
+	color: #F4F1FF;
+	font-weight: normal;
+}
+
+.backgroundheader {
+	background: #7C9ECA;
+}
+
+.TitleScreen {
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	/* background-color : #E1E1E1; */
+	background-color: white;
+	color: #161E5F;
+}
+
+.TitleScreen1 {
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	/* background-color : #E1E1E1; */
+	background-color: white;
+	color: #161E5F;
+	BORDER-BOTTOM: silver 1px solid;
+	BORDER-LEFT: silver 1px solid;
+	BORDER-RIGHT: silver 1px solid;
+	BORDER-TOP: silver 1px solid;
+}
+
+.TitleScreen2 {
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	/* background-color : #E1E1E1; */
+	background-color: white;
+	color: #161E5F;
+	BORDER-BOTTOM: silver 1px solid;
+	BORDER-LEFT: silver 1px solid;
+	BORDER-RIGHT: silver 1px solid;
+	BORDER-TOP: silver 1px solid;
+}
+
+
+.groupcell {
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #E8ECF8;
+}
+
+.groupcell2 {
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #EEEEEE;
+}
+
+.groupcell3 {
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #EEEEEE;
+}
+
+
+.groupfondo {
+
+	background-color: #E8ECF8;
+}
+
+.label {
+	color: #336699;
+	FONT-SIZE: 8pt;
+	font-weight: normal;
+}
+
+.label1 {
+	color: #336699;
+	FONT-SIZE: 12pt;
+	font-weight: bold;
+}
+
+.labelrounded {
+	font-family: 'daxcompact-mediumregular', Helvetica, Arial, sans-serif, Verdana;
+	FONT-SIZE: 14pt;
+	font-weight: bolder;
+	color: #336699;
+	
+	float: left; 
+	margin-right:10px; 
+	text-align: right; 
+	line-height: 25px; 
+	padding: 5px; 
+}
+
+.label2 {
+	color: #000000;
+	FONT-SIZE: 9pt;
+	font-weight: bold;
+}
+.label3{
+	color: #336699;
+	FONT-SIZE: 10pt;
+	font-weight: bold;
+}
+
+.label4 {
+	color: #336699;
+	FONT-SIZE: 7pt;
+	font-weight: bold;
+}
+
+.labelblack {
+	color: black;
+	font-weight: bold;
+}
+
+.caja {
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 10pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	BORDER-BOTTOM: silver 1px solid;
+	BORDER-LEFT: silver 1px solid;
+	BORDER-RIGHT: silver 1px solid;
+	BORDER-TOP: silver 1px solid;
+	TEXT-DECORATION: none;
+}
+
+.cajaCap {
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 8pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	BORDER-BOTTOM: silver 1px solid;
+	BORDER-LEFT: silver 1px solid;
+	BORDER-RIGHT: silver 1px solid;
+	BORDER-TOP: silver 1px solid;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+
+.caja1 {
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+}
+
+.caja2 {
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 7pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+}
+.caja3 {
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 7pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+	color: #0000FF;
+	
+}
+
+.caja4 {
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 6pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+}
+.caja5{
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 6pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+	color: #FF0000;
+}
+.caja6{
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 6pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+	color: #00CC66;
+}
+
+.caja7 {
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 8pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+}
+
+.caja9 {
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 7pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+}
+
+.caja10 {
+	COLOR: #FF0000;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 7pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+}
+.caja11 {
+	COLOR: #00CC66;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 7pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+}
+
+.caja12 {
+	COLOR: midnightblue;
+	FONT-FAMILY: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 8pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: none;
+}
+
+
+A.caja7{
+	
+	FONT-FAMILY: Verdana,Arial, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 8pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: underline;
+	color: #0000FF;
+}
+A.caja7:hover{
+	
+	FONT-FAMILY: Verdana,Arial, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 8pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: underline;
+	color: #0000FF;
+}
+
+.caja8{
+	
+	FONT-FAMILY: Verdana,Arial, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 7pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: underline;
+	color: #0000FF;
+}
+
+A.caja8{
+	
+	FONT-FAMILY: Verdana,Arial, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 7pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: underline;
+	color: #0000FF;
+}
+A.caja8:hover{
+	
+	FONT-FAMILY: Verdana,Arial, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 7pt;
+	FONT-STYLE: normal;
+	FONT-VARIANT: normal;
+	TEXT-DECORATION: underline;
+	color: #999999;
+}
+
+.tablaBackgray {
+	background-color: #E4E4E4;
+	background-repeat: repeat;
+	cursor: default;
+	border-top-style: dotted;
+	border-right-style: dotted;
+	border-bottom-style: dotted;
+	border-left-style: dotted;
+
+}
+
+
+.tablaGrayBorde {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #E7E6E2;
+	padding: 3px;
+	clip: rect(auto, auto, auto, 10px);
+	color: #000000;
+	border: 0.5px solid #666666;
+}
+
+.tablaBorde {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	border: thin solid #EAEAEA;
+}
+
+.tablaBordeGray {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	border: thin dashed #C2C0C2;
+}
+
+
+.txtCelda {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.celdaCap {
+	font: normal;
+	font-family: arial;
+	font-size: 11px;
+	text-transform: capitalize;
+}
+
+.celdaMay {
+	font: normal;
+	font-family: arial;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.celdaMin {
+	font: normal;
+	font-family: arial;
+	font-size: 11px;
+	text-transform: lowercase;
+}
+
+.boton {
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+	color: #003366;
+	border: 1px #666666 solid;
+	background-color: #f2f2f2;
+	font-weight: bold;
+	height: 21px;
+	padding: 1px;
+}
+
+.textomensaje14bold {
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.textomensaje10bold {
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 10px;
+}
+.error {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	text-align: left;
+	font-weight: normal;
+	color: red;			
+}

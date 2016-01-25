@@ -1,0 +1,96 @@
+.BKNR_TextBox {
+	BORDER-RIGHT: #738c94 1px solid; BORDER-TOP: #738c94 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #738c94 1px solid; COLOR: #144eac; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: Verdana, Arial; HEIGHT: 16px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.BKNR_ListBox {
+	FONT-SIZE: 8pt; COLOR: #144eac; FONT-FAMILY: Verdana, Arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left; align: center
+}
+.BKNR_TitleText {
+	FONT-SIZE: 9pt; VERTICAL-ALIGN: middle; COLOR: #144eac; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+.BKNR_Text {
+	FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; COLOR: #144eac; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+.BKNR_Line {
+	HEIGHT: 1px; BACKGROUND-COLOR: #c00000
+}
+.BKNR_picker {
+	BORDER-RIGHT: #738c94 1px solid; BORDER-TOP: #738c94 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #738c94 1px solid; COLOR: #144eac; TEXT-INDENT: 1px; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: verdana, arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.BKNR_calendar_button {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; CURSOR: default; BORDER-BOTTOM: medium none
+}
+.BKNR_calendar TD {
+	FONT-SIZE: 11px
+}
+.BKNR_Title {
+	FONT-WEIGHT: bold; BACKGROUND-IMAGE: url(/bkin_webui_client/img/HeaderBG.gif); BACKGROUND-COLOR: #dbe7eb
+}
+.BKNR_day {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; WIDTH: 25px; CURSOR: default; BORDER-BOTTOM: #ffffff 1px solid; TEXT-ALIGN: center
+}
+.BKNR_dayhover {
+	BORDER-RIGHT: #c00000 1px solid; BORDER-TOP: #c00000 1px solid; BORDER-LEFT: #c00000 1px solid; WIDTH: 25px; CURSOR: default; COLOR: #c00000; BORDER-BOTTOM: #c00000 1px solid; TEXT-ALIGN: center; TEXT-DECORATION: underline
+}
+.BKNR_dayheader {
+	BORDER-RIGHT: white 1px solid; BORDER-TOP: white 1px solid; FONT-WEIGHT: bold; BORDER-LEFT: white 1px solid; WIDTH: 25px; COLOR: #c00000; BORDER-BOTTOM: white 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+.BKNR_othermonthday {
+	COLOR: #83adbb
+}
+.BKNR_selectedday {
+	BORDER-RIGHT: #c00000 1px solid; BORDER-TOP: #c00000 1px solid; FONT-WEIGHT: bold; BORDER-LEFT: #c00000 1px solid; WIDTH: 25px; COLOR: #000000; BORDER-BOTTOM: #c00000 1px solid; BACKGROUND-COLOR: #dbe7eb
+}
+.BKNR_calendar {
+	BORDER-RIGHT: #738c94 1px solid; BORDER-TOP: #738c94 1px solid; BORDER-LEFT: #738c94 1px solid; CURSOR: default; BORDER-BOTTOM: #738c94 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #ffffff
+}
+.BKNR_month {
+	MARGIN: 0px 5px 5px; BACKGROUND-COLOR: #ffffff
+}
+.BKNR_nextprev {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; CURSOR: default; PADDING-TOP: 0px; HEIGHT: 25px
+}
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Verdana
+}
+TD {
+	FONT-FAMILY: Verdana
+}
+.BKNTMG {
+	PADDING-RIGHT: 2px; BACKGROUND-POSITION: left center; PADDING-LEFT: 2px; FONT-SIZE: 11px; CURSOR: pointer; COLOR: #c00000; FONT-FAMILY: Verdana; HEIGHT: 18px
+}
+.BKNTMGH {
+	PADDING-RIGHT: 11px; PADDING-LEFT: 11px; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(/bkin_webui_client/img/bg_menu_hover.gif); CURSOR: pointer; COLOR: #c00000; BACKGROUND-REPEAT: repeat; FONT-FAMILY: Verdana; HEIGHT: 18px
+}
+.BKNTMGD {
+	FONT-SIZE: 11px; CURSOR: default; COLOR: #c00000; FONT-FAMILY: Verdana; HEIGHT: 18px
+}
+.BKNTMGS {
+	PADDING-RIGHT: 11px; BACKGROUND-POSITION: left center; PADDING-LEFT: 11px; FONT-SIZE: 11px; WIDTH: 100%; CURSOR: default; COLOR: #c00000; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 18px; BACKGROUND-COLOR: transparent
+}
+.BKNTMI {
+	PADDING-RIGHT: 11px; PADDING-LEFT: 11px; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(/bkin_webui_client/img/bg_menu.gif); WIDTH: 100%; CURSOR: pointer; COLOR: #093864; FONT-FAMILY: Verdana; HEIGHT: 18px; BACKGROUND-COLOR: #dee7ef
+}
+.BKNTMIH {
+	PADDING-RIGHT: 11px; PADDING-LEFT: 11px; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(/bkin_webui_client/img/bg_menu_hover.gif); WIDTH: 100%; CURSOR: pointer; COLOR: #000000; BACKGROUND-REPEAT: repeat; FONT-FAMILY: Verdana; HEIGHT: 18px; BACKGROUND-COLOR: #c6ced6
+}
+.BKNTMID {
+	PADDING-RIGHT: 11px; PADDING-LEFT: 11px; FONT-SIZE: 11px; BORDER-LEFT: #093864 1px solid; CURSOR: pointer; COLOR: #c00000; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #dee7ef
+}
+.BKNTML {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana; TEXT-DECORATION: none
+}
+.BKNTML:hover {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana; TEXT-DECORATION: none
+}
+.BKNTMLU {
+	FONT-SIZE: 12px; COLOR: #083963; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.BKNTMLU:hover {
+	FONT-SIZE: 12px; COLOR: #c00000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.BKNTMTBS {
+	BORDER-RIGHT: #46617a 1px solid; BORDER-TOP: #46617a 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #46617a 1px solid; COLOR: #084284; TEXT-INDENT: 1px; BORDER-BOTTOM: #46617a 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 17px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+.BKNTMIMB {
+	WIDTH: 100%; HEIGHT: 1px
+}

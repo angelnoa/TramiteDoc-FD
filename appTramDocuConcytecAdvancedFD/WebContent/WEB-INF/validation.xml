@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+<!--
+     This is a minimal Validator form file with a couple of examples.
+-->
+
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+
+    </global>
+
+    <formset>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+        </form>
+        
+        
+        <form name="FFormDocumentoInterno">    
+        	<!-- <field
+                property="file"  depends="required,mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/> 
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w ]*))+\.(JPG)$</var-value>
+                    </var>
+            </field> -->
+                    
+            <!-- <field
+                property="descripcion"
+                depends="required">
+                    <arg key="errors.required"/>
+            </field> -->
+            <field
+                property="asunto"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field>
+            <field
+                property="abreviatura_grado_profesion"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field>
+          <!--   <field
+                property="dirigido_a"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field> 
+            
+            <field
+                property="nombre_archivo"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field> 
+            
+            <field
+                property="codigo_tipo_documento_interno"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9]*$</var-value>
+                    </var>            
+            </field>
+            -->
+             <field
+                property="codigo_estado_documento"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9]*$</var-value>
+                    </var>            
+            </field>          
+            
+            <field
+                property="firmado_por"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field>
+            
+            <field
+                property="codigo_oficina"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9][0-9]*$</var-value>
+                    </var>            
+            </field> 
+            
+             <!-- 
+             <field
+                property="personas"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9][0-9]*$</var-value>
+                    </var>            
+            </field> 
+            -->
+           
+        </form>
+        
+        <form name="FFormDocumentoInternoEspecialC">            
+            <field
+                property="descripcion"
+                depends="required">
+                    <arg key="errors.required"/>
+            </field>
+              <field
+                property="abreviatura_grado_profesion"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field>
+            <field
+                property="asunto"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field>
+            <!-- 
+           <field
+                property="dirigido_a"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field> 
+            
+            <field
+                property="nombre_archivo"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field> 
+            
+            <field
+                property="codigo_tipo_documento_interno"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9]*$</var-value>
+                    </var>            
+            </field>
+            -->
+            
+             <field
+                property="codigo_tipo_requerimiento"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9]*$</var-value>
+                    </var>            
+            </field>          
+            
+            <field
+                property="codigo_estado_documento"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9]*$</var-value>
+                    </var>            
+            </field>
+                        
+            <field
+                property="codigo_oficina"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9][0-9]*$</var-value>
+                    </var>            
+            </field> 
+               <!-- 
+             <field
+                property="firmado_por"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field>
+            
+             <field
+                property="personas"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9][0-9]*$</var-value>
+                    </var>            
+            </field> 
+            -->
+           
+        </form>
+        
+         <form name="FFormDocumentoInternoEspecialT">            
+            <field
+                property="finalidad"
+                depends="required">
+                    <arg key="errors.required"/>
+            </field>
+             
+            <field
+                property="objetivo"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field>
+            <!-- 
+           <field
+                property="dirigido_a"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field> 
+            
+            <field
+                property="nombre_archivo"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field> 
+            
+            <field
+                property="codigo_tipo_documento_interno"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9]*$</var-value>
+                    </var>            
+            </field>
+            -->
+             <field
+                property="codigo_estado_documento"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9]*$</var-value>
+                    </var>            
+            </field>          
+                                
+            <field
+                property="codigo_oficina"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9][0-9]*$</var-value>
+                    </var>            
+            </field> 
+               <!-- 
+             <field
+                property="firmado_por"
+                depends="required">
+                    <arg key="errors.required"/>                    
+            </field>
+            
+             <field
+                property="personas"
+                depends="mask">
+                    <arg key="errors.required"/>
+                    <msg name="mask" key="error.tramite.elegir.combo"/>                                                
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[1-9][0-9]*$</var-value>
+                    </var>            
+            </field> 
+            -->
+           
+        </form>
+
+    </formset>
+
+    <!-- An example formset for another locale -->
+    <formset language="fr">
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^[0-9a-zA-Z]*$</constant-value>
+        </constant>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+        </form>
+
+   </formset>
+
+</form-validation>

@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources>
+  		<data-source type="org.apache.commons.dbcp.BasicDataSource" id="principal" key="principal">
+			<set-property property="driverClassName" value="org.postgresql.Driver" />			
+		
+		<!--PRODUCCION NUEVO  
+			<set-property property="url" value="jdbc:postgresql://192.168.5.153:5432/concytec" />
+			<set-property property="username" value="usrtram" />
+			<set-property property="password" value="utramdocu" />		
+		-->
+		<!--PRODUCCION
+			<set-property property="url" value="jdbc:postgresql://192.168.5.224:5432/concytec" />
+			<set-property property="username" value="usrtram" />
+			<set-property property="password" value="utramdocu" />		
+		 -->
+		 
+		<!--DESARROLLO	 -->
+			<set-property property="url" value="jdbc:postgresql://192.168.5.175:5432/concytec" />
+			<set-property property="username" value="usrtram" />
+			<set-property property="password" value="usrtram" />		
+		
+			
+		<!--DESARROLLO SERV LOCAL --> 
+		 	<!--     
+		 	<set-property property="url" value="jdbc:postgresql://localhost:5432/concytec" />
+			<set-property property="username" value="postgres" />
+			<set-property property="password" value="root" />			 
+	 		-->
+	 		
+			<set-property property="maxActive" value="-1" />
+			<set-property property="maxWait" value="5000" />
+			<set-property property="defaultAutoCommit" value="false" />
+			<set-property property="defaultReadOnly" value="false" />
+		</data-source>
+	</data-sources>
+
+  
+  	<form-beans> 
+  	
+		<!-- *************************************************** -->
+		<!-- ************ FORMS PARA SISTEMA DE TRAMITE DOCUMENTARIO WEB CONCYTEC *********** -->
+		<!-- *************************************************** -->
+  	
+  	
+  	    <form-bean name="FFormUploadArchivo" type="tramitedoc.concytec.form.FFormUploadArchivo"></form-bean>
+  		<form-bean name="FFormReiterativoMantenimiento" type="tramitedoc.concytec.form.FFormReiterativoMantenimiento"></form-bean>
+  	    <form-bean name="FFormReiterativoRegistro" type="tramitedoc.concytec.form.FFormReiterativoRegistro"></form-bean>
+  		<form-bean name="FFormReiterativo" type="tramitedoc.concytec.form.FFormReiterativo"></form-bean>
+  	    <form-bean name="FFormAdmUsuario" type="tramitedoc.concytec.form.FFormAdmUsuario"></form-bean>
+	 	<form-bean name="FFormLogin" type="tramitedoc.concytec.form.FFormLogin"/>
+		<form-bean name="FFormSeleccion" type="tramitedoc.concytec.form.FFormSeleccion"/>
+		<form-bean name="FFormMantProcedencia" type="tramitedoc.concytec.form.FFormMantProcedencia"/>
+		<form-bean name="FFormMantDocumento" type="tramitedoc.concytec.form.FFormMantDocumento"/>
+		<form-bean name="FFormMantEntregarRecibir" type="tramitedoc.concytec.form.FFormMantEntregarRecibir"/>
+		<form-bean name="FFormMantDocumentosDerivados" type="tramitedoc.concytec.form.FFormMantDocumentosDerivados"/>
+		<form-bean name="FFormMantDocumentosArchivar" type="tramitedoc.concytec.form.FFormMantDocumentosArchivar"/>
+		<form-bean name="FFormMantUsuario" type="tramitedoc.concytec.admin.form.FFormMantUsuario"/>
+		<form-bean name="FFormMantUsuariosOficinas" type="tramitedoc.concytec.admin.form.FFormMantUsuariosOficinas"/>
+		<form-bean name="FFormMantOficinas" type="tramitedoc.concytec.admin.form.FFormMantOficinas"/>
+		<form-bean name="FFormMantPersonal" type="tramitedoc.concytec.admin.form.FFormMantPersonal"/>
+		<form-bean name="FFormMantConexion" type="tramitedoc.concytec.admin.form.FFormMantConexion"/>
+		<form-bean name="FFormMantDocumentoA" type="tramitedoc.concytec.admin.form.FFormMantDocumento"/>
+		<form-bean name="FFormMantCargo" type="tramitedoc.concytec.admin.form.FFormMantCargo"/>
+		<form-bean name="FFormMantTipoDocumento" type="tramitedoc.concytec.admin.form.FFormMantTipoDocumento"/>
+		<form-bean name="FFormMantSolicitud" type="tramitedoc.concytec.admin.form.FFormMantSolicitud"/>
+		<form-bean name="FFormMantUsuarioClave" type="tramitedoc.concytec.form.FFormMantUsuarioClave"/>
+		<form-bean name="FFormMantRecepcion" type="tramitedoc.concytec.form.FFormMantRecepcion"/>
+		<form-bean name="FFormMantDerivar" type="tramitedoc.concytec.form.FFormMantDerivar"/>
+		<form-bean name="FFormMantSeguimiento" type="tramitedoc.concytec.form.FFormMantSeguimiento"/>
+		<form-bean name="FFormMantArchivar" type="tramitedoc.concytec.form.FFormMantArchivar"/>
+		<form-bean name="FFormMantAnular" type="tramitedoc.concytec.form.FFormMantAnular"/>
+		<form-bean name="FFormMantModificar" type="tramitedoc.concytec.form.FFormMantModificar"/>
+		<form-bean name="FFormMantPreliquidar" type="tramitedoc.concytec.form.FFormMantPreliquidar"/>
+		<form-bean name="FFormMantLiquidar" type="tramitedoc.concytec.form.FFormMantLiquidar"/>
+		<form-bean name="FFormMantCerrar" type="tramitedoc.concytec.form.FFormMantCerrar"/>
+		<form-bean name="FFormMantPrecerrar" type="tramitedoc.concytec.form.FFormMantPrecerrar"/>	
+		<form-bean name="FFormDocumentoInterno" type="tramitedoc.concytec.form.FFormDocumentoInterno"/>
+		<form-bean name="FFormDocumentoInternoEspecialC" type="tramitedoc.concytec.form.FFormDocumentoInternoEspecialC"/>	
+		<form-bean name="FFormDocumentoInternoEspecialT" type="tramitedoc.concytec.form.FFormDocumentoInternoEspecialT"/>
+		<form-bean name="FFormCargaArchivo" type="tramitedoc.concytec.admin.form.FFormCargaArchivo" />
+		<form-bean name="FFormBusquedaDocumentoInterno" type="tramitedoc.concytec.form.FFormBusquedaDocumentoInterno" />
+		<form-bean name="FFormMantSeguimientoDocumentoInterno" type="tramitedoc.concytec.form.FFormMantSeguimientoDocumentoInterno"/>
+	</form-beans>
+	
+	<global-forwards >
+	
+            
+	</global-forwards>
+
+	<!-- *************************************************** -->
+  	<!-- ************ ACTIONS PARA SISTEMA DE TRAMITE DOCUMENTARIO WEB CONCYTEC *********** -->
+  	<!-- *************************************************** -->
+	<action-mappings>
+	
+	<action path="/LoginGoogle" type="tramitedoc.concytec.action.AActionLogin"
+		scope="request">
+		<forward name="error" path="/errorGoogleLogin.jsp" />
+		<forward name="usuario" path="/pag_mesa_partes.jsp" />
+		<forward name="administrador" path="/pag_principal.jsp" />
+		<forward name="expiracion" path="/pag_expiracion.jsp" />
+		<forward name="switchUsuario" path="/switchUsuario.jsp"/>
+	</action>  
+	
+	<action
+            path="/MostrarFormularioCrearcionDocumentoInterno" 
+            type="tramitedoc.concytec.action.AActionSetupCreacionDocumentoInterno"  
+             name="FFormDocumentoInterno"   
+             validate="false"         
+            scope="session"
+            >
+         <forward name="expiracion" path="/pag_expiracion.jsp" />
+         <forward name="error" path="/pg_error.jsp" />
+         <forward name ="exito" path="/pag_crear_documento_interno.jsp" ></forward>
+         
+         <forward name ="exito_bandeja_firma" path="/pag_bandeja_firmar_documento_interno.jsp" ></forward>
+         
+      </action>
+      
+      <action
+            path="/FormularioBusquedaDocumentoInterno" 
+            type="tramitedoc.concytec.action.AActionBusquedaDocumentoInterno"  
+             name="FFormBusquedaDocumentoInterno"   
+             validate="false"         
+            scope="session"
+            >
+         <forward name="expiracion" path="/pag_expiracion.jsp" />
+         <forward name="error" path="/pg_error.jsp" />
+         <forward name ="exito" path="/pag_bandeja_firmar_documento_interno.jsp" ></forward>
+         
+         <forward name="proyectos" path="/pagina_bandeja_documentos_internos_proyectos_creados.jsp" />
+         <forward name="vistobueno" path="/pagina_bandeja_documentos_internos_proyectos_recibidos.jsp" />
+         <forward name="firma" path="/pagina_bandeja_documentos_internos_proyectos_recibidos.jsp" />
+      </action>
+      
+      <action
+            path="/FormularioBusquedaDocumentoInternoEC" 
+            type="tramitedoc.concytec.action.AActionBusquedaDocumentoInternoEspecialC"  
+             name="FFormBusquedaDocumentoInterno"   
+             validate="false"         
+            scope="session"
+            >
+         <forward name="expiracion" path="/pag_expiracion.jsp" />
+         <forward name="error" path="/pg_error.jsp" />
+         <forward name ="exito" path="/pag_bandeja_firmar_documento_interno_ccp.jsp" ></forward>
+         
+      </action>
+      
+      <action
+            path="/FormularioBusquedaDocumentoInternoET" 
+            type="tramitedoc.concytec.action.AActionBusquedaDocumentoInternoEspecialT"  
+             name="FFormBusquedaDocumentoInterno"   
+             validate="false"         
+            scope="session"
+            >
+         <forward name="expiracion" path="/pag_expiracion.jsp" />
+         <forward name="error" path="/pg_error.jsp" />
+         <forward name ="exito" path="/pag_bandeja_firmar_documento_interno_tdr.jsp" ></forward>
+         
+      </action>
+      
+      <action
+            path="/MostrarFormularioCrearcionDocumentoInternoEspecialC" 
+            type="tramitedoc.concytec.action.AActionSetupCreacionDocumentoInternoEspecialC"  
+             name="FFormDocumentoInternoEspecialC"   
+             validate="false"         
+            scope="session"
+            >
+             <forward name="expiracion" path="/pag_expiracion.jsp" />
+             <forward name="error" path="/pg_error.jsp" />
+             <forward name ="exito" path="/pag_crear_documento_interno_ccp.jsp" ></forward>
+             
+             <forward name ="exito_bandeja_firma" path="/pag_bandeja_firmar_documento_interno_ccp.jsp" ></forward>
+
+      </action>
+      
+      <action
+            path="/MostrarFormularioCrearcionDocumentoInternoEspecialT" 
+            type="tramitedoc.concytec.action.AActionSetupCreacionDocumentoInternoEspecialT"  
+             name="FFormDocumentoInternoEspecialT"   
+             validate="false"         
+            scope="session"
+            >
+             <forward name="expiracion" path="/pag_expiracion.jsp" />
+             <forward name="error" path="/pg_error.jsp" />
+             <forward name ="exito" path="/pag_crear_documento_interno_tdr.jsp" ></forward>
+			
+			 <forward name ="exito_bandeja_firma" path="/pag_bandeja_firmar_documento_interno_tdr.jsp" ></forward>
+      </action>
+      
+      <action
+            path="/ListaDocumentosFirmados" 
+            type="tramitedoc.concytec.action.AActionListaDocumentosFirmados" 
+             name="FFormMantSeguimientoDocumentoInterno"   
+             validate="false"         
+            scope="session"
+            >
+         <forward name="expiracion" path="/pag_expiracion.jsp" />
+         <forward name="error" path="/pg_error.jsp" />
+         <forward name ="exito" path="/pag_reporte_documentos_firmardos.jsp" ></forward>
+         <forward name ="exito_archivos" path="/pag_reporte_seguimiento_archivos.jsp" ></forward>
+      </action>
+      
+      <action
+            path="/CopiarPDFATemporal" 
+            type="tramitedoc.concytec.action.AActionCopiarPDFTemp"  
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno.jsp" >
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="error" path="/pg_error.jsp" />
+            
+			<forward  name ="exito" path="/appletFirma.jsp"></forward>
+			<forward  name ="test" path="/pag_test.jsp" ></forward>
+          </action> 
+          
+      <action
+            path="/CopiaMasivaPDFATemporal" 
+            type="tramitedoc.concytec.action.AActionCopiaMasivaPDFATemporal"  
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno.jsp" >
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="error" path="/pg_error.jsp" />
+            
+			<forward  name ="exito" path="/appletFirma.jsp" ></forward>
+			<forward  name ="mensajevacio" path="/pg_mensaje.jsp" ></forward>
+			
+			<forward  name ="test" path="/pag_test.jsp" ></forward>
+      </action>
+      
+      <action
+            path="/CopiaRequeridaPDFATemporal" 
+            type="tramitedoc.concytec.action.AActionCopiaRequeridaPDFATemporal"  
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno.jsp" >
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="error" path="/pg_error.jsp" />
+            
+			<forward  name ="exito" path="/appletFirma.jsp" ></forward>
+			<forward  name ="mensajevacio" path="/pg_mensaje.jsp" ></forward>
+			
+			<forward  name ="test" path="/pag_test.jsp" ></forward>
+      </action>  
+          
+                 
+      <action
+            path="/CrearDocumentoInterno" 
+            type="tramitedoc.concytec.action.AActionCreacionDocumentoInterno"  
+            name="FFormDocumentoInterno" 
+            validate="true"
+            scope="session"
+            input="/pag_crear_documento_interno.jsp">
+           <forward name="expiracion" path="/pag_expiracion.jsp" />
+           <forward name="error" path="/pg_error.jsp" />
+           
+           <forward name ="puentemantdocu" path="/MantDocumento.do" ></forward>
+           <forward name ="puentederivadocu" path="/MantDerivar.do" ></forward>
+           
+           <forward name ="haciabderiva" path="/ListaDocumentos.do?tipo=regresarbd" ></forward>
+           <forward name ="haciabreitera" path="/Reiterativo.do?tipo=regresarbr" ></forward>
+           
+           <forward name ="exito" path="/MostrarFormularioCrearcionDocumentoInterno.do" ></forward>
+           <forward name ="exitoporfirmar" path="/FormularioBusquedaDocumentoInterno.do?tipo=firma" ></forward>
+      </action> 
+    
+      <action
+            path="/CrearDocumentoInternoEspecialC" 
+            type="tramitedoc.concytec.action.AActionCreacionDocumentoInternoEspecialC"  
+            name="FFormDocumentoInternoEspecialC" 
+            validate="true"
+            scope="session"
+            input="/pag_crear_documento_interno_ccp.jsp">
+           	
+           	<forward name ="puentemantdocu" path="/MantDocumento.do" ></forward>  
+         	<forward name ="puentederivadocu" path="/MantDerivar.do" ></forward>
+           	
+			<forward name ="haciabderiva" path="/ListaDocumentos.do?tipo=regresarbd" ></forward>
+           	<forward name ="haciabreitera" path="/Reiterativo.do?tipo=regresarbr" ></forward>
+           	
+           	<forward name="expiracion" path="/pag_expiracion.jsp" />
+           	<forward name="error" path="/pg_error.jsp" />
+           	<forward name ="exito" path="/MostrarFormularioCrearcionDocumentoInternoEspecialC.do" ></forward>
+         	<forward name ="exitoporfirmarccp" path="/FormularioBusquedaDocumentoInternoEC.do?tipo=firma" ></forward>
+      </action> 
+      
+      <action
+            path="/CrearDocumentoInternoEspecialT" 
+            type="tramitedoc.concytec.action.AActionCreacionDocumentoInternoEspecialT"  
+            name="FFormDocumentoInternoEspecialT" 
+            validate="true"
+            scope="session"
+            input="/pag_crear_documento_interno_tdr.jsp">
+           
+           	<forward name ="puentemantdocu" path="/MantDocumento.do" ></forward>  
+         	<forward name ="puentederivadocu" path="/MantDerivar.do" ></forward>
+           	
+			<forward name ="haciabderiva" path="/ListaDocumentos.do?tipo=regresarbd" ></forward>
+           	<forward name ="haciabreitera" path="/Reiterativo.do?tipo=regresarbr" ></forward>  
+           	
+           	<forward name="expiracion" path="/pag_expiracion.jsp" />
+           	<forward name="error" path="/pg_error.jsp" />
+         	<forward name ="exito" path="/MostrarFormularioCrearcionDocumentoInternoEspecialT.do" ></forward>
+         	<forward name ="exitoporfirmartdr" path="/FormularioBusquedaDocumentoInternoET.do?tipo=firma" ></forward>
+         	
+      </action>
+      
+      <action
+            path="/UtilidadRegistroMovimiento" 
+            type="tramitedoc.concytec.action.AActionUtilidadRegistroMovimiento"  
+            validate="false"
+            scope="session" >
+           <forward name="expiracion" path="/pag_expiracion.jsp" />
+           <forward name="error" path="/pg_error.jsp" />
+           
+           <forward name ="exito" path="/MostrarFormularioCrearcionDocumentoInterno.do" ></forward>
+           <forward name ="exitoporfirmar" path="/FormularioBusquedaDocumentoInterno.do?tipo=firma" ></forward>
+            
+           <forward name ="puentemantdocu" path="/MantDocumento.do" ></forward>
+           <forward name ="puentederivadocu" path="/MantDerivar.do" ></forward>
+           <forward name ="puentereiteradocu" path="/ReiterativoRegistro.do" ></forward>
+           
+           
+      </action> 
+      
+      <action
+            path="/UtilidadActualizacionRegistroMovimiento" 
+            type="tramitedoc.concytec.action.AActionUtilidadActualizacionRegistroMovimiento"  
+            validate="false"
+            scope="session" >
+           <forward name="expiracion" path="/pag_expiracion.jsp" />
+           <forward name="error" path="/pg_error.jsp" />
+
+           <forward name ="exito" path="/FormularioBusquedaDocumentoInterno.do?inicia=SI" ></forward>
+           <forward name ="exito-updatefirmaovisto" path="/pagina_bandeja_documentos_internos_proyectos_recibidos.jsp" ></forward>
+           
+           <forward name ="puentemantdocu" path="/MantDocumento.do?operacion=FDIBC" ></forward>
+           <forward name ="puentederivadocu" path="/MantDerivar.do" ></forward>
+           <forward name ="puentereiteradocu" path="/ReiterativoRegistro.do" ></forward>
+
+      </action> 
+      
+      <action
+            path="/UtilidadRegistroMovimientoFirmaManual" 
+            type="tramitedoc.concytec.action.AActionUtilidadRegistroMovimientoFirmaManual"  
+            validate="false"
+            scope="session" >
+           <forward name="expiracion" path="/pag_expiracion.jsp" />
+           <forward name="error" path="/pg_error.jsp" />
+           
+           <!-- <forward name ="exito" path="/MostrarFormularioCrearcionDocumentoInterno.do" ></forward>  -->
+           <forward name ="exitoporfirmar" path="/FormularioBusquedaDocumentoInterno.do?tipo=firma" ></forward>
+            
+           <forward name ="puentemantdocu" path="/MantDocumento.do" ></forward>
+           <forward name ="puentederivadocu" path="/MantDerivar.do" ></forward>
+           <forward name ="puentereiteradocu" path="/ReiterativoRegistro.do" ></forward>
+           
+           
+      </action>
+      
+      <action
+            path="/ModificarDocumentoInterno" 
+            type="tramitedoc.concytec.action.AActionModificarDocumentoInterno"  
+            name="FFormDocumentoInterno" 
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno.jsp">
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="error" path="/pg_error.jsp" />
+         	<forward  name ="exito" path="/pag_crear_documento_interno.jsp" ></forward>
+      </action> 
+      
+      <action
+            path="/ModificarDocumentoInternoEspecialC" 
+            type="tramitedoc.concytec.action.AActionModificarDocumentoInternoEspecialC"  
+            name="FFormDocumentoInternoEspecialC" 
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno_ccp.jsp">
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="error" path="/pg_error.jsp" />
+         	<forward  name ="exito" path="/pag_crear_documento_interno_ccp.jsp" ></forward>
+      </action> 
+      
+      <action
+            path="/ModificarDocumentoInternoEspecialT" 
+            type="tramitedoc.concytec.action.AActionModificarDocumentoInternoEspecialT"  
+            name="FFormDocumentoInternoEspecialT" 
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno_tdr.jsp">
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="error" path="/pg_error.jsp" />
+         <forward  name ="exito" path="/pag_crear_documento_interno_tdr.jsp" ></forward>
+      </action> 
+      
+      <action
+            path="/MantenimientoDocumentoInterno" 
+            type="tramitedoc.concytec.action.AActionMantenimientoDocumentoInterno"  
+            name="FFormDocumentoInterno" 
+            input="/pag_crear_documento_interno.jsp"
+            validate="false"
+            scope="session">
+            <forward name="error" path="/pg_error.jsp" />
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="upload" path="/pag_doc_interno_upload_popup.jsp" />
+            
+         <!-- forward  name ="exito" path="/MostrarFormularioCrearcionDocumentoInterno.do" ></forward-->
+         <forward  name ="exito" path="/mostrarlistasdebandejadocumentosinternos.do?cambia=1" ></forward>
+         <forward  name ="exitoccp" path="/MostrarFormularioCrearcionDocumentoInternoEspecialC.do" ></forward>
+         <forward  name ="exitotdr" path="/MostrarFormularioCrearcionDocumentoInternoEspecialT.do" ></forward>
+         
+         <forward  name ="exitob" path="/FormularioBusquedaDocumentoInterno.do?tipo=firma" ></forward>
+         <forward  name ="exitoccpb" path="/FormularioBusquedaDocumentoInternoEC.do?tipo=firma" ></forward>
+         <forward  name ="exitotdrb" path="/FormularioBusquedaDocumentoInternoET.do?tipo=firma" ></forward>
+         
+        <forward name ="noencontrado" path="/pag_bandeja_firmar_documento_interno.jsp" ></forward>
+      </action> 
+      
+      <action
+            path="/AdjuntarDocumentoInterno" 
+            type="tramitedoc.concytec.action.AActionAdjuntarDocumentoInterno"  
+            name="FFormDocumentoInterno" 
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno.jsp">
+            <forward name="error" path="/pg_error.jsp" />
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="upload" path="/pag_doc_interno_normal_upload_popup.jsp" />
+         <forward  name ="exito" path="/MostrarFormularioCrearcionDocumentoInterno.do" ></forward>
+      </action> 
+      
+      <action
+            path="/AdjuntarDocumentoInternoEspecialC" 
+            type="tramitedoc.concytec.action.AActionAdjuntarDocumentoInternoEspecialC"  
+            name="FFormDocumentoInternoEspecialC" 
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno_ccp.jsp">
+            <forward name="error" path="/pg_error.jsp" />
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="upload" path="/pag_doc_interno_especialc_upload_popup.jsp" />
+         
+      </action> 
+      
+      <action
+            path="/AdjuntarDocumentoInternoEspecialT" 
+            type="tramitedoc.concytec.action.AActionAdjuntarDocumentoInternoEspecialT"  
+            name="FFormDocumentoInternoEspecialT" 
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno_tdr.jsp">
+            <forward name="error" path="/pg_error.jsp" />
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="upload" path="/pag_doc_interno_especialt_upload_popup.jsp" />
+         
+      </action> 
+      
+      <action
+            path="/UtilidadesSTD" 
+            type="tramitedoc.concytec.action.AActionUtilidades"
+            validate="false"            
+            scope="session"
+            >
+         <forward name ="exito" path="/pag_crear_documento_interno.jsp" ></forward>
+      </action> 
+      
+       <action
+            path="/VerArchivoPDFDocumentoInterno" 
+            type="tramitedoc.concytec.action.AActionVerDocumentoInternoPDF"
+            validate="false"
+            scope="session"
+            input="/pag_crear_documento_interno.jsp">
+         <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+         <forward name ="exito" path="/pag_crear_documento_interno.jsp" ></forward>
+         <forward name ="noencontrado" path="/pag_bandeja_firmar_documento_interno.jsp" ></forward>
+      </action> 
+      
+      
+      <action path="/MoverArchivoAAdjunto" type="tramitedoc.concytec.action.AActionMoverArchivoAAdjunto" name="FFormMantDocumento" scope="request" validate="true" input="/pag_registro_doc_entrada_externo.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_registro_doc_entrada.jsp" /> 
+		  <forward name="upload" path="/pag_doc_entrada_upload_popup.jsp" />
+		  <forward name="exitomod" path="/pag_registro_doc_entrada_mod.jsp" />
+	  </action> 
+		
+		
+	<action path="/MoverArchivoAADocumento"  type="tramitedoc.concytec.action.AActionMoverArchivoAADocumento" name="FFormMantDocumento" scope="session" validate="true" input="/pag_registro_doc_entrada.jsp">
+            <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/MantDocumento.do" />
+    </action>
+		
+
+    <action path="/UploadArchivo" type="tramitedoc.concytec.action.AActionUploadArchivo" name="FFormUploadArchivo" scope="request" validate="true" input="/pag_reiterativo_upload_popup.jsp">
+		<forward name="upload" path="/pag_reiterativo_upload_popup.jsp"></forward>
+		<forward name="mensaje" path="/pag_mensaje.jsp"></forward>
+	</action>
+	
+    <action path="/UploadArchivoFirmadoManualmente" type="tramitedoc.concytec.action.AActionUploadArchivoFirmadoManualmente" name="FFormUploadArchivo" scope="request" validate="true" input="/pag_firmados_manualmente_upload_popup.jsp">
+		<forward name="upload" path="/pag_firmados_manualmente_upload_popup.jsp"></forward>
+		<forward name="mensaje" path="/pag_mensaje.jsp"></forward>
+	</action>
+	
+	<action
+            path="/AgregarImagen" 
+            type="tramitedoc.concytec.admin.action.AActionAgregarImagen"  
+            name="FFormCargaArchivo" 
+            validate="true"
+            scope="request" >
+            <forward name="error" path="/pg_error.jsp" />
+            <forward name="expiracion" path="/pag_expiracion.jsp" /> 
+            <forward name="upload" path="/pag_imagen_upload_popup.jsp" />
+         	
+      </action>
+
+<action path="/Reiterativo" type="tramitedoc.concytec.action.AActionReiterativo" name="FFormReiterativo" scope="request" validate="true" input="/pag_reiterativo_lista_docs.jsp">
+		<forward name="buscar_documentos" path="/pag_reiterativo_lista_docs.jsp"></forward>
+       <forward name="mantenimiento" path="/pag_reiterativo_mantenimiento.jsp"></forward>
+       <forward name="registro" path="/pag_reiterativo_registro.jsp"></forward>
+       <forward name="mensaje" path="/pag_reiterativo_mensaje.jsp"></forward>
+       <forward name="index" path="/index.jsp"></forward>
+     </action>
+     
+	<action path="/ReiterativoRegistro" type="tramitedoc.concytec.action.AActionReiterativoRegistro" name="FFormReiterativoRegistro" scope="request" validate="true" input="/pag_reiterativo_registro.jsp">
+		<forward name="buscar_documentos" path="/pag_reiterativo_lista_docs.jsp"></forward>
+       <forward name="mantenimiento" path="/pag_reiterativo_mantenimiento.jsp"></forward>
+       <forward name="registro" path="/pag_reiterativo_registro.jsp"></forward>
+       <forward name="mensaje" path="/pag_reiterativo_mensaje.jsp"></forward>
+       <forward name="index" path="/index.jsp"></forward>
+       
+       <forward name ="haciabreitera" path="/Reiterativo.do?tipo=regresarbr" ></forward>
+       <forward name="exitoreiterativo" path="/FormularioBusquedaDocumentoInterno.do?tipo=firma"></forward>
+     </action>
+     
+     <action path="/ReiterativoMantenimiento" type="tramitedoc.concytec.action.AActionReiterativoMantenimiento" name="FFormReiterativoMantenimiento" scope="session" validate="true" input="/pag_reiterativo_mantenimiento.jsp">
+		<forward name="buscar_documentos" path="/pag_reiterativo_lista_docs.jsp"></forward>
+       <forward name="mantenimiento" path="/pag_reiterativo_mantenimiento.jsp"></forward>
+       <forward name="registro" path="/pag_reiterativo_registro.jsp"></forward>
+       <forward name="mensaje" path="/pag_reiterativo_mensaje.jsp"></forward>
+       <forward name="index" path="/index.jsp"></forward>
+     </action>
+     
+     
+     <action path="/MantPrecerrar" type="tramitedoc.concytec.action.AActionMantPrecerrar" name="FFormMantPrecerrar" scope="session" validate="true" input="/pag_precerrar_doc.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_cierre_precerrar_doc.jsp" /> 
+		</action>
+		
+	<action path="/MantCerrar" type="tramitedoc.concytec.action.AActionMantCerrar" name="FFormMantCerrar" scope="request" validate="true" input="/pag_lista_cerrar_doc.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_cierre_lista_cerrar_doc.jsp" /> 
+	</action> 
+	
+	<action path="/Busquedas" type="tramitedoc.concytec.action.AActionBusquedasTramite" validate="true">
+		   <forward name="default" path="/pg_error.jsp" />
+		   <forward name="instituciones" path="/pag_cierre_frame_instituciones.jsp" />
+		   <forward name="usuarios" path="/pag_cierre_frame_usuarios.jsp" />
+		   <forward name="documentos_pendientes_cerrar" path="/pag_cierre_documentos_pend.jsp"></forward>
+		   <forward name="pagina_popup" path="/pag_doc_entrada_upload_popup.jsp"></forward>
+		   <forward name="admin" path="/pag_documento.jsp"></forward>
+		   <forward name="pagina_popup_deriva" path="/pag_documento_upload_popup.jsp"></forward>
+		   <forward name="pagina_popup_internos" path="/pag_doc_interno_normal_upload_popup.jsp"></forward>
+		   <forward name="pagina_popup_internosc" path="/pag_doc_interno_especialc_upload_popup.jsp"></forward>
+		   <forward name="pagina_popup_internost" path="/pag_doc_interno_especialt_upload_popup.jsp"></forward>
+		</action>
+
+   <action path="/AdmUsuario" type="tramitedoc.concytec.action.AActionAdmUsuario" name="FFormAdmUsuario" scope="request" validate="true"  >
+       <forward name="pagina_inicio" path="/pag_cambio_clave_new.jsp"></forward>
+       <forward name="pagina_mensaje" path="/pag_mensaje_cambio_password.jsp"></forward>
+       <forward name="default" path="/pag_mesa_partes.jsp"></forward>
+       <forward name="pagina_index" path="/index.jsp"></forward>
+       <forward name="pagina_init" path="/inicio.jsp"></forward>
+       
+   </action>
+		<action path="/Login" type="tramitedoc.concytec.action.AActionLogin" name="FFormLogin" scope="request" validate="true" input="/index.jsp">
+		   <forward name="error" path="/index.jsp" />
+		   <forward name="usuario" path="/pag_mesa_partes.jsp" /> 
+		   <forward name="administrador" path="/pag_principal.jsp" /> 
+		   <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="switchUsuario" path="/switchUsuario.jsp"/>
+		</action>  
+		
+		 
+		<action path="/CargaInicial" type="tramitedoc.concytec.action.AActionCargaInicial" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="mesapartes" path="/CargaMesaPartes.do" />
+		</action>   
+
+		<action path="/ListaDocumentos" name="FFormMantSeguimiento"   type="tramitedoc.concytec.action.AActionListaDocumentos" validate="true" >
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="listadocumentos" path="/pag_lista_documentos.jsp" />
+		    <forward name="recepcion" path="/MantRecepcion.do" />
+		    <forward name="derivar" path="/MantDerivar.do" />
+		    <forward name="seguimiento" path="/pag_lista_seguimiento.jsp" />
+		    <forward name="recorrido" path="/DocumentoRecorrido.do" />
+		   	<forward name="recorridofecnull" path="/DocumentoRecorridoFechaNull.do" />
+		   	<forward name="archivar" path="/MantArchivar.do" />
+		   	<forward name="anular" path="/MantAnular.do" />
+		   	<forward name="modificar" path="/MantModificar.do" />
+		   	<forward name="cerrar" path="/MantCerrar.do" />
+		   	<forward name="precerrar" path="/MantPrecerrar.do" />
+		   	<forward name="preliquidar" path="/MantPreliquidar.do" />
+		   	<forward name="liquidar" path="/MantLiquidar.do" />
+		   	<forward name="recepcionnormal" path="/MantRecepcionNormal.do" />
+		   	<forward name="modificar_recep" path="/MantModificar.do" />
+		   	<forward name="modificardocent" path="/pag_lista_registro_doc.jsp" />
+		   	<forward name="modificardoc" path="/pag_registro_doc_entrada_mod.jsp" />
+		   	<forward name="reportpdfexcel" path="/seguimiento.jsp" />
+		   	<forward name="modificarderiv" path="/MantModDeriva.do" />
+		</action>  		
+		
+		
+		
+		<action path="/CargaMesaPartes" type="tramitedoc.concytec.action.AActionCargaMesaPartes" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="listadocumentos" path="/pag_lista_documentos.jsp" />
+		   <forward name="mesapartes" path="/pag_mesa_partes.jsp" />
+		    
+		</action>  		
+		
+		<action path="/ValidaPaginas" type="tramitedoc.concytec.action.AActionValidaPaginas" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="seleccion" path="/pag_seleccion.jsp" />
+		   <forward name="instcontactos" path="/pag_lista_instcontactos_registro.jsp" />
+		   <forward name="dirigidos" path="/pag_lista_dirigidos_registro.jsp" />
+		   <forward name="nuevaprocedencia" path="/pag_agregar_procedencia.jsp" />
+		   <forward name="entrada" path="/pag_registro_doc_entrada.jsp" />
+		   <forward name="entrada_doc_interno" path="/pag_crear_documento_interno.jsp" />
+		   <forward name="mismodocumento" path="/pag_derivar_con_mismo_documento.jsp" />
+		   <forward name="selecnatuderiva" path="/pag_selec_natur_deriva.jsp" />
+		   <forward name="selecreporte" path="/pag_selec_report.jsp" />
+		    <forward name="rangocodigos" path="/pag_rango_codigos.jsp" />
+		    <forward name="regresar" path="/pag_registro_doc_entrada.jsp" />
+		    <forward name="mensaje" path="/pag_mensaje.jsp" />
+		    <forward name="reportesgenerales" path="/pag_filtro_reporte_generales.jsp" />
+		    <forward name="reportescriterio" path="/pag_filtro_reporte.jsp" />
+		    <forward name="regreportes" path="/pag_selec_report.jsp" />
+		    <forward name="cambioclave" path="/pag_cambio_clave.jsp" />
+		    <forward name="mensajerecepcion" path="/pag_mensaje_recepcion.jsp" />
+		    <forward name="inicio" path="/pag_mesa_partes.jsp" />
+		    <forward name="recepcion" path="/MantRecepcion.do" />
+		    <forward name="reporte" path="/pag_filtro_reporte.jsp" />
+		    <forward name="ayudamedios" path="/pag_ayuda_docpend.jsp" />
+		    <forward name="recorrido" path="/DocumentoRecorrido.do" />
+		   	<forward name="recorridofecnull" path="/DocumentoRecorridoFechaNull.do" />
+		    <forward name="hojaenvio" path="/pag_hoja_envio.jsp" />
+		    <forward name="modificardoc" path="/pag_registro_doc_entrada_mod.jsp" />
+		    <forward name="verhojaruta" path="/reportes/pag_hojaruta.jsp" />
+		    <forward name="generarReportExterno" path="/generate_report.do" />
+		    <forward name="ayudareportes" path="/pag_ayuda_reportes.jsp" />
+		    
+		    
+		</action> 
+		
+		<action path="/generate_report"
+			type="tramitedoc.concytec.action.GenerateReportAction"
+			name="FFormMantDocumento"
+			scope="request"
+			input="pag_mensaje_recepcion.jsp">
+		</action>
+		 		
+		 
+		<action path="/ActionSeleccion" type="tramitedoc.concytec.action.AActionSeleccion" name="FFormSeleccion" scope="request" validate="true" input="/pag_seleccion.jsp">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="entrada" path="/pag_registro_doc_entrada.jsp" />
+		   <forward name="entrada_externo" path="/pag_registro_doc_entrada_externo.jsp"/>
+		   
+		   <forward name="interno" path="/pag_+registro_doc_interno.jsp" />
+		   <forward name="asociarintent" path="/pag_registro_doc_int_ent.jsp" />
+		   <forward name="mensaje" path="/pag_mensaje.jsp" />
+		</action>  	
+		
+		<action path="/VerFrameListas" type="tramitedoc.concytec.action.AActionVerFrameListas" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="procedencia" path="/pag_frame_procedencia.jsp" />
+		   <forward name="dirigidos" path="/pag_frame_dirigidos.jsp" />
+		   <forward name="derivadocumento" path="/pag_frame_derivar_documento.jsp" />
+		   <forward name="rangocodigos" path="/pag_rango_codigos.jsp" />
+		   <forward name="reportegenerales" path="/pag_frame_generales.jsp" />
+		   <forward name="reportehistorial" path="/pag_frame_historial.jsp" />
+		   <forward name="busquedalinea" path="/pag_frame_busquedalinea.jsp" />
+		   <forward name="blank" path="/pag_blank.jsp" />
+		   <forward name="reportehistoriallinea" path="/pag_frame_historial_linea.jsp" />
+		</action>  	
+		
+		<action path="/MantProcedencia" type="tramitedoc.concytec.action.AActionMantProcedencia" name="FFormMantProcedencia" scope="request" validate="true" input="/pag_agregar_procedencia.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_instcontactos_registro.jsp" /> 
+		   <forward name="exito1" path="/pag_lista_dirigidos_registro.jsp" />
+		</action> 
+		
+		<action path="/obtenerLista" type="tramitedoc.concytec.action.AActionCrearListas" />
+		<action path="/obtenerListaDestinatarios" type="tramitedoc.concytec.action.AActionCrearListasDestinatario" />
+		<action path="/actualizaDocumentoAdjunto" type="tramitedoc.concytec.action.AActionActualizarPopUp" />
+		<action path="/obtenerListaAbreviaturas" type="tramitedoc.concytec.action.AActionCrearListas" />
+		<action path="/mostraralerta" type="tramitedoc.concytec.action.AActionMostrarAlerta" />
+		
+		<action path="/mostrarlistasdebandejarecepcion" type="tramitedoc.concytec.action.AActionMostrarListasBandejaRecepcion">
+				    <forward name="error" path="/pg_error.jsp" />
+		   			<forward name="exito" path="/pag_bandeja_recepcion.jsp" /> 
+		</action> 
+		
+		<action path="/mostrarlistasdebandejadocumentosinternos" type="tramitedoc.concytec.action.AActionMostrarListasBandejaDocumentosInternos">
+				    <forward name="error" path="/pg_error.jsp" />
+		   			<forward name="exito" path="/pagina_bandeja_documentos_internos_creados.jsp" /> 
+		   			<forward name="upload" path="/pag_doc_adjuntos_upload_popup.jsp" />
+		   			<forward name="firmma_masiva" path="/pag_bandeja_firma_masiva_documento_interno.jsp" />
+
+		</action>
+		
+		<action path="/obtenerListaSeguimiento" type="tramitedoc.concytec.action.AActionCrearListasSeguimiento" />
+		
+		<action path="/cambiaModoInicioLogin" type="tramitedoc.concytec.action.AActionCambiaModoInicioLogin" />
+		
+		<action path="/MantDocumento" type="tramitedoc.concytec.action.AActionMantDocumento" 
+		name="FFormMantDocumento" 
+		scope="session" 
+		validate="true" 
+		input="/pag_registro_doc_entrada.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_registro_doc_entrada.jsp" />
+		   <forward name="exitodocint" path="/pag_registro_doc_entrada.jsp" />
+		   <forward name="upload" path="/pag_doc_entrada_upload_popup.jsp" />
+		    <forward name="uploadadmin" path="/pag_documento.jsp" />
+		   <forward name="uploadinterno" path="/pag_doc_interno_upload_popup.jsp" />
+		   <forward name="exitograbacion" path="/FormularioBusquedaDocumentoInterno.do?tipo=firma" />
+		  <forward name="exitomod" path="/pag_registro_doc_entrada_mod.jsp" />
+		</action> 
+		
+		<action path="/MantDocumentoExterno" type="tramitedoc.concytec.action.AActionMantDocumento" name="FFormMantDocumento" scope="request" validate="true" input="/pag_registro_doc_entrada_externo.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_registro_doc_entrada.jsp" /> 
+		  <forward name="upload" path="/pag_doc_entrada_upload_popup.jsp" />
+		  <forward name="exitomod" path="/pag_registro_doc_entrada_mod.jsp" />
+		</action> 
+		 
+		<action path="/PuenteDocumentoInterno" type="tramitedoc.concytec.action.AActionPuenteDocumentoInterno" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="noadmitido_bderiva" path="/pag_lista_derivar_doc.jsp" />
+		   <forward name="noadmitido_breiterativa" path="/pag_reiterativo_lista_docs.jsp" />
+		   
+		   <forward name="mensaje" path="/pag_mensaje.jsp" />
+		   
+		   <forward name="exito" path="/MostrarFormularioCrearcionDocumentoInterno.do" />
+		   <forward name="exitoccp" path="/MostrarFormularioCrearcionDocumentoInternoEspecialC.do" />
+		   <forward name="exitotdr" path="/MostrarFormularioCrearcionDocumentoInternoEspecialT.do" />
+		    
+		   <forward name ="crearrespuesta" path="/MostrarFormularioCrearcionDocumentoInterno.do" ></forward>
+		   <forward name="ver-bandeja" path="/pag_bandeja_proyectos.jsp" />
+		   
+		</action>
+		
+		
+		
+		<action path="/PuenteDocumento" type="tramitedoc.concytec.action.AActionPuenteDocumento" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="mensaje" path="/pag_mensaje.jsp" />
+		   <forward name="recibirdoc" path="/pag_serie_expediente.jsp" />
+		   <forward name="derivacion" path="/ValidaPaginas.do?tipo=mismodocumento" />
+		   <forward name="archivar" path="/pag_archivar.jsp" />
+		   <forward name="recorrido" path="/DocumentoRecorrido.do" />
+		   <forward name="recorridofecnull" path="/DocumentoRecorridoFechaNull.do" />
+		   <forward name="asociarintent" path="/pag_asociar_docinternoentrada.jsp" />
+		   <forward name="preliquidardoc" path="/pag_liquidar_docinternoentrada.jsp" />
+		   <forward name="cerrarsession" path="/index.jsp" />
+		   <forward name="modificardoc" path="/pag_mantenimiento_documento.jsp" />
+		</action>  	
+		
+		<action path="/MantEntregarRecibir" type="tramitedoc.concytec.action.AActionMantEntregarRecibir" name="FFormMantEntregarRecibir" scope="request" validate="true" input="/pag_serie_expediente.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/CargaMesaPartes.do?operacion=buscar" /> 
+		</action> 
+		
+		<action path="/MantDocumentosDerivados" type="tramitedoc.concytec.action.AActionMantDocumentosDerivados" name="FFormMantDocumentosDerivados" scope="request" validate="true" input="/pag_derivar_con_mismo_documento.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_derivar_con_mismo_documento.jsp" /> 
+		  
+		</action> 
+		
+		<action path="/ConsultaDocumento" type="tramitedoc.concytec.action.AActionConsultaDocumento" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		    <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="mesadepartes" path="/pag_consulta_documento.jsp" />
+		   <forward name="reportes" path="/pag_reporte_historial.jsp" />
+		   <forward name="reporteslinea" path="/pag_reporte_historial_linea.jsp" />
+		</action>  	
+		
+		<action path="/MantDocumentosArchivar" type="tramitedoc.concytec.action.AActionMantDocumentosArchivar" name="FFormMantDocumentosArchivar" scope="request" validate="true" input="/pag_archivar.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/CargaMesaPartes.do?operacion=buscar" /> 
+		</action> 
+		
+		<action path="/DocumentoRecorrido" type="tramitedoc.concytec.action.AActionDocumentoRecorrido" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		    <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="recorrido" path="/pag_recorrido.jsp" />
+		    <forward name="recorridoreporte" path="/pag_report_recorridofecha.jsp" />
+		    <forward name="reportehistorial" path="/ConsultaDocumento.do?tipo=reportseguimiento" />
+		</action>  	
+		
+		<action path="/DetalleFrame" type="tramitedoc.concytec.action.AActionDetalleFrame" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		    <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="procedencia" path="/pag_agregar_procedencia.jsp" />
+		   <forward name="dirigidos" path="/pag_agregar_procedencia.jsp" />
+		</action>  
+		
+		<action path="/DocumentoRecorridoFechaNull" type="tramitedoc.concytec.action.AActionDocumentoRecorridoFechaNull" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		    <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="recorrido" path="/pag_recorrido_fechanull.jsp" />
+		   <forward name="recorridoreporte" path="/pag_report_recorrido.jsp" />
+		   <forward name="reportehistorial" path="/ConsultaDocumento.do?tipo=reportseguimiento" />
+		</action>	
+		
+		<action path="/CargaMesaPartesBuscar" type="tramitedoc.concytec.action.AActionCargaMesaPartesBuscar" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="listadocumentos" path="/pag_lista_documentos.jsp" />
+		   <forward name="mesapartes" path="/pag_mesa_partes.jsp" />
+		    
+		</action>
+		
+		<action path="/ReportesGestion" type="tramitedoc.concytec.action.AActionReportesGestion" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="reporte_cons_trans" path="/reporte_gestion_consolidado_transacciones.jsp" />
+		   <forward name="reporte_doc_pendientes" path="/reporte_gestion_doc_pendientes.jsp" />	
+		   <forward name="reporte_mos_doc" path="/pag_reporte_obs.jsp" />		    
+		</action> 
+		
+		<action path="/ReportesTramite" type="tramitedoc.concytec.action.AActionReportesTramite" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="expiracion" path="/pag_expiracion.jsp" />
+		   <forward name="reportes" path="/pag_reportes.jsp" />		    
+		</action>  	
+		
+		<action path="/Maestros" type="tramitedoc.concytec.action.AActionMaestros" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="usuario" path="/MantUsuarios.do" />
+		   <forward name="oficinausuario" path="/MantUsuariosOficinas.do" />
+		   <forward name="oficina" path="/MantOficinas.do" />
+		   <forward name="personal" path="/MantPersonal.do" />
+		   <forward name="documento" path="/MantDocumentoA.do" />
+		   <forward name="cargo" path="/MantCargo.do" />
+		   <forward name="tipodocumento" path="/MantTipoDocumento.do" />
+		   <forward name="solicitud" path="/MantSolicitud.do" />
+		   <forward name="conexionusuario" path="/MantConexion.do" />
+		</action>  
+		
+		<action path="/MantUsuarios" type="tramitedoc.concytec.admin.action.AActionMantUsuarios" name="FFormMantUsuario" scope="request" validate="true" input="/pag_usuario.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_usuario.jsp" /> 
+		</action> 
+     
+		<action path="/MantUsuariosOficinas" type="tramitedoc.concytec.admin.action.AActionMantUsuariosOficinas" name="FFormMantUsuariosOficinas" scope="request" validate="true" input="/pag_usuario_oficinas.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_usuario_oficinas.jsp" /> 
+		</action> 
+		<action path="/MantOficinas" type="tramitedoc.concytec.admin.action.AActionMantOficinas" name="FFormMantOficinas" scope="request" validate="true" input="/pag_oficinas.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_oficinas.jsp" /> 
+		</action> 	
+		<action path="/MantPersonal" type="tramitedoc.concytec.admin.action.AActionMantPersonal" name="FFormMantPersonal" scope="request" validate="true" input="/pag_personal.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_personal.jsp" /> 
+		</action> 
+		<action path="/MantConexion" type="tramitedoc.concytec.admin.action.AActionMantConexion" name="FFormMantConexion" scope="request" validate="true" input="/pag_creacion_usuarios.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_creacion_usuarios.jsp" /> 
+		</action> 
+		<action path="/MantDocumentoA" type="tramitedoc.concytec.admin.action.AActionMantDocumento" name="FFormMantDocumentoA" scope="request" validate="true" input="/pag_documento.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_documento.jsp" /> 
+		</action>	
+		
+		<action path="/ObtenerUsuario" type="tramitedoc.concytec.admin.action.AActionObtenerUsuario" />
+		
+		<action path="/MantCargo" type="tramitedoc.concytec.admin.action.AActionMantCargo" name="FFormMantCargo" scope="request" validate="true" input="/pag_cargo.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_cargo.jsp" /> 
+		</action> 	
+		<action path="/MantTipoDocumento" type="tramitedoc.concytec.admin.action.AActionMantTipoDocumento" name="FFormMantTipoDocumento" scope="request" validate="true" input="/pag_tipo_documento.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_tipo_documento.jsp" /> 
+		</action> 	
+		<action path="/MantSolicitud" type="tramitedoc.concytec.admin.action.AActionMantSolicitud" name="FFormMantSolicitud" scope="request" validate="true" input="/pag_solicitud.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_solicitud.jsp" /> 
+		</action> 	
+		
+		<action path="/ReportesBuscar" type="tramitedoc.concytec.action.AActionReportesBuscar" validate="true">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="reportesgenerales" path="/pag_frame_generales.jsp" />
+		    <forward name="reporte" path="/pag_reportes.jsp" />
+		</action>
+		
+		<action path="/MantUsuarioClave" type="tramitedoc.concytec.action.AActionMantUsuarioClave" name="FFormMantUsuarioClave" scope="request" validate="true" input="/pag_cambio_clave.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/CargaMesaPartes.do?operacion=buscar" /> 
+		</action> 
+		
+		<action path="/MantRecepcion" type="tramitedoc.concytec.action.AActionMantRecepcion" name="FFormMantRecepcion" scope="request" validate="true" input="/pag_lista_recepcion_doc.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_recepcion_doc.jsp" /> 
+		    <forward name="upload" path="/pag_documento_recepcion_upload_popup.jsp" /> 
+		</action> 	
+		
+		<action path="/MantDerivar" type="tramitedoc.concytec.action.AActionMantDerivar" 
+			name="FFormMantDerivar" 
+			scope="session" 
+			validate="true" input="/pag_lista_derivar_doc.jsp">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_derivar_doc.jsp" />	   
+		   <forward name="upload" path="/pag_documento_upload_popup.jsp" />
+		   <forward name="uploadinterno" path="/pag_doc_interno_upload_popup.jsp" /> 
+		   
+		   <forward name ="haciabderiva" path="/ListaDocumentos.do?tipo=regresarbd" ></forward>
+		   <forward name="exitoderivacion" path="/FormularioBusquedaDocumentoInterno.do?tipo=firma" />
+		   
+		</action> 	
+		
+		<action path="/MantArchivar" type="tramitedoc.concytec.action.AActionMantArchivar" name="FFormMantArchivar" scope="request" validate="true" input="/pag_lista_archivar_doc.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_archivar_doc.jsp" /> 
+		   <forward name="upload" path="/pag_documento_archivar_upload_popup.jsp" />
+		</action> 	
+		<action path="/MantAnular" type="tramitedoc.concytec.action.AActionMantAnular" name="FFormMantAnular" scope="request" validate="true" input="/pag_lista_anular_doc.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_anular_doc.jsp" /> 
+		</action> 	
+		
+		<action path="/MantModificar" type="tramitedoc.concytec.action.AActionMantModificar" name="FFormMantModificar" scope="request" validate="true" input="/pag_lista_modificar_doc.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_modificar_doc.jsp" /> 
+		</action> 	
+		
+		<action path="/MantPreliquidar" type="tramitedoc.concytec.action.AActionMantPreliquidar" name="FFormMantPreliquidar" scope="request" validate="true" input="/pag_lista_preliquidar_doc.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_preliquidar_doc.jsp" /> 
+		</action> 	
+		
+		<action path="/MantLiquidar" type="tramitedoc.concytec.action.AActionMantLiquidar" name="FFormMantLiquidar" scope="request" validate="true" input="/pag_lista_liquidar_doc.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_liquidar_doc.jsp" /> 
+		</action> 
+		
+		<action path="/MantRecepcionNormal" type="tramitedoc.concytec.action.AActionMantRecepcionNormal" name="FFormMantRecepcion" scope="request" validate="true" input="/pag_lista_recepcion_doc_normal.jsp">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_recepcion_doc_normal.jsp" /> 
+		</action> 
+		
+		<action input="/" name="FFormMantSeguimiento" path="/userAction" scope="session" type="tramitedoc.concytec.action.UserAction">
+            <forward name="success" path="/user.jsp" />
+            <forward name="success1" path="/seguimiento.jsp" />
+        </action>
+        
+        <action path="/MantSeguimiento" type="tramitedoc.concytec.action.AActionMantSeguimiento" name="FFormMantSeguimiento" scope="session"  input="/">
+		    <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_seguimiento.jsp" /> 
+		   <forward name="upload" path="/pag_documento_seguimiento_upload_popup.jsp" />
+		   <forward name="seguimiento" path="/pag_lista_seguimiento.jsp" />
+		</action> 	
+		
+		<action path="/MantModDeriva" type="tramitedoc.concytec.action.AActionMantModDeriva" name="FFormMantModificar" scope="request" validate="true" input="/pag_lista_mod_deriva_doc.jsp">
+		   <forward name="error" path="/pg_error.jsp" />
+		   <forward name="exito" path="/pag_lista_mod_deriva_doc.jsp" /> 
+		   <forward name="popup" path="/pag_lista_mod_deriva_doc_copias.jsp" /> 
+		</action> 
+		
+		 <action path="/generateReport"
+		          type="tramitedoc.concytec.action.GenerateReportWhitExcelAction"
+		          name="FFormMantSeguimiento"
+		          scope="request">  
+          <forward name="listadocumentos" path="/pag_lista_documentos.jsp" />
+          </action>
+		
+				<action path="/AutenticarArchivoFD" type="tramitedoc.concytec.action.AActionFirmaDigital" 
+				scope="request" validate="true">
+			<forward name ="exitoFirma" path="/appletFirma.jsp"></forward>
+		</action>
+		
+		<action path="/ResultadoAJAXFD" type="tramitedoc.concytec.action.AActionAJAXFD" scope="request" /> 
+		
+		
+	</action-mappings>
+
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+	<message-resources parameter="tramitedoc/concytec/action/ApplicationResource"/>
+	<message-resources parameter="ApplicationResources"/>
+ 	
+ 	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+ 	
+ 	
+</struts-config>
+

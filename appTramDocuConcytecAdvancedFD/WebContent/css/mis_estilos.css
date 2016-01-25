@@ -1,0 +1,29 @@
+#menu {
+	 PADDING-RIGHT: 7px;  PADDING-LEFT: 8px; FLOAT: left; PADDING-BOTTOM: 7px;  WIDTH: 150px; PADDING-TOP: 7px;  HEIGHT: 10px;
+}
+#menu A {
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-WEIGHT: bold; PADDING-BOTTOM: 3px; WIDTH: 100%; COLOR: #606; PADDING-TOP: 3px; BORDER-BOTTOM: gray 1px solid; TEXT-DECORATION: none
+}
+#menu A:hover {
+	COLOR: #fff; BACKGROUND-COLOR: #99c
+}
+BODY {
+	FONT-FAMILY: Geneva, Arial, Helvetica, sans-serif
+}
+.titulos {
+	COLOR: #036
+}
+#contenidos {
+	PADDING-RIGHT: 5px;
+	 PADDING-LEFT: 5px; 
+	 MIN-HEIGHT: 250px; 
+	 FLOAT: left; 
+	 PADDING-BOTTOM: 8px;
+	  MARGIN-LEFT: 10px;
+	   WIDTH: 480px; 
+	   PADDING-TOP: 5px;
+	    BACKGROUND-COLOR: #fff;
+}
+ HTML #contenidos {
+	HEIGHT: 400px
+}

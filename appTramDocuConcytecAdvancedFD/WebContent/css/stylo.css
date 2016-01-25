@@ -1,0 +1,442 @@
+textarea{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	border: 1px solid #666666;
+	background-color: #F0F5FB;
+	
+}
+SELECT {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #000000 1px solid; COLOR: #f4f0ed; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #BAD0EB;
+	SCROLLBAR-FACE-COLOR: #eeeeee; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #aaaaaa; SCROLLBAR-3DLIGHT-COLOR: #62708a; SCROLLBAR-ARROW-COLOR: #62708a; SCROLLBAR-TRACK-COLOR: #eeeeee; SCROLLBAR-DARKSHADOW-COLOR: #000000; SCROLLBAR-BASE-COLOR: #eeeeee;
+}
+body 
+{
+	SCROLLBAR-FACE-COLOR: #eeeeee; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #aaaaaa; SCROLLBAR-3DLIGHT-COLOR: #62708a; SCROLLBAR-ARROW-COLOR: #62708a; SCROLLBAR-TRACK-COLOR: #eeeeee; SCROLLBAR-DARKSHADOW-COLOR: #000000; SCROLLBAR-BASE-COLOR: #eeeeee;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+A.menuarr {
+	text-decoration: none;
+	color: #ECECEC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bolder;
+}
+
+A.menuarr:hover {
+	text-decoration: none;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bolder;
+}
+.separadorblanco {
+	font-size: 9px;
+	color: #FFFFFF;
+}
+.descripcionarribTitulo {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #E83C3C;
+	font-weight: bolder;
+}
+.descripcionarrib {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #333333;
+}
+.descripciontablacentral {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #000000;
+	text-align: justify;
+	vertical-align: top;
+}
+.titulotablacentral {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #E83C3C;
+	font-weight: bolder;
+	vertical-align: top;
+}
+A.linktablacentral {
+	text-decoration: none;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #E83C3C;
+}
+
+A.linktablacentral:hover {
+	text-decoration: underline;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+}
+.titulocuadrito {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: bolder;
+	vertical-align: top;
+}
+.footertexto {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #FFFFFF;
+	font-weight: bolder;
+}
+.celdacabezera01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000099;
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/img/celda_fondo_01.jpg);
+	height: 28px;
+	font-weight: bolder;
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+.celdaimpar01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #BAD0EB;
+	border: 1px solid #e9e9e9;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.celdaimpar03 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #BAD0EB;
+	text-decoration: none;
+	border: 1px solid #666666;
+	height: 10px;
+}
+.celdaimpar02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #BAD0EB;
+	padding-left: 20px;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+.celdapar {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #3E2076;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #E1EBF7;
+	LINE-HEIGHT: 6px;	
+}
+
+.celdapar02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #3E2076;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #E1EBF7;
+	BORDER-BOTTOM: #999999 1px solid;
+	LINE-HEIGHT: 6px;	
+}
+.celdapar03 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #3E2076;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #E1EBF7;
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-TOP: #999999 1px solid;
+	LINE-HEIGHT: 6px;	
+}
+.celdapar04 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #3E2076;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #E1EBF7;
+	
+	
+	LINE-HEIGHT: 6px;	
+}
+.celdapar01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #E1EBF7;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.celdafooter01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #BAD0EB;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+.celdapietabla01{
+	height: 7px;
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/img/pie_tabla_fondo_01.jpg);
+}
+.tabla01 {
+	border: 1px solid #0066CC;
+}
+.tabla02 {
+	border: 1px solid #FFFFFF;
+}
+.tabla03 {
+	border: thin solid #2E88C7;
+	text-transform: capitalize;
+	background-color: #FFFFFF;
+	list-style-position: inside;
+	list-style-image: none;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style-type: disc;
+
+
+}
+.titulolistado {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bolder;
+	color: #3069B6;	
+	text-align: left;
+	BORDER-TOP: #999999 1px solid;
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-LEFT: #999999 1px solid;
+	BORDER-RIGHT: #999999 1px solid;		
+}
+.titulolistado03 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bolder;
+	color: #3069B6;	
+	text-align: left;
+	
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-LEFT: #999999 1px solid;
+	BORDER-RIGHT: #999999 1px solid;		
+}
+.titulolistado02 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bolder;
+	color: #3069B6;	
+	text-align: left;
+	BORDER-TOP: #999999 1px solid;
+	BORDER-BOTTOM: #999999 1px solid;
+	BORDER-LEFT: #999999 1px solid;
+	BORDER-RIGHT: #999999 1px solid;		
+}
+.titulolistado1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #663300;	
+	text-align: left;
+			
+}
+.titulolistado01 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bolder;
+	color: #3069B6;
+	text-transform: uppercase;
+	text-align: left;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	BORDER-BOTTOM: #999999 1px solid;
+}
+A.linkcelda01 {
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000099;
+	font-weight: normal;
+}
+
+A.linkcelda01:hover {
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #6F0000;
+	font-weight: normal;
+}
+A.linkopcioncelda {
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #6F0000;
+	font-weight: normal;
+}
+
+A.linkopcioncelda:hover {
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000099;
+	font-weight: normal;
+}
+A.linkboton01 {
+	text-decoration: none;
+	border: 0px solid #333333;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	padding: 2px 2px 2px 5px;
+	vertical-align: middle;
+}A.linkboton01:hover {
+	vertical-align: middle;
+	text-decoration: none;
+	border: 0px solid #333333;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	padding: 2px 2px 2px 5px;
+}
+.textfield01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	height: 16px;
+	border: 1px solid #e9e9e9;
+	background-color: #F0F5FB;	
+}
+.textfield02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	height: 16px;	
+	background-color: #BADOEB;
+	padding: 1px 1px 1px 1px;
+
+}
+.textfield03 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	height: 16px;
+	border: 1px solid #666666;
+	background-color: #F0F5FB;	
+}
+.textfield04 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	
+	border: 1px solid #666666;
+	background-color: #F0F5FB;	
+}
+.textfield05 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	height: 16px;
+	border: 1px solid #666666;
+	background-color: #F0F5FB;
+	text-transform: uppercase;	
+}
+.textfield06 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	height: 16px;
+	border: 1px solid #666666;
+	background-color: #e9e9e9;	
+}
+.textfield07 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	height: 16px;
+	border: 1px solid #666666;
+	background-color: #F0F5FB;
+	text-align: center;	
+}
+.boton02 {
+	font-family: Tahoma;
+	font-size: 12px;
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/img/boton.jpg);
+	width: 150px;
+	background-color: #FFFFFF;
+	height: 30px;
+	border: #FFFFFF;
+	color: #993300;
+
+}
+
+.boton01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	border: 1px solid #333333;
+	color: #FFFFFF;
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/img/celda.jpg);	
+	font-size: 10px;
+	font-weight: bolder;
+	padding: 2px 2px 2px 2px;
+	vertical-align: middle;
+}
+
+.textoopcion {
+	FONT-SIZE: 11px; CURSOR: hand; COLOR: #000000; LINE-HEIGHT: 8px; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}

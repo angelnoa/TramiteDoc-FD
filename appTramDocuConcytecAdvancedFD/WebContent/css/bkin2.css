@@ -1,0 +1,288 @@
+.background {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #e0eaed
+}
+.blankLine {
+	HEIGHT: 15px; BACKGROUND-COLOR: transparent
+}
+.boxText {
+	BORDER-RIGHT: #738c94 1px solid; BORDER-TOP: #738c94 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #738c94 1px solid; COLOR: #144eac; TEXT-INDENT: 1px; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: Verdana, Arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.boxTextMultiline {
+	BORDER-RIGHT: #738c94 1px solid; BORDER-TOP: #738c94 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #738c94 1px solid; COLOR: #144eac; TEXT-INDENT: 1px; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.boxNumber {
+	BORDER-RIGHT: #738c94 1px solid; BORDER-TOP: #738c94 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #738c94 1px solid; COLOR: #144eac; TEXT-INDENT: 1px; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: Verdana, Arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: right
+}
+.boxNegativeNumber {
+	BORDER-RIGHT: #738c94 1px solid; BORDER-TOP: #738c94 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #738c94 1px solid; COLOR: #c00000; TEXT-INDENT: 1px; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: Verdana, Arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: right
+}
+.button1 {
+	MARGIN-TOP: 0px; FONT-WEIGHT: normal; FONT-SIZE: 8pt; MARGIN-BOTTOM: 0px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial; HEIGHT: 0px; BACKGROUND-COLOR: #9babbb; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+A.button1:link {
+	MARGIN-TOP: 0px; FONT-WEIGHT: normal; FONT-SIZE: 8pt; MARGIN-BOTTOM: 0px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial; HEIGHT: 0px; BACKGROUND-COLOR: #9babbb; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+A.button1:hover {
+	COLOR: #000000
+}
+.clock {
+	FONT-SIZE: 7pt; COLOR: #000000; FONT-FAMILY: Verdana, Arial
+}
+.corporativeLink {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; MARGIN-LEFT: 2px; COLOR: #000000; FONT-FAMILY: Verdana, Arial; TEXT-DECORATION: none
+}
+A.corporativeLink:link {
+	TEXT-DECORATION: underline
+}
+A.corporativeLink:hover {
+	COLOR: #c00000; TEXT-DECORATION: underline
+}
+.descriptiveText {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial
+}
+.detail {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #325189; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-DECORATION: none
+}
+.emphasize {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #c00000; FONT-FAMILY: Verdana, Arial
+}
+.SubMenuLineBPM {
+	FONT-SIZE: 8pt; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-IMAGE: url(../img/bg_SubMenu.gif); BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #92acd6; TEXT-DECORATION: none
+}
+.errorText {
+	FONT-SIZE: 8pt; COLOR: #c00000; FONT-FAMILY: Verdana, Arial; TEXT-DECORATION: none
+}
+.line {
+	HEIGHT: 1px; BACKGROUND-COLOR: #c00000
+}
+.line2 {
+	HEIGHT: 1px; BACKGROUND-COLOR: #000000
+}
+.link {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; MARGIN-LEFT: 2px; COLOR: #144eac; FONT-FAMILY: Verdana, Arial; TEXT-DECORATION: underline
+}
+A.link:link {
+	COLOR: #144eac; TEXT-DECORATION: underline
+}
+A.link:hover {
+	COLOR: #c00000; TEXT-DECORATION: underline
+}
+.listbox1 {
+	FONT-SIZE: 8pt; COLOR: #144eac; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left; align: center
+}
+.filter {
+	BORDER-RIGHT: #144eac 1px solid; BORDER-TOP: #144eac 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 8pt; BORDER-LEFT: #144eac 1px solid; COLOR: #000000; BORDER-BOTTOM: #144eac 1px solid; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #e5edf0; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.filterText {
+	FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Verdana, Arial; TEXT-DECORATION: none
+}
+.note {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #7f7e7e; FONT-FAMILY: Arial, Verdana; TEXT-DECORATION: none
+}
+A.note:link {
+	COLOR: #7f7e7e; TEXT-DECORATION: underline
+}
+A.note:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.negativeText {
+	FONT-SIZE: 8pt; COLOR: #c00000; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right; TEXT-DECORATION: none
+}
+.numberFile {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right
+}
+.number {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #144eac; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right
+}
+A.number:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #144eac; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right
+}
+A.number:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #144eac; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right
+}
+.numberNegative {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #c00000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right
+}
+A.numberNegative:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #c00000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right
+}
+A.numberNegative:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #c00000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right
+}
+.numberPositive {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #144eac; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right
+}
+.oddRow {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 20px; BACKGROUND-COLOR: #e9f1f3
+}
+A.oddRow:link {
+	TEXT-DECORATION: underline
+}
+A.oddRow:hover {
+	COLOR: #144eac; BACKGROUND-COLOR: #e0eaed; TEXT-DECORATION: none
+}
+.overRow {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+.pager {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #d2e1fb; TEXT-DECORATION: none
+}
+A.pager:link {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.pager:hover {
+	COLOR: #144eac; TEXT-DECORATION: none
+}
+.pairRow {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+A.pairRow:link {
+	TEXT-DECORATION: underline
+}
+A.pairRow:hover {
+	COLOR: #144eac; BACKGROUND-COLOR: #e0eaed; TEXT-DECORATION: none
+}
+.table1 {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; BACKGROUND-COLOR: #ccdadf
+}
+.table2 {
+	BACKGROUND-COLOR: #cccccc
+}
+.tableHeadFile {
+	FONT-WEIGHT: bolder; FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../img/bg_table_head.gif); COLOR: #ffffff; TEXT-INDENT: 1px; BACKGROUND-REPEAT: repeat; FONT-FAMILY: Arial, Verdana; BACKGROUND-COLOR: black; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.tableHead1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../img/bg_table_head.gif); COLOR: #000000; TEXT-INDENT: 1px; BACKGROUND-REPEAT: repeat; FONT-FAMILY: Arial, Verdana; BACKGROUND-COLOR: transparent; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.tableHead1 A:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; BACKGROUND-IMAGE: none; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Arial, Verdana; TEXT-ALIGN: center; TEXT-DECORATION: underline
+}
+.tableHead1 A:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; BACKGROUND-IMAGE: none; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Arial, Verdana; TEXT-ALIGN: center; TEXT-DECORATION: underline
+}
+.tableHead1 A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; BACKGROUND-IMAGE: none; COLOR: #c00000; TEXT-INDENT: 1px; FONT-FAMILY: Arial, Verdana; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.tablehead2 {
+	PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(../img/bg_table_head.gif); COLOR: #163c45; BACKGROUND-REPEAT: repeat; FONT-FAMILY: Verdana; HEIGHT: 25px; BACKGROUND-COLOR: transparent
+}
+.tableHead3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #d0dcfa; TEXT-ALIGN: left
+}
+.footRow {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #d2e1fb; TEXT-DECORATION: none
+}
+.footRow A:link {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+.footRow A:hover {
+	COLOR: #144eac; TEXT-DECORATION: none
+}
+.footNumber {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #d2e1fb; TEXT-ALIGN: right; TEXT-DECORATION: none
+}
+.footNumber A:link {
+	TEXT-DECORATION: underline
+}
+.footNumber A:link {
+	COLOR: #144eac; TEXT-DECORATION: none
+}
+.tableRow {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 15px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.textcenter {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #144eac; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.textFile {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+.text {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #144eac; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+A.text:link {
+	TEXT-DECORATION: underline
+}
+A.text:hover {
+	COLOR: #c00000; TEXT-DECORATION: none
+}
+.titleTable {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #ffffff; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #144eac; TEXT-ALIGN: center
+}
+.titleText {
+	FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; COLOR: #144eac; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+A.titleText:link {
+	TEXT-DECORATION: underline
+}
+A.titleText:visited {
+	TEXT-DECORATION: underline
+}
+.titleText2 {
+	FONT-SIZE: 8pt; COLOR: #144eac; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: left
+}
+.totalRow {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: verdana; HEIGHT: 19px; BACKGROUND-COLOR: #dee9ec; TEXT-ALIGN: right
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #ffffff; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #ffffff; SCROLLBAR-3DLIGHT-COLOR: #cccccc; SCROLLBAR-ARROW-COLOR: #c00000; SCROLLBAR-TRACK-COLOR: #f3f3f3; BACKGROUND-COLOR: #ffffff; scollbar-track-color: #ffffff; scollbar-dark-color: #ffffff
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.rowInEdition {
+	FONT-SIZE: 11px; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana,Arial; HEIGHT: 21px; BACKGROUND-COLOR: #fcc174; TEXT-ALIGN: left
+}
+.actionsCell {
+	MARGIN-LEFT: 2px; MARGIN-RIGHT: 2px; TEXT-ALIGN: center
+}
+.actionsCellCentered {
+	TEXT-ALIGN: center
+}
+.dateBox {
+	BORDER-RIGHT: #738c94 1px solid; BORDER-TOP: #738c94 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #738c94 1px solid; COLOR: #000000; TEXT-INDENT: 1px; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: Verdana, Arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+.date {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 19px; TEXT-ALIGN: center
+}
+.selectionCell {
+	TEXT-ALIGN: center
+}
+.taskInLevel0 {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 20px; BACKGROUND-COLOR: #d0dcfa; TEXT-ALIGN: left
+}
+.taskInLevel1 {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 20px; BACKGROUND-COLOR: #eaeaea; TEXT-ALIGN: left
+}
+.taskInLevelGt1 {
+	FONT-SIZE: 8pt; COLOR: #000000; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.menu1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; MARGIN-LEFT: 10px; COLOR: #ffffff; MARGIN-RIGHT: 10px; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #666666; TEXT-DECORATION: none
+}
+.menu2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; MARGIN-LEFT: 10px; COLOR: #666666; MARGIN-RIGHT: 10px; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.menu3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: right; TEXT-DECORATION: none
+}
+.menu4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.menu5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.plannerWbs {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #0861f3; TEXT-INDENT: 1px; FONT-FAMILY: Verdana, Arial
+}
+.bkinAppSubMenuLine {
+	FONT-SIZE: 8pt; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-IMAGE: url(../img/bg_SubMenu.gif); BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Verdana, Arial; BACKGROUND-COLOR: #92acd6; TEXT-DECORATION: none
+}
+.bkinAppMenuTopGroup {
+	FONT-SIZE: 8pt; VERTICAL-ALIGN: bottom; FONT-FAMILY: Verdana, Arial; TEXT-DECORATION: none
+}
+.bkinAppSubMenuText {
+	PADDING-RIGHT: 10px; FONT-SIZE: 8pt; CURSOR: pointer; COLOR: #ffffff; FONT-FAMILY: verdana, arial; TEXT-DECORATION: none
+}
+.bkinAppSubMenuTextSelected {
+	PADDING-RIGHT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 8pt; CURSOR: pointer; COLOR: #ffffff; FONT-FAMILY: verdana, arial; TEXT-DECORATION: none
+}

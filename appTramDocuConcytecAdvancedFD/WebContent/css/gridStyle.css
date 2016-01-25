@@ -1,0 +1,90 @@
+.Grid {
+	BORDER-RIGHT: #9eb4bb 1px solid; BORDER-TOP: #9eb4bb 1px solid; FONT-SIZE: 11px; VERTICAL-ALIGN: top; BORDER-LEFT: #9eb4bb 1px solid; BORDER-BOTTOM: #9eb4bb 1px solid; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #ffffff
+}
+.GridHeader {
+	PADDING-LEFT: 3px; BACKGROUND-IMAGE: url(../img/Grid/grid_headerBg.gif); CURSOR: pointer; HEIGHT: 24px; BACKGROUND-COLOR: #dbe7eb
+}
+.GridHeaderSmall {
+	PADDING-LEFT: 3px; FONT-SIZE: 9px; BACKGROUND-IMAGE: url(../img/Grid/grid_headerBg.gif); CURSOR: pointer; COLOR: #000000; FONT-FAMILY: verdana; HEIGHT: 24px; BACKGROUND-COLOR: #dbe7eb
+}
+.GridHeaderText {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: verdana
+}
+.GroupByText {
+	PADDING-RIGHT: 5px; FONT-SIZE: 11px; COLOR: #000000
+}
+.HeadingRow {
+	BACKGROUND-IMAGE: url(../img/grid/header_rowBg.gif); BACKGROUND-COLOR: #e9e9eb
+}
+.HeadingCell {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND-IMAGE: url(../img/grid//header_bg.gif); PADDING-BOTTOM: 2px; PADDING-TOP: 2px; BACKGROUND-COLOR: #e9e9eb
+}
+.HeadingCellHover {
+	BACKGROUND-IMAGE: url(../img/grid//header_hoverBg.gif); BACKGROUND-COLOR: #f6f6f7
+}
+.HeadingCellActive {
+	BACKGROUND-IMAGE: url(../img/grid//header_activeBg.gif); BACKGROUND-COLOR: #f6f6f7
+}
+.HeadingRow TD.FirstHeadingCell {
+	BACKGROUND-IMAGE: url(../img/grid//header_bg.gif)
+}
+.HeadingCellText {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; PADDING-BOTTOM: 5px; CURSOR: default; COLOR: #000000; PADDING-TOP: 3px; FONT-FAMILY: verdana; TEXT-ALIGN: left
+}
+.Row {
+	BACKGROUND-COLOR: #ffffff
+}
+.DataCell {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 10px; PADDING-BOTTOM: 1px; CURSOR: default; COLOR: #224988; PADDING-TOP: 1px; BORDER-BOTTOM: #c8dde3 1px solid; FONT-FAMILY: verdana
+}
+.Row TD.DataCell {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 10px; PADDING-BOTTOM: 3px; CURSOR: default; COLOR: #224988; PADDING-TOP: 3px; BORDER-BOTTOM: #c8dde3 1px solid; FONT-FAMILY: verdana
+}
+.SortedDataCell {
+	BACKGROUND-COLOR: #f5f5f5
+}
+.EditDataField {
+	BORDER-RIGHT: #738c94 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #738c94 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 8pt; PADDING-BOTTOM: 2px; BORDER-LEFT: #738c94 1px solid; COLOR: #144eac; TEXT-INDENT: 1px; PADDING-TOP: 2px; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: verdana, arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.boxTextSearch {
+	BORDER-RIGHT: #738c94 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #738c94 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 8pt; PADDING-BOTTOM: 1px; MARGIN: 0px 2px 0px 0px; BORDER-LEFT: #738c94 1px solid; COLOR: #144eac; TEXT-INDENT: 1px; PADDING-TOP: 1px; BORDER-BOTTOM: #738c94 1px solid; FONT-FAMILY: verdana, arial; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.Row TD.LastDataCell {
+	BACKGROUND-COLOR: #e0e8eb
+}
+.SelectedRow {
+	
+}
+.SelectedRow TD.DataCell {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 2px; BORDER-TOP: #c00000 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 10px; PADDING-BOTTOM: 2px; COLOR: #c00000; PADDING-TOP: 3px; BORDER-BOTTOM: #c00000 1px solid; FONT-FAMILY: verdana; BACKGROUND-COLOR: #e9f3f6
+}
+.SelectedRow TD.FirstDataCell {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 3px; PADDING-LEFT: 2px; BORDER-LEFT: #c00000 1px solid; BACKGROUND-COLOR: #e9f3f6
+}
+.SelectedRow TD.LastDataCell {
+	BORDER-RIGHT: #c00000 1px solid; BACKGROUND-COLOR: #e9f3f6
+}
+.GroupHeading {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; COLOR: #9eb4bb; PADDING-TOP: 10px; BORDER-BOTTOM: #dbe7eb 2px solid; FONT-FAMILY: verdana; BACKGROUND-COLOR: #ffffff
+}
+.SliderPopup {
+	BORDER-RIGHT: #4b4b6f 1px solid; BORDER-TOP: #9495a2 1px solid; BORDER-LEFT: #9495a2 1px solid; WIDTH: 288px; BORDER-BOTTOM: #4b4b6f 1px solid; HEIGHT: 60px; BACKGROUND-COLOR: #fff4d7
+}
+.GridFooter {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; CURSOR: default; PADDING-TOP: 5px
+}
+.GridFooterText {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: verdana
+}
+.WhiteText {
+	COLOR: #ffffff
+}
+.ScrollBar {
+	BACKGROUND-IMAGE: url(../img/Grid/scroller/scroller_bg.gif)
+}
+.ScrollGrip {
+	BACKGROUND-IMAGE: url(../img/Grid/scroller/scroll_gripBg.gif)
+}
+.ScrollPopup {
+	BORDER-RIGHT: #666666 2px solid; BORDER-TOP: #666666 1px solid; BORDER-LEFT: #666666 1px solid; BORDER-BOTTOM: #666666 2px solid; HEIGHT: 23px; BACKGROUND-COLOR: #ffffff
+}

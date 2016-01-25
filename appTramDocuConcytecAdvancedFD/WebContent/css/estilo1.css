@@ -1,0 +1,482 @@
+a{color:#0000ff}
+a:hover{color:#6F6F6F}
+td{font-family:Tahoma;font-size:11px;}
+.TextFieldOn{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #ffffff;
+	font-weight: normal;
+	background-color: #2E88C7;
+}
+.TextFieldOn1{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #ffffff;
+	font-weight: normal;
+	BORDER-TOP: #006699 1px solid ;
+	BORDER-LEFT: #006699 1px solid ;
+	BORDER-RIGHT: #006699 1px solid;
+	BORDER-BOTTOM: #006699 1px solid ;
+	
+}
+.TextFieldOn2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-TOP: #006699 1px solid ;
+	BORDER-LEFT: #006699 1px solid ;
+	BORDER-RIGHT: #006699 1px solid;
+	BORDER-BOTTOM: #006699 1px solid ;
+	
+}
+
+.TextFieldOn3{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #ffffff;
+	font-weight: normal;
+	background-color: #2E88C7;
+	BORDER-TOP: #006699 1px solid ;
+}
+
+.TextFieldOn4{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-transform: uppercase;
+	
+}
+.TextFieldOn5{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	font-weight: normal;
+
+	BORDER-BOTTOM: #006699 1px solid ;
+	
+}
+.TextFieldOn6{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight: bolder;
+
+}
+.TextFieldOn7{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	font-weight: bolder;
+
+}
+.TextFieldOn8{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: bolder;
+	BORDER-TOP: #006699 1px solid ;
+
+}
+.TextFieldOn9{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	font-weight: bolder;
+	
+
+}
+
+.TextFieldOn10{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight: bolder;
+	BORDER-BOTTOM: #999999 1px solid ;
+}
+
+.TextFieldOn11{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	font-weight: bolder;
+	BORDER-BOTTOM: #000000 1px solid ;
+
+}
+
+.TextFieldOn12{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-TOP: #999999 1px solid ;
+	BORDER-LEFT: #999999 1px solid ;
+	BORDER-RIGHT: #999999 1px solid;
+	BORDER-BOTTOM: #999999 1px solid ;
+	
+}
+.TextFieldOn13{
+	BORDER-TOP: #999999 1px solid ;
+	BORDER-LEFT: #999999 1px solid ;
+	BORDER-RIGHT: #999999 1px solid;
+	BORDER-BOTTOM: #999999 1px solid ;
+	
+}
+
+.TextFieldOn14{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7px;
+	color: #000000;
+	font-weight: normal;
+
+}
+
+.Columna{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	
+}
+.Columna1{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-LEFT: #006699 1px solid ;
+	
+}
+.Columna2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-LEFT: #006699 1px solid ;
+	BORDER-BOTTOM: #006699 1px solid ;
+	BORDER-RIGHT: #006699 1px solid;
+}
+.Columna3{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-LEFT: #006699 1px solid ;
+	BORDER-BOTTOM: #006699 1px solid ;
+	BORDER-RIGHT: #006699 1px solid;
+	
+}
+.Columna4{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-RIGHT: #006699 1px solid;
+}
+.Columna5{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-RIGHT: #666666 1px solid;
+}
+.Columna6{
+	
+	BORDER-RIGHT: #666666 1px solid;
+	BORDER-LEFT: #666666 1px solid ;
+	BORDER-BOTTOM: #666666 1px solid ;
+	
+}
+.Columna7{
+	BORDER-LEFT: #666666 1px solid ;
+}
+.Columna8{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-BOTTOM: #666666 1px solid;
+}
+.Columna9{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-TOP: #006699 1px solid ;
+	BORDER-RIGHT: #666666 1px solid;
+}
+.Columna10{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-LEFT: #006699 1px solid ;
+}
+.Columna11{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-TOP: #006699 1px solid ;
+	BORDER-LEFT: #006699 1px solid ;
+	BORDER-RIGHT: #006699 1px solid ;
+}
+.Columna12{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-BOTTOM: #006699 1px solid ;
+	BORDER-RIGHT: #006699 1px solid ;
+	BORDER-LEFT: #006699 1px solid ;
+}
+.Columna13{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-RIGHT: #006699 1px solid ;
+	
+}
+.Columna14{
+	BORDER-LEFT: #006699 1px solid ;
+	
+}
+
+.Columna15{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7px;
+	color: #000000;
+	font-weight: normal;
+	
+	
+}
+
+.TextFieldOff {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #616161;
+	text-decoration: none;
+	height: 13px;
+	border: 1px solid #666666;
+	background-color: #ffffff;
+	height: 15px;
+}
+.Button {
+	BORDER-RIGHT: #46617a 1px solid; 
+	BORDER-TOP: #46617a 1px solid;
+	 MARGIN-TOP: 0px; 
+	 FONT-WEIGHT: normal; 
+	 FONT-SIZE: 11px; 
+	 MARGIN-BOTTOM: 0px; 
+	 BORDER-LEFT: #46617a 1px solid;
+	 CURSOR: pointer; 
+	 COLOR: #404654; 
+	 BORDER-BOTTOM: #46617a 1px solid; 
+	 FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+	 HEIGHT: 17px; 
+	 BACKGROUND-COLOR: #f0f9fc;
+	 TEXT-ALIGN: center; 
+	 TEXT-DECORATION: none;
+	 width: 70px;
+}
+.Button1 {
+	BORDER-RIGHT: #46617a 1px solid; 
+	BORDER-TOP: #46617a 1px solid;
+	 MARGIN-TOP: 0px; 
+	 FONT-WEIGHT: normal; 
+	 FONT-SIZE: 11px; 
+	 MARGIN-BOTTOM: 0px; 
+	 BORDER-LEFT: #46617a 1px solid;
+	 CURSOR: pointer; 
+	 COLOR: #404654; 
+	 BORDER-BOTTOM: #46617a 1px solid; 
+	 FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+	 HEIGHT: 17px; 
+	 BACKGROUND-COLOR: #f0f9fc;
+	 TEXT-ALIGN: center; 
+	 TEXT-DECORATION: none;
+	 width: 130px;
+}
+.Button6 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	border: 1px solid #333333;
+	color: #FFFFFF;
+	
+	background-image:   url(img_base/grafico4.png);
+	font-size: 10px;
+	font-weight: bolder;
+	padding: 2px 2px 2px 2px;
+	vertical-align: middle;
+	width: 80px;
+	height: 25px;
+}
+.Columna15{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	
+	BORDER-LEFT: #006699 1px solid ;
+	BORDER-RIGHT: #006699 1px solid ;
+}
+.Columna16{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-TOP: #006699 1px solid ;
+	BORDER-RIGHT: #006699 1px solid ;
+	BORDER-BOTTOM: #006699 1px solid ;
+}
+.Columna17{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	
+}
+.Columna18{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-LEFT: #ffffff 1px solid ;
+}
+.TextFieldOff1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #ffffff;
+	text-decoration: none;
+	height: 13px;
+	background-color: #006699;
+}
+
+.TextFieldOff2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	height: 9px;
+	width: 130px;
+}
+
+.celdaimpar01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #BAD0EB;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.celdaimpar02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FF0000;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #BAD0EB;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.celdapar01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #E1EBF7;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.textoTituloAzul {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #3E2076;
+}
+.textoTituloBlanco {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #ffffff;
+}
+.tabla03 {
+	border: thin solid #2E88C7;
+	text-transform: capitalize;
+	background-color: #FFFFFF;
+	list-style-position: inside;
+	list-style-image: none;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style-type: disc;
+	BORDER-TOP: #666666 1px solid ;
+}
+.tabla04 {
+	
+	BORDER-TOP: #000000  1px solid ;
+}
+.titulolistado01 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bolder;
+	color: #3069B6;
+	text-transform: uppercase;
+	text-align: left;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	BORDER-TOP: #999999 1px solid;
+	BORDER-BOTTOM: #999999 1px solid;
+}
+.textfield05 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	height: 16px;
+		
+}
+
+#scroll { 
+     width:400px; 
+     height:300px; 
+     background-color:#F2F2F2; 
+     overflow:auto; 
+}
+
+.titulolistado02 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bolder;
+	color: #3069B6;
+	text-transform: uppercase;
+	text-align: left;
+	
+}
+
+.TextFieldOn14{
+	BORDER-TOP: #000000 1px solid ;
+	BORDER-LEFT: #000000 1px solid ;
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-BOTTOM: #000000 1px solid ;
+	
+}

@@ -1,0 +1,167 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang3082{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\f0\fs20 /* \par
+ Metodo para listar Datos\par
+ S = Reporte de Doc. de Salida\par
+ I = Reporte de doc. Internos\par
+ ****\par
+ by Joseph Estrada.\par
+ ****\par
+*/ \par
+ResultSet lrs\par
+String ls_desde, ls_hasta\par
+date   ld_fecha\par
+DataStore ds_datos\par
+n_error ln_error\par
+integer li_cont\par
+//\par
+iel_log.log(" dentro de : " + "of_lista_reportes()")\par
+iel_log.log(" as_oficina: " + as_oficina)\par
+iel_log.log(" as_naturaleza: " + as_naturaleza)\par
+iel_log.log(" as_fecha: " + as_fecha)\par
+iel_log.log(" as_desde: " + as_desde)\par
+iel_log.log(" as_hasta: " + as_hasta)\par
+if not isvalid(ds_datos) then\par
+\tab ds_datos = create DataStore\par
+end if\par
+//\par
+if as_naturaleza = "I" then\par
+\tab // interno\par
+\tab ds_datos.dataobject = "r_hojas_tramite_interno"\par
+else\par
+\tab // salida\par
+\tab ds_datos.dataobject = "r_hoja_cargos_salida"\par
+end if\par
+ld_fecha = date(as_fecha)\par
+ds_datos.settransobject(itr_trans)\par
+//\par
+if ds_datos.retrieve(as_oficina, "01", ld_fecha, as_desde, as_hasta)  < 0 then\par
+\tab iel_log.log(" error en el sqlca : " + itr_trans.sqlerrtext)\par
+\tab ln_error = create n_error\par
+\tab ln_error.setmessage( "No se logro obtener los datos Requeridos")\par
+\tab throw ln_error\par
+end if\par
+//\par
+iel_log.log(" ds_datos.rowcount() : " + String(ds_datos.rowcount()))\par
+if ds_datos.generateresultset(lrs) = -1 then\par
+\tab  iel_log.log(" error al convertir el resultset ...!!!" )\par
+\tab ln_error = create n_error\par
+\tab ln_error.setmessage( "Error al convertir rs en : of_lista_reportes() ")\par
+\tab throw ln_error\par
+end if\par
+//\par
+return lrs\par
+\par
+//////////////////////////////tramite interno//////////////////////////\par
+\par
+SELECT "movimientos_doc"."codigo_documento",   \par
+         "oficinas_a"."descripcion_oficina",   \par
+         "oficinas_b"."descripcion_oficina",   \par
+         "tipo_documento"."descripcion_tipo",   \par
+         "documento"."numero_documento",   \par
+         "documento"."naturaleza_documento",   \par
+         "documento"."fecha_documento",   \par
+         "doc_salida_origen"."codigo_oficina",   \par
+         "doc_salida_destino"."codigo_institucion",   \par
+         "institucion_a"."descripcion_institucion",   \par
+         "oficinas_c"."descripcion_oficina",   \par
+         "institucion_b"."descripcion_institucion",   \par
+         "oficinas_d"."descripcion_oficina",   \par
+         "institucion_b"."siglas_institucion",   \par
+         "oficinas_c"."siglas_oficina",   \par
+         "oficinas_b"."siglas_oficina",   \par
+         "movimientos_doc"."fecha_movimiento",   \par
+         "movimientos_doc"."hora_movimiento",   \par
+         "movimientos_doc"."estado_movimiento",   \par
+         "motivo"."descripcion_motivo",   \par
+         "documento"."asunto_documento",   \par
+         "documento"."folios_documento",   \par
+         "documento"."observa_documento",   \par
+         "serie_documental"."descripcion_serie",   \par
+         "expediente"."descripcion_expediente",   \par
+         "documento"."fecha_registro",   \par
+         "documento"."hora_registro",   \par
+         "documento"."ultima_modificacion",   \par
+         "movimientos_doc"."codigo_inicia",   \par
+         "movimientos_doc"."secuencia_movimiento",   \par
+         "doc_interno_origen"."codigo_oficina",   \par
+         "movimientos_doc"."ultimo_usuario",   \par
+         "personal_a"."nombre_personal",   \par
+         "personal_b"."nombre_personal",   \par
+         "personal_c"."nombre_personal",   \par
+         "contactos_a"."nombre_contacto",   \par
+         "contactos_b"."nombre_contacto",   \par
+         "personal_d"."nombre_personal",   \par
+         "tipo_documento"."es_multiple"  \par
+    FROM \{oj "institucion" "institucion_a" RIGHT OUTER JOIN "doc_salida_destino" ON "institucion_a"."codigo_institucion" = "doc_salida_destino"."codigo_institucion"\}, \{oj "oficinas" "oficinas_c" RIGHT OUTER JOIN "doc_salida_origen" ON "oficinas_c"."codigo_oficina" = "doc_salida_origen"."codigo_oficina" AND "oficinas_c"."codigo_fondo" = "doc_salida_origen"."codigo_fondo" RIGHT OUTER JOIN "documento" ON "doc_salida_origen"."codigo_documento" = "documento"."codigo_documento"\}, \{oj "doc_salida_destino" RIGHT OUTER JOIN "documento" ON "doc_salida_destino"."codigo_documento" = "documento"."codigo_documento"\}, \{oj "doc_interno_destino" RIGHT OUTER JOIN "documento" ON "doc_interno_destino"."codigo_documento" = "documento"."codigo_documento"\}, \{oj "doc_interno_origen" RIGHT OUTER JOIN "documento" ON "doc_interno_origen"."codigo_documento" = "documento"."codigo_documento"\}, \{oj "oficinas" "oficinas_a" RIGHT OUTER JOIN "doc_interno_destino" ON "oficinas_a"."codigo_oficina" = "doc_interno_destino"."codigo_oficina" AND "oficinas_a"."codigo_fondo" = "doc_interno_destino"."codigo_fondo"\}, \{oj "doc_interno_origen" LEFT OUTER JOIN "oficinas" "oficinas_b" ON "doc_interno_origen"."codigo_fondo" = "oficinas_b"."codigo_fondo" AND "doc_interno_origen"."codigo_oficina" = "oficinas_b"."codigo_oficina"\}, \{oj "institucion" "institucion_b" RIGHT OUTER JOIN "doc_entrada" ON "institucion_b"."codigo_institucion" = "doc_entrada"."origen_documento" RIGHT OUTER JOIN "documento" ON "doc_entrada"."codigo_documento" = "documento"."codigo_documento"\}, \{oj "oficinas" "oficinas_d" RIGHT OUTER JOIN "doc_entrada" ON "oficinas_d"."codigo_oficina" = "doc_entrada"."destino_documento" AND "oficinas_d"."codigo_fondo" = "doc_entrada"."fondo_destino"\}, \{oj "motivo" RIGHT OUTER JOIN "movimientos_doc" ON "motivo"."codigo_motivo" = "movimientos_doc"."codigo_motivo"\}, \{oj "expediente" RIGHT OUTER JOIN "movimientos_doc" ON "expediente"."codigo_expediente" = "movimientos_doc"."codigo_expediente" AND "expediente"."codigo_fondo" = "movimientos_doc"."codigo_fondo" AND "expediente"."codigo_oficina" = "movimientos_doc"."codigo_oficina" AND "expediente"."codigo_serie" = "movimientos_doc"."codigo_serie"\}, \{oj "serie_documental" RIGHT OUTER JOIN "movimientos_doc" ON "serie_documental"."codigo_fondo" = "movimientos_doc"."codigo_fondo" AND "serie_documental"."codigo_oficina" = "movimientos_doc"."codigo_oficina" AND "serie_documental"."codigo_serie" = "movimientos_doc"."codigo_serie"\}, \{oj "personal" "personal_a" RIGHT OUTER JOIN "doc_interno_origen" ON "personal_a"."codigo_personal" = "doc_interno_origen"."codigo_personal"\}, \{oj "personal" "personal_b" RIGHT OUTER JOIN "doc_interno_destino" ON "personal_b"."codigo_personal" = "doc_interno_destino"."codigo_personal"\}, \{oj "personal" "personal_c" RIGHT OUTER JOIN "doc_salida_origen" ON "personal_c"."codigo_personal" = "doc_salida_origen"."codigo_personal"\}, \{oj "contactos" "contactos_a" RIGHT OUTER JOIN "doc_salida_destino" ON "contactos_a"."codigo_contacto" = "doc_salida_destino"."codigo_contacto"\}, \{oj "contactos" "contactos_b" RIGHT OUTER JOIN "doc_entrada" ON "contactos_b"."codigo_contacto" = "doc_entrada"."remitente"\}, \{oj "personal" "personal_d" RIGHT OUTER JOIN "doc_entrada" ON "personal_d"."codigo_personal" = "doc_entrada"."destinatario"\},   \par
+         "tipo_documento"  \par
+   WHERE ( "documento"."codigo_documento" = "movimientos_doc"."codigo_documento" ) and  \par
+         ( "tipo_documento"."codigo_tipo" = "documento"."codigo_tipo" ) and  \par
+         ( ( "movimientos_doc"."codigo_oficina" like :ofi ) AND  \par
+         ( "movimientos_doc"."codigo_fondo" like :fon ) AND  \par
+         ( "movimientos_doc"."estado_movimiento" = '1' ) AND  \par
+         ( "documento"."naturaleza_documento" = 'I' ) AND  \par
+         ( "movimientos_doc"."fecha_movimiento" = :fec ) AND  \par
+         ( "movimientos_doc"."codigo_documento" >= :cod ) AND  \par
+         ( "movimientos_doc"."codigo_documento" <= :cod2 ) )   \par
+ORDER BY "oficinas_d"."descripcion_oficina" ASC,   \par
+         "movimientos_doc"."codigo_documento" ASC,   \par
+         "movimientos_doc"."secuencia_movimiento" ASC   \par
+\par
+///////////////////cargos salida/////////////////\par
+\par
+ SELECT DISTINCT "movimientos_doc"."codigo_documento",   \par
+         "movimientos_doc"."secuencia_movimiento",   \par
+         "movimientos_doc"."fecha_movimiento",   \par
+         "movimientos_doc"."codigo_inicia",   \par
+         "movimientos_doc"."estado_movimiento",   \par
+         "movimientos_doc"."hora_movimiento",   \par
+         "movimientos_doc"."ultimo_usuario",   \par
+         "tipo_documento"."descripcion_tipo",   \par
+         "oficinas_a"."descripcion_oficina",   \par
+         "institucion_a"."descripcion_institucion",   \par
+         "institucion_a"."direccion_institucion",   \par
+         "contactos"."nombre_contacto",   \par
+         "contactos"."direccion_contacto",   \par
+         "personal"."nombre_personal",   \par
+         "pais_a"."descripcion_pais",   \par
+         "provincia_a"."des_prov",   \par
+         "distrito_a"."des_dist",   \par
+         "pais_b"."descripcion_pais",   \par
+         "provincia_b"."des_prov",   \par
+         "distrito_b"."des_dist",   \par
+         "documento"."naturaleza_documento",   \par
+         "doc_salida_destino"."codigo_institucion",   \par
+         "documento"."fecha_documento",   \par
+         "documento"."numero_documento",   \par
+         "oficinas_a"."siglas_oficina",   \par
+         "institucion_b"."siglas_institucion",   \par
+         "oficinas_b"."siglas_oficina"  \par
+    FROM \{oj \{oj "institucion" institucion_a  LEFT OUTER JOIN "pais" pais_a  ON "institucion_a"."codigo_pais" = "pais_a"."codigo_pais"\}, \{oj "institucion" institucion_a  LEFT OUTER JOIN "provincia" provincia_a  ON "institucion_a"."cod_dpto" = "provincia_a"."cod_dpto" AND "institucion_a"."cod_prov" = "provincia_a"."cod_prov"\}, \{oj "contactos"  LEFT OUTER JOIN "pais" pais_b  ON "contactos"."codigo_pais" = "pais_b"."codigo_pais"\}, \{oj "contactos"  LEFT OUTER JOIN "provincia" provincia_b  ON "contactos"."cod_dpto" = "provincia_b"."cod_dpto" AND "contactos"."cod_prov" = "provincia_b"."cod_prov"\}, \{oj "institucion" institucion_a  LEFT OUTER JOIN "distrito" distrito_a  ON "institucion_a"."cod_dpto" = "distrito_a"."cod_dpto" AND "institucion_a"."cod_prov" = "distrito_a"."cod_prov" AND "institucion_a"."cod_dist" = "distrito_a"."cod_dist"\}, \{oj "contactos"  LEFT OUTER JOIN "distrito" distrito_b  ON "contactos"."cod_dpto" = "distrito_b"."cod_dpto" AND "contactos"."cod_prov" = "distrito_b"."cod_prov" AND "contactos"."cod_dist" = "distrito_b"."cod_dist"\}, \{oj "doc_entrada"  LEFT OUTER JOIN "institucion" institucion_b  ON "doc_entrada"."origen_documento" = "institucion_b"."codigo_institucion"\}, \{oj "documento"  LEFT OUTER JOIN "doc_entrada"  ON "documento"."codigo_documento" = "doc_entrada"."codigo_documento"\}, \{oj "documento"  LEFT OUTER JOIN "doc_interno_origen"  ON "documento"."codigo_documento" = "doc_interno_origen"."codigo_documento"\} LEFT OUTER JOIN "oficinas" oficinas_b  ON "doc_interno_origen"."codigo_oficina" = "oficinas_b"."codigo_oficina" AND "doc_interno_origen"."codigo_fondo" = "oficinas_b"."codigo_fondo"\},   \par
+         "movimientos_doc",   \par
+         "doc_salida_origen",   \par
+         "doc_salida_destino",   \par
+         "oficinas" "oficinas_a",   \par
+         "personal",   \par
+         "tipo_documento"  \par
+   WHERE ( "doc_salida_origen"."codigo_fondo" = "personal"."codigo_fondo" ) and  \par
+         ( "doc_salida_origen"."codigo_oficina" = "personal"."codigo_oficina" ) and  \par
+         ( "doc_salida_origen"."codigo_personal" = "personal"."codigo_personal" ) and  \par
+         ( "doc_salida_destino"."codigo_institucion" = "contactos"."codigo_institucion" ) and  \par
+         ( "doc_salida_destino"."codigo_contacto" = "contactos"."codigo_contacto" ) and  \par
+         ( "institucion_a"."codigo_institucion" = "doc_salida_destino"."codigo_institucion" ) and  \par
+         ( "doc_salida_origen"."codigo_fondo" = "oficinas_a"."codigo_fondo" ) and  \par
+         ( "doc_salida_origen"."codigo_oficina" = "oficinas_a"."codigo_oficina" ) and  \par
+         ( "documento"."codigo_documento" = "movimientos_doc"."codigo_documento" ) and  \par
+         ( "doc_salida_origen"."codigo_documento" = "documento"."codigo_documento" ) and  \par
+         ( "doc_salida_destino"."codigo_documento" = "documento"."codigo_documento" ) and  \par
+         ( "tipo_documento"."codigo_tipo" = "documento"."codigo_tipo" ) and  \par
+         ( ( "movimientos_doc"."codigo_oficina" = '0001' ) AND  \par
+         ( "movimientos_doc"."codigo_fondo" = :fon ) AND  \par
+         ( "movimientos_doc"."estado_movimiento" = '2' ) AND  \par
+         ( "movimientos_doc"."fecha_movimiento" = :fec ) AND  \par
+         ( "movimientos_doc"."codigo_documento" >= :cod ) AND  \par
+         ( "movimientos_doc"."codigo_documento" <= :cod2 ) AND  \par
+         ( "doc_salida_origen"."codigo_fondo" = :fon ) AND  \par
+         ( "doc_salida_origen"."codigo_oficina" = :ofi ) )    \par
+}
+ 

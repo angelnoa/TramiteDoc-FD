@@ -1,0 +1,859 @@
+DIV.taMenu {
+	BACKGROUND: url(/images/taMenuBorder.gif) #ffffff repeat-x 50% bottom; FLOAT: left; WIDTH: 100%
+}
+DIV.taMenu UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+DIV.taMenu LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DIV.taMenu A {
+	FONT-WEIGHT: bold; FONT-SIZE: x-small; BACKGROUND: url(/images/taMenuRight.gif) no-repeat right top; FLOAT: left; BORDER-BOTTOM: #84b0c7 1px solid; TEXT-DECORATION: none
+}
+DIV.taMenu A.smallBusiness {
+	BACKGROUND: url(/images/sbMenuRight.jpg) no-repeat right top
+}
+DIV.taMenu A:hover {
+	BACKGROUND-POSITION: 100% -150px
+}
+DIV.taMenu A:link {
+	COLOR: #115e94
+}
+DIV.taMenu A:visited {
+	COLOR: #115e94
+}
+DIV.taMenu A:active {
+	COLOR: #115e94
+}
+DIV.taMenu A:hover {
+	COLOR: #115e94
+}
+DIV.taMenu SPAN {
+	PADDING-RIGHT: 9px; DISPLAY: block; PADDING-LEFT: 9px; BACKGROUND: url(/images/taMenuLeft.gif) no-repeat left top; FLOAT: left; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; WHITE-SPACE: nowrap
+}
+DIV.taMenu SPAN.smallBusiness {
+	BACKGROUND: url(/images/sbMenuLeft.jpg) no-repeat left top
+}
+DIV.taMenu SPAN {
+	FLOAT: none
+}
+DIV.taMenu A:hover SPAN {
+	BACKGROUND-POSITION: 0% -150px
+}
+DIV.taMenu LI#current A {
+	BORDER-TOP-WIDTH: 0px; BACKGROUND-POSITION: 100% -150px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.taMenu LI#current SPAN {
+	BACKGROUND-POSITION: 0% -150px; PADDING-BOTTOM: 6px
+}
+
+body 
+{
+	SCROLLBAR-FACE-COLOR: #eeeeee; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-SHADOW-COLOR: #aaaaaa; 
+	SCROLLBAR-3DLIGHT-COLOR: #62708a; 
+	SCROLLBAR-ARROW-COLOR: #62708a; 
+	SCROLLBAR-TRACK-COLOR: #eeeeee; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000; 
+	SCROLLBAR-BASE-COLOR: #eeeeee;
+}
+TD {
+	FONT-SIZE: 10px; 
+	COLOR: #000000; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+}
+TH {
+	FONT-SIZE: 10px; 
+	COLOR: #000000; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.subtitulo{
+	FONT-SIZE: 8px; 
+	COLOR: #ffa51f; 
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	border: 1px solid #336699;
+	vertical-align: middle;
+	font-weight: bolder;		
+}
+.subtitulo2{
+	FONT-SIZE: 17px; 
+	COLOR: #ffffff; 
+	FONT-FAMILY: Tahoma, Verdana;
+	vertical-align: middle;
+	font-weight: bolder;		
+}
+.subtitulo3{
+	FONT-SIZE: 17px; 
+	COLOR: #666666; 
+	FONT-FAMILY: Tahoma, Verdana;
+	vertical-align: left;
+	font-weight: bolder;		
+}
+.subtitulo4{
+	FONT-SIZE: 17px; 
+	COLOR: #FFFFFF; 
+	FONT-FAMILY: Tahoma, Verdana;
+	vertical-align: left;
+	font-weight: bolder;		
+}
+.celdacabecera{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #ffffff;
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/css/img_style/fondo_boton.png);
+	
+	height: 18px;
+	font-weight: bolder;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+.celdacabecera1{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #ffffff;
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/css/img_style/modif2.png);
+	height: 18px;
+	font-weight: bolder;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+.celdacabecera2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	border: #006699;
+	border-style: solid;
+	background-color: #006699;
+	height: 30px;
+	font-weight: bolder;
+	text-align: left;
+	vertical-align: middle;
+	BORDER-TOP: #CCCCCC 1px solid;
+	BORDER-BOTTOM: #CCCCCC 1px solid;
+	BORDER-LEFT: #CCCCCC 1px solid;
+	BORDER-RIGHT: #CCCCCC 1px solid;
+}
+.celdacabecera3{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #ffffff;
+	height: 18px;
+	font-weight: bolder;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+.celdacabecera4{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #ffffff;
+	background-color: #CCCCCC;
+	height: 18px;
+	font-weight: bolder;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+.celdacabecera5{
+	background-color: #E9E9E9;
+	vertical-align: middle;
+	
+}
+.border1{
+    
+	border-botton-width: 1px solid #666666;
+	
+	
+}
+.celdanombrecampo{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: #666666;
+	height: 18px;
+	font-weight: bolder;
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+.celdaresaltada{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	background-color: #999999;
+	height: 14px;
+	font-weight: bolder;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+.def {
+	FONT-SIZE: 11px; 
+	COLOR: #616161; 
+	FONT-FAMILY: Tahoma, Verdana
+}
+.defCentrado {
+	FONT-SIZE: 12px; 
+	COLOR: #616161; 
+	FONT-FAMILY: Tahoma, Verdana;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.white {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Tahoma, Verdana
+}
+.seleccionado{
+	FONT-SIZE: 12px; 
+	COLOR: #CCE5FF; 
+	FONT-FAMILY: Tahoma, Verdana; 
+	TEXT-DECORATION: underline;
+	font-weight: bolder;
+}
+/**
+A {
+	FONT-SIZE: 9px; 
+	COLOR: #996633; 
+	FONT-FAMILY: Tahoma, Verdana; 
+	TEXT-DECORATION: none;
+	font-weight: bolder;
+}
+A:hover {
+	FONT-SIZE: 9px; 
+	COLOR: white; 
+	FONT-FAMILY: Tahoma, Verdana; 
+	TEXT-DECORATION: underline;
+	font-weight: bolder;
+}
+.copyright {
+	FONT-SIZE: 10px; COLOR: black; FONT-FAMILY: Tahoma, Verdana
+}
+A.copyright {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Tahoma, Verdana; TEXT-DECORATION: none
+}
+A.copyright:hover {
+	FONT-SIZE: 12px; 
+	COLOR: #ffffff; 
+	FONT-FAMILY: Tahoma, Verdana; 
+	TEXT-DECORATION: none
+}
+
+	
+A:hover {
+		font-size:9; 
+		font-weight:bold; 
+		color: #990000;
+		TEXT-DECORATION: underline;} 
+		
+**/
+.TextFieldOn{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+	
+	BORDER-TOP: #CCCCCC 1px solid;
+	BORDER-BOTTOM: #CCCCCC 1px solid;
+	BORDER-LEFT: #CCCCCC 1px solid;
+	BORDER-RIGHT: #CCCCCC 1px solid;
+}
+.TextFieldOn1{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+	height: 13px;
+	
+	
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+}
+.TextFieldOn2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	height: 13px;
+	background-color: #E9E9E9;
+	
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	border-style: none;
+}
+.TextFieldOn3{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+	height: 15px;
+	
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/css/img_style/modif2.PNG);
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+}
+.TextFieldOn4{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+	height: 15px;
+	
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/css/img_style/modif2.PNG);
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+}
+.TextFieldOn5{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FF9900;
+	text-decoration: none;
+	height: 15px;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+}
+.TextFieldOn6{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+	height: 13px;
+	
+	background-color: #FFCC99;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+}
+.TextFieldOn7{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: underline;
+	
+	height: 13px;
+	
+	background-color: #E9E9E9;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	border-style: none;
+}
+.TextFieldOn8{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	height: 13px;
+	background-color: #E9E9E9;
+	
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	border-style: none;
+}
+.TextFieldOn9{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	height: 13px;
+	background-color: #FFFFFF;
+	
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	border-style: none;
+}
+.TextFieldOn10{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	BORDER-TOP: #000000 1px solid;
+	BORDER-BOTTOM: #000000 1px solid;
+	BORDER-RIGHT: #000000 1px solid;
+	height: 13px;
+	
+	
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	
+}
+.TextFieldOn11{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: underline;
+
+	height: 13px;
+	
+	
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	border-style: none;
+}
+.TextFieldOn12{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+	height: 15px;
+	
+}
+.TextFieldOn13{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	height: 13px;
+	background-color: #E9E9E9;
+	
+	border-style: solid;
+	border-top-width: 3px;
+	
+	height: 15px;
+	
+}
+.TextFieldOn14{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	BORDER-TOP: #000000 1px solid ;
+	
+	BORDER-RIGHT: #000000 1px solid;
+	height: 13px;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	
+}
+.TextFieldOn15{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	
+	BORDER-RIGHT: #000000 1px solid;
+	
+	height: 13px;
+	
+	
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	
+}
+.TextFieldOn16{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	BORDER-BOTTOM: #000000 1px solid;
+	BORDER-RIGHT: #000000 1px solid;
+	
+	height: 13px;
+	height: 15px;
+	
+}
+.TextFieldOn17{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	BORDER-BOTTOM: #000000 1px solid;
+	BORDER-LEFT: #000000 1px solid;
+	
+	height: 13px;
+
+	
+}
+.TextFieldOn18{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	BORDER-TOP: #000000 1px solid;
+	BORDER-LEFT: #000000 1px solid;
+	
+	height: 13px;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	
+}
+.TextFieldOn19{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	
+	BORDER-LEFT: #000000 1px solid;
+	
+	height: 13px;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	
+}
+.TextFieldOn20{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	BORDER-TOP: #000000 1px solid ;
+	BORDER-LEFT: #000000 1px solid ;
+	BORDER-RIGHT: #000000 1px solid;
+	
+	height: 26px;
+}
+.TextFieldOn21{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	BORDER-RIGHT: #000000 1px solid;
+	height: 26px;
+}
+.TextFieldOn22{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	BORDER-BOTTOM: #000000 1px solid;
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-LEFT: #000000 1px solid;
+	height: 29px;
+}
+.TextFieldOn23{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	BORDER-LEFT: #000000 1px solid;
+	height: 26px;
+}
+.TextFieldOn24{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	
+	background-color: #e9e9e9;
+	BORDER-TOP: #000000 1px solid ;
+	BORDER-LEFT: #000000 1px solid ;
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-BOTTOM: #000000 1px solid ;
+}
+.TextFieldOn25{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	text-transform: uppercase;
+	font-weight: normal;
+	BORDER-TOP: #999999 1px solid ;
+	BORDER-LEFT: #999999 1px solid ;
+	BORDER-RIGHT: #999999 1px solid;
+	BORDER-BOTTOM: #999999 1px solid ;
+	
+
+}
+.TextFieldOn26{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	BORDER-TOP: #000000 1px solid ;
+	BORDER-LEFT: #000000 1px solid ;
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-BOTTOM: #000000 1px solid ;
+	color: #e9e9e9;
+}
+.TextFieldOn27{
+	
+	
+	BORDER-BOTTOM: #000000 2px solid ;
+	
+}
+.TextFieldOn28{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	BORDER-TOP: #000000 1px solid ;
+	
+	BORDER-BOTTOM: #000000 1px solid ;
+	color: #e9e9e9;
+}
+.TextFieldOn29{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	BORDER-TOP: #000000 1px solid ;
+	BORDER-LEFT: #000000 1px solid ;
+	BORDER-BOTTOM: #000000 1px solid ;
+	color: #e9e9e9;
+}
+.TextFieldOn30{
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	BORDER-TOP: #000000 1px solid ;
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-BOTTOM: #000000 1px solid ;
+	
+}
+.TextFieldOn31{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	text-transform: uppercase;
+	font-weight: normal;
+	BORDER-TOP: #999999 1px solid ;
+	
+	BORDER-RIGHT: #999999 1px solid;
+	BORDER-BOTTOM: #999999 1px solid ;
+	
+}
+.TextFieldOn32{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	
+	BORDER-BOTTOM: #999999 1px solid ;
+	color: #e9e9e9;
+}
+.TextFieldOn33{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	
+	
+	color: #000000;
+}
+.TextFieldOn34{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	background-color: #e9e9e9;
+	BORDER-BOTTOM: #000000 1px solid ;
+	color: #e9e9e9;
+	height: 30px;
+}
+.TextFieldOn35{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	BORDER-TOP: #000000 1px solid ;
+	BORDER-BOTTOM: #000000 1px solid ;
+	BORDER-LEFT:  #000000 1px solid ;
+	BORDER-RIGHT:  #000000 1px solid;
+	color: #e9e9e9;
+	height: 20px;
+	background-color: #BAD0EB;
+}
+
+.TextFieldOn36{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	
+	BORDER-BOTTOM: #000000 1px solid ;
+	color: #e9e9e9;
+	height: 20px;
+	background-color: #006699;
+}
+
+.TextFieldOn37{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	
+	background-color: #F0F5FB;
+	BORDER-TOP: #0099CC 1px solid ;
+	BORDER-LEFT: #0099CC 1px solid ;
+	BORDER-RIGHT: #0099CC 1px solid;
+	BORDER-BOTTOM: #0099CC 1px solid ;
+}
+
+.TextFieldOn38{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	
+	BORDER-TOP: #a0b3c6 1px solid ;
+	BORDER-LEFT: #a0b3c6 1px solid ;
+	BORDER-RIGHT: #a0b3c6 1px solid;
+	BORDER-BOTTOM: #a0b3c6 1px solid ;
+}
+
+.TextFieldOn39{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+	font-weight: normal;
+	
+	BORDER-BOTTOM: #000000 1px solid ;
+	color: #e9e9e9;
+	height: 20px;
+	background-color: #006699;
+}
+
+.TextFieldOn40{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	font-weight: bolder;
+	BORDER-BOTTOM: #000000 1px solid ;
+
+}
+
+.TextFieldOff {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #616161;
+	text-decoration: none;
+	height: 13px;
+	border: 1px solid #666666;
+	background-color: #FFE2C6;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+}
+.TextFieldOff1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #616161;
+	text-decoration: none;
+	height: 13px;
+	border: 1px solid #666666;
+	background-color: #FFFFF;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+	text-align: center;
+}
+.TextFieldOff2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #616161;
+	text-decoration: none;
+	height: 13px;
+	border: 1px solid #666666;
+	background-color: #dedede;
+	padding: 1px 1px 1px 1px;
+	height: 15px;
+}
+.TextAreaOn{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #000000;
+	text-decoration: none;
+	border: 1px solid #666666;
+	background-color: #ffffff;	
+	padding: 1px 1px 1px 1px;
+}
+.TextAreaOff {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #616161;
+	text-decoration: none;
+	border: 1px solid #666666;
+	background-color: #efefef;
+	padding: 1px 1px 1px 1px;
+}
+/**
+.Button {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	border: 1px solid #333333;
+	color: #FFFFFF;
+	background-image:  url(file:///D|/eclipse/workspace/ERPZ9_RRHH/webroot/css/img_style/grafico4.png);
+	font-size: 10px;
+	font-weight: bolder;
+	padding: 2px 2px 2px 2px;
+	vertical-align: middle;
+	width: 70px;
+	height: 22px;
+}
+.Button1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	border: 1px solid #333333;
+	color: #FFFFFF;
+	
+	background-image:   url(img_base/grafico4.png);
+	font-size: 10px;
+	font-weight: bolder;
+	padding: 2px 2px 2px 2px;
+	vertical-align: middle;
+	width: 80px;
+	height: 25px;
+}
+.Button2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	border: 1px solid #333333;
+	color: #FFFFFF;
+	background-image:  url(file:///D|/img_style/grafico4.png);
+	font-size: 10px;
+	font-weight: bolder;
+	padding: 2px 2px 2px 2px;
+	vertical-align: middle;
+	width: 150px;
+	height: 22px;
+}
+
+.Button5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	border: 1px solid #333333;
+	color: #FFFFFF;
+	
+	background-image:   url(img_base/grafico4.png);
+	font-size: 10px;
+	font-weight: bolder;
+	padding: 2px 2px 2px 2px;
+	vertical-align: middle;
+	width: 80px;
+	height: 25px;
+}
+***/
+.elprecio {
+	color: #3366FF;
+	font-size: 12px;
+	font-family: Tahoma, Verdana;
+}
+
+.TextFieldOn41{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	font-weight: normal;
+	BORDER-TOP: #000000 1px solid ;
+	
+}
+.TextFieldOn42{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	
+}
